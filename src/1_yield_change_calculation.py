@@ -37,7 +37,7 @@ def setup_logging():
         level=logging.INFO,
         format='%(asctime)s - %(levelname)s - %(message)s',
         handlers=[
-            logging.FileHandler("yield_processing.log"),
+            logging.FileHandler("logs/yield_processing.log"),
             logging.StreamHandler()
         ]
     )

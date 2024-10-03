@@ -82,3 +82,7 @@ country_mapping:
   South Georgia and South Sandwich Islands: 'South Georgia and the South Sandwich Islands'
   Svalbard: 'Svalbard and Jan Mayen'
   US Virgin Islands: 'Virgin Islands, U.S.'
+
+reference_file_path: 'data/raw/rutgers_nw_production_raw.csv'
+
+output_file_path: 'data/processed/output_150Tg_crops_and_grasses_1.csv'

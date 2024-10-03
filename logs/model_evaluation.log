@@ -1,0 +1,22 @@
+2024-10-03 22:47:49,187 - INFO - Loaded reference data from data/raw/rutgers_nw_production_raw.csv
+2024-10-03 22:47:49,187 - INFO - Loaded model output data from data/processed/output_150Tg_crops_and_grasses_1.csv
+2024-10-03 22:47:49,189 - INFO - Merged dataframes on column 'Country'
+2024-10-03 22:47:49,215 - INFO - Filtered data to remove values greater than 100000 and NaNs
+2024-10-03 22:47:49,401 - INFO - Calculated metrics for all countries
+2024-10-03 22:47:49,402 - INFO - Saved evaluation metrics to reports/model_evaluation_metrics.csv
+2024-10-03 22:47:50,624 - INFO - Saved plot to reports/figures/output_150Tg_crops_and_grasses_1_evaluation.png
+2024-10-03 23:04:42,977 - INFO - Loaded reference data from data/raw/rutgers_nw_production_raw.csv
+2024-10-03 23:04:42,977 - INFO - Loaded model output data from data/processed/output_150Tg_crops_and_grasses_1.csv
+2024-10-03 23:04:42,979 - INFO - Merged dataframes on column 'Country'
+2024-10-03 23:04:43,006 - INFO - Filtered data to remove values greater than 100000 and NaNs
+2024-10-03 23:04:43,198 - INFO - Calculated metrics for all countries
+2024-10-03 23:04:43,200 - INFO - Saved evaluation metrics to reports/model_evaluation_metrics.csv
+2024-10-03 23:04:44,367 - INFO - Saved plot to reports/figures/output_150Tg_crops_and_grasses_1_evaluation.png
+2024-10-03 23:04:44,400 - INFO - Loaded shapefile from data/external/World_Countries__Generalized_/World_Countries__Generalized_.shp
+2024-10-03 23:04:44,440 - INFO - Merged evaluation metrics with GeoDataFrame
+2024-10-03 23:11:39,724 - INFO - Loaded reference data from data/raw/rutgers_nw_production_raw.csv
+2024-10-03 23:11:39,724 - INFO - Loaded model output data from data/processed/output_150Tg_crops_and_grasses_1.csv
+2024-10-03 23:11:39,726 - INFO - Merged dataframes on column 'Country'
+2024-10-03 23:11:39,752 - INFO - Filtered data to remove values greater than 100000 and NaNs
+2024-10-03 23:11:39,931 - INFO - Calculated metrics for all countries
+2024-10-03 23:11:39,933 - INFO - Saved evaluation metrics to reports/model_evaluation_metrics.csv
