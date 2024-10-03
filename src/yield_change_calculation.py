@@ -16,7 +16,7 @@ It performs the following steps:
 8. Applies country name mappings for consistency.
 9. Outputs the results to CSV files sorted alphabetically by country name.
 
-AUTHOR: Your Name
+AUTHOR: Ricky Nathvani
 DATE: YYYY-MM-DD
 """
 
@@ -27,7 +27,6 @@ import xarray as xr
 from tqdm import tqdm
 import logging
 import yaml
-from pathlib import Path
 
 
 def setup_logging():
@@ -465,7 +464,7 @@ def main():
     country_mapping = config['country_mapping']
 
     # Process each scenario of nuclear winter (different soot levels)
-    for scenario in scenarios[5:]:
+    for scenario in scenarios:
         logging.info(f"Processing scenario: {scenario['name']}")
         process_scenario(
             scenario_name=scenario['name'],
