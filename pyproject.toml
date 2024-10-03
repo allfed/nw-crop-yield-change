@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "allfed-task"
+version = "0.1.0"
+description = "Project to calculate anticipated crop-yield reductions following nuclear winter scenarios"
+authors = ["ThickNavyRain <15817473+thicknavyrain@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+xarray = "^2024.9.0"
+geopandas = "^1.0.1"
+numpy = "^2.1.1"
+pandas = "^2.2.3"
+rioxarray = "^0.17.0"
+tqdm = "^4.66.5"
+gdal = "3.8.4"
+netcdf4 = "^1.7.1.post2"
+flake8 = "^7.1.1"
+isort = "^5.13.2"
+pyyaml = "^6.0.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
