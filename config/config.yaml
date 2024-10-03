@@ -1,55 +1,55 @@
 control_crop_files:
-  - 'Crop Yield/clm5_crop_2deg_cpl_cntrl_03_0005-0019_yield_latlon_CLM5mask_6crops.nc'
-  - 'Crop Yield/clm5_crop_2deg_cpl_cntrl_03m02_0005-0019_yield_latlon_CLM5mask_6crops.nc'
-  - 'Crop Yield/clm5_crop_2deg_cpl_cntrl_03m03_0005-0019_yield_latlon_CLM5mask_6crops.nc'
+  - 'data/raw/Crop Yield/clm5_crop_2deg_cpl_cntrl_03_0005-0019_yield_latlon_CLM5mask_6crops.nc'
+  - 'data/raw/Crop Yield/clm5_crop_2deg_cpl_cntrl_03m02_0005-0019_yield_latlon_CLM5mask_6crops.nc'
+  - 'data/raw/Crop Yield/clm5_crop_2deg_cpl_cntrl_03m03_0005-0019_yield_latlon_CLM5mask_6crops.nc'
 
 control_grass_files:
-  - 'Grass Production/clm5_crop_2deg_cpl_cntrl_03_0005-0018_yield_latlon_CLM5mask_C3-C4-LEAFC.nc'
-  - 'Grass Production/clm5_crop_2deg_cpl_cntrl_03m02_0005-0018_yield_latlon_CLM5mask_C3-C4-LEAFC.nc'
-  - 'Grass Production/clm5_crop_2deg_cpl_cntrl_03m03_0005-0018_yield_latlon_CLM5mask_C3-C4-LEAFC.nc'
+  - 'data/raw/Grass Production/clm5_crop_2deg_cpl_cntrl_03_0005-0018_yield_latlon_CLM5mask_C3-C4-LEAFC.nc'
+  - 'data/raw/Grass Production/clm5_crop_2deg_cpl_cntrl_03m02_0005-0018_yield_latlon_CLM5mask_C3-C4-LEAFC.nc'
+  - 'data/raw/Grass Production/clm5_crop_2deg_cpl_cntrl_03m03_0005-0018_yield_latlon_CLM5mask_C3-C4-LEAFC.nc'
 
 scenarios:
   - name: '5Tg'
     crop_files:
-      - 'Crop Yield/clm5_crop_2deg_cpl_nw_targets_01_0005-0019_yield_latlon_CLM5mask_6crops.nc'
-      - 'Crop Yield/clm5_crop_2deg_cpl_nw_targets_01m02_0005-0019_yield_latlon_CLM5mask_6crops.nc'
-      - 'Crop Yield/clm5_crop_2deg_cpl_nw_targets_01m03_0005-0019_yield_latlon_CLM5mask_6crops.nc'
+      - 'data/raw/Crop Yield/clm5_crop_2deg_cpl_nw_targets_01_0005-0019_yield_latlon_CLM5mask_6crops.nc'
+      - 'data/raw/Crop Yield/clm5_crop_2deg_cpl_nw_targets_01m02_0005-0019_yield_latlon_CLM5mask_6crops.nc'
+      - 'data/raw/Crop Yield/clm5_crop_2deg_cpl_nw_targets_01m03_0005-0019_yield_latlon_CLM5mask_6crops.nc'
     grass_files:
-      - 'Grass Production/clm5_crop_2deg_cpl_nw_targets_01_0005-0018_yield_latlon_CLM5mask_C3-C4-LEAFC.nc'
-      - 'Grass Production/clm5_crop_2deg_cpl_nw_targets_01m02_0005-0018_yield_latlon_CLM5mask_C3-C4-LEAFC.nc'
-      - 'Grass Production/clm5_crop_2deg_cpl_nw_targets_01m03_0005-0018_yield_latlon_CLM5mask_C3-C4-LEAFC.nc'
+      - 'data/raw/Grass Production/clm5_crop_2deg_cpl_nw_targets_01_0005-0018_yield_latlon_CLM5mask_C3-C4-LEAFC.nc'
+      - 'data/raw/Grass Production/clm5_crop_2deg_cpl_nw_targets_01m02_0005-0018_yield_latlon_CLM5mask_C3-C4-LEAFC.nc'
+      - 'data/raw/Grass Production/clm5_crop_2deg_cpl_nw_targets_01m03_0005-0018_yield_latlon_CLM5mask_C3-C4-LEAFC.nc'
 
   - name: '16Tg'
     crop_files:
-      - 'Crop Yield/clm5_crop_2deg_cpl_nw_targets_04_0005-0019_yield_latlon_CLM5mask_6crops.nc'
+      - 'data/raw/Crop Yield/clm5_crop_2deg_cpl_nw_targets_04_0005-0019_yield_latlon_CLM5mask_6crops.nc'
     grass_files:
-      - 'Grass Production/clm5_crop_2deg_cpl_nw_targets_04_0005-0018_yield_latlon_CLM5mask_C3-C4-LEAFC.nc'
+      - 'data/raw/Grass Production/clm5_crop_2deg_cpl_nw_targets_04_0005-0018_yield_latlon_CLM5mask_C3-C4-LEAFC.nc'
 
   - name: '27Tg'
     crop_files:
-      - 'Crop Yield/clm5_crop_2deg_cpl_nw_targets_02_0005-0019_yield_latlon_CLM5mask_6crops.nc'
+      - 'data/raw/Crop Yield/clm5_crop_2deg_cpl_nw_targets_02_0005-0019_yield_latlon_CLM5mask_6crops.nc'
     grass_files:
-      - 'Grass Production/clm5_crop_2deg_cpl_nw_targets_02_0005-0018_yield_latlon_CLM5mask_C3-C4-LEAFC.nc'
+      - 'data/raw/Grass Production/clm5_crop_2deg_cpl_nw_targets_02_0005-0018_yield_latlon_CLM5mask_C3-C4-LEAFC.nc'
 
   - name: '37Tg'
     crop_files:
-      - 'Crop Yield/clm5_crop_2deg_cpl_nw_targets_03_0005-0019_yield_latlon_CLM5mask_6crops.nc'
+      - 'data/raw/Crop Yield/clm5_crop_2deg_cpl_nw_targets_03_0005-0019_yield_latlon_CLM5mask_6crops.nc'
     grass_files:
-      - 'Grass Production/clm5_crop_2deg_cpl_nw_targets_03_0005-0018_yield_latlon_CLM5mask_C3-C4-LEAFC.nc'
+      - 'data/raw/Grass Production/clm5_crop_2deg_cpl_nw_targets_03_0005-0018_yield_latlon_CLM5mask_C3-C4-LEAFC.nc'
 
   - name: '47Tg'
     crop_files:
-      - 'Crop Yield/clm5_crop_2deg_cpl_nw_targets_05_0005-0019_yield_latlon_CLM5mask_6crops.nc'
+      - 'data/raw/Crop Yield/clm5_crop_2deg_cpl_nw_targets_05_0005-0019_yield_latlon_CLM5mask_6crops.nc'
     grass_files:
-      - 'Grass Production/clm5_crop_2deg_cpl_nw_targets_05_0005-0018_yield_latlon_CLM5mask_C3-C4-LEAFC.nc'
+      - 'data/raw/Grass Production/clm5_crop_2deg_cpl_nw_targets_05_0005-0018_yield_latlon_CLM5mask_C3-C4-LEAFC.nc'
 
   - name: '150Tg'
     crop_files:
-      - 'Crop Yield/clm5_crop_2deg_cpl_nw_ur_150_07_0005-0019_yield_latlon_CLM5mask_6crops.nc'
+      - 'data/raw/Crop Yield/clm5_crop_2deg_cpl_nw_ur_150_07_0005-0019_yield_latlon_CLM5mask_6crops.nc'
     grass_files:
-      - 'Grass Production/clm5_crop_2deg_cpl_nw_ur_150_07_0005-0018_yield_latlon_CLM5mask_C3-C4-LEAFC.nc'
+      - 'data/raw/Grass Production/clm5_crop_2deg_cpl_nw_ur_150_07_0005-0018_yield_latlon_CLM5mask_C3-C4-LEAFC.nc'
 
-shapefile_path: 'World_Countries__Generalized_/World_Countries__Generalized_.shp'
+shapefile_path: 'data/external/World_Countries__Generalized_/World_Countries__Generalized_.shp'
 
 EPSG: 6933
 
