@@ -1,3 +1,25 @@
+"""
+CROP AND GRASS YIELD PERCENTAGE CHANGE CALCULATION SCRIPT
+
+This code processes crop and grass yield data from NetCDF datasets, calculates percentage changes in yields
+for various crops and grasses across countries for the first 10 years post-nuclear winter, and outputs the 
+results to CSV files.
+It performs the following steps:
+
+1. Aligns longitudes in the datasets from [0, 360] to [-180, 180] for spatial merging.
+2. Ensures consistent coordinate reference systems (CRS) across datasets.
+3. Aggregates rainfed and irrigated yields for specified crops.
+4. Aggregates yields for grasses (C3grass and C4grass).
+5. Clips yield data to country geometries provided in a shapefile.
+6. Calculates total yield per country and percentage changes compared to control datasets.
+7. Averages percentage changes across multiple control datasets.
+8. Applies country name mappings for consistency.
+9. Outputs the results to CSV files sorted alphabetically by country name.
+
+AUTHOR: Your Name
+DATE: YYYY-MM-DD
+"""
+
 import geopandas as gpd
 import numpy as np
 import pandas as pd
@@ -188,64 +210,46 @@ def calculate_percentage_change(total_yield_value, reference_yield_value):
     return percentage_change
 
 
-def process_yields(
-    ds,
-    control_datasets,
-    gdf,
-    aggregation_dict,
-    names,
-    years,
-    epsg_code,
-    country_mapping,
-    yield_type
-):
+def process_yields(ds, control_datasets, gdf, aggregation_info, names_list, years, epsg_code, country_mapping):
     """
-    Process yields (crops or grasses), calculate percentage changes, and return the result DataFrame.
+    Unified function to process yield data for both crops and grasses.
 
     Parameters:
     - ds (xarray.Dataset): The target dataset containing yield data.
     - control_datasets (list of xarray.Dataset): List of control datasets.
     - gdf (geopandas.GeoDataFrame): GeoDataFrame containing country geometries.
-    - aggregation_dict (dict): Dictionary mapping main categories to their components.
-    - names (list): List of names from the datasets (crops or grasses).
+    - aggregation_info (dict or None): For crops, a dictionary mapping main crops to their components.
+                                        For grasses, None.
+    - names_list (list): List of names from the datasets (crop names or grass names).
     - years (int): Number of years to process.
     - epsg_code (int): The EPSG code for the coordinate reference system.
     - country_mapping (dict): Dictionary mapping old country names to new ones.
-    - yield_type (str): Type of yield being processed ('crop' or 'grass').
 
     Returns:
-    - pandas.DataFrame: DataFrame containing percentage changes in yields for each country and category.
+    - pandas.DataFrame: DataFrame containing percentage changes in yield for each country and group.
     """
     # Initialize a dictionary to store percentage changes for each country
     percentage_changes = {}
 
-    # Determine the aggregation function based on yield_type
-    if yield_type == 'crop':
-        aggregate_func = aggregate_yields
-    elif yield_type == 'grass':
-        aggregate_func = aggregate_grass_yields
+    # Determine if we're processing crops or grasses
+    if aggregation_info:
+        # Processing crops
+        groups = aggregation_info.items()
     else:
-        logging.error(f"Invalid yield_type: {yield_type}. Must be 'crop' or 'grass'.")
-        raise ValueError("Invalid yield_type. Must be 'crop' or 'grass'.")
+        # Processing grasses; create a single group
+        groups = [('grasses', None)]
 
-    # Loop over each category (crop or grass group), aggregate yields, and calculate percentage changes
-    for main_category, sub_components in tqdm(aggregation_dict.items(), desc=f'Processing {yield_type}s'):
-        if yield_type == 'crop':
-            # For crops, sub_components are [Rainfed, Irrigated]
-            rain_component, irr_component = sub_components
-            try:
-                rain_idx = names.index(rain_component)
-                irr_idx = names.index(irr_component)
-            except ValueError as e:
-                logging.error(f"Component {e} not found in names list for category {main_category}.")
-                continue
-
-            # Aggregate yields for target dataset
-            total_yield = aggregate_func(ds, rain_idx, irr_idx)
-        elif yield_type == 'grass':
-            # For grasses, sub_components might be different; assuming they are not used similarly
-            # If grasses have multiple components, adjust accordingly
-            total_yield = aggregate_func(ds)
+    # Loop over each group
+    for group_name, sub_components in tqdm(groups, desc='Processing groups'):
+        # Aggregate yields based on whether we're processing crops or grasses
+        if sub_components:
+            # For crops, find indices for rainfed and irrigated components
+            rain_idx = names_list.index(sub_components[0])
+            irr_idx = names_list.index(sub_components[1])
+            total_yield = aggregate_yields(ds, rain_idx, irr_idx)
+        else:
+            # For grasses, aggregate across the 'grass' dimension
+            total_yield = aggregate_grass_yields(ds)
 
         # Iterate over each year
         for year in range(years):
@@ -258,16 +262,14 @@ def process_yields(
 
             # For each control dataset
             for ctrl_ds in control_datasets:
-                if yield_type == 'crop':
-                    # Aggregate yields for control dataset
-                    reference_yield = aggregate_func(ctrl_ds, rain_idx, irr_idx)
-                elif yield_type == 'grass':
-                    # Aggregate yields for control dataset
-                    reference_yield = aggregate_func(ctrl_ds)
+                # Aggregate yields for control dataset
+                if sub_components:
+                    reference_yield = aggregate_yields(ctrl_ds, rain_idx, irr_idx)
+                else:
+                    reference_yield = aggregate_grass_yields(ctrl_ds)
 
                 # Extract the yield data for the given year in the reference dataset
                 reference_yield_year = reference_yield.isel(time=year)
-                # Assign CRS
                 reference_yield_year = assign_crs(reference_yield_year, epsg_code)
 
                 # Iterate over each country polygon in the GeoDataFrame
@@ -276,9 +278,7 @@ def process_yields(
                     country_iso = country['ISO']
 
                     # Apply country name mapping if necessary
-                    if country_name in country_mapping:
-                        country_name = country_mapping[country_name]
-
+                    country_name = country_mapping.get(country_name, country_name)
                     country_geometry = [country['geometry']]
 
                     try:
@@ -307,7 +307,7 @@ def process_yields(
                         })
 
                     except Exception as e:
-                        logging.error(f"Could not process {country_name} for year {year + 1} and {yield_type} {main_category}: {e}")
+                        logging.error(f"Could not process {country_name} for year {year + 1} and group {group_name}: {e}")
 
             # Now average the percentage changes across all reference datasets
             if year_percentage_changes:
@@ -329,17 +329,14 @@ def process_yields(
                             'Country': country_name
                         }
 
-                    # Store the average percentage change
-                    if yield_type == "crop":
-                        if main_category == "Wheat":
-                            category_name = "spring_wheat"
-                        else:
-                            category_name = main_category.lower()
-                        key = f'{category_name}_year{year + 1}'
-                    elif yield_type == "grass":
-                        key = f'{yield_type}s_year{year + 1}'
+                    # Adjust the group name for special cases
+                    if group_name == "Wheat":
+                        group_col_name = "spring_wheat"
+                    else:
+                        group_col_name = group_name.lower()
 
-                    percentage_changes[country_name][key] = avg_percentage_change
+                    # Store the average percentage change
+                    percentage_changes[country_name][f'{group_col_name}_year{year + 1}'] = avg_percentage_change
 
     result_df = pd.DataFrame.from_dict(percentage_changes, orient='index').reset_index(drop=True)
 
@@ -349,18 +346,7 @@ def process_yields(
     return result_df
 
 
-def process_scenario(
-    scenario_name,
-    crop_file_paths,
-    grass_file_paths,
-    control_crop_files,
-    control_grass_files,
-    gdf,
-    crop_aggregation,
-    country_mapping,
-    EPSG=6933,
-    years=10
-):
+def process_scenario(scenario_name, crop_file_paths, grass_file_paths, control_crop_files, control_grass_files, gdf, crop_aggregation, country_mapping, EPSG=6933, years=10):
     """
     Process a single scenario and output the results to CSV files.
 
@@ -383,74 +369,65 @@ def process_scenario(
     control_datasets = [fix_longitude(xr.open_dataset(fp)) for fp in control_crop_files]
     grass_control_datasets = [fix_longitude(xr.open_dataset(fp)) for fp in control_grass_files]
 
-    # Process crops
-    crop_results = []
-    for idx, crop_file in enumerate(crop_file_paths):
-        ds = fix_longitude(xr.open_dataset(crop_file))
-        crop_names = ds['crops'].attrs['long_name'].split(',')
+    # Lists to store results
+    combined_results = []
 
-        # Process crops using the unified function
-        if 'yield' in ds.data_vars and all('yield' in ctrl_ds.data_vars for ctrl_ds in control_datasets):
-            result_df = process_yields(
-                ds=ds,
+    # Process each pair of crop and grass files
+    for idx, (crop_file, grass_file) in enumerate(zip(crop_file_paths, grass_file_paths)):
+        ds_crop = fix_longitude(xr.open_dataset(crop_file))
+        ds_grass = fix_longitude(xr.open_dataset(grass_file))
+        crop_names = ds_crop['crops'].attrs['long_name'].split(',')
+        grass_names = ds_grass['grass'].attrs['long_name'].split(', ')
+
+        # Process crops
+        if 'yield' in ds_crop.data_vars and all('yield' in ctrl_ds.data_vars for ctrl_ds in control_datasets):
+            result_crop_df = process_yields(
+                ds=ds_crop,
                 control_datasets=control_datasets,
                 gdf=gdf,
-                aggregation_dict=crop_aggregation,
-                names=crop_names,
+                aggregation_info=crop_aggregation,
+                names_list=crop_names,
                 years=years,
                 epsg_code=EPSG,
-                country_mapping=country_mapping,
-                yield_type='crop'
+                country_mapping=country_mapping
             )
-            crop_results.append(result_df)
         else:
-            logging.warning(f"One or more crop datasets do not contain a 'yield' variable for scenario {scenario_name}.")
+            logging.warning(f"Crop dataset does not contain a 'yield' variable for scenario {scenario_name}.")
             continue
 
-    # Process grasses
-    grass_results = []
-    for idx, grass_file in enumerate(grass_file_paths):
-        grass_ds = fix_longitude(xr.open_dataset(grass_file))
-        grass_names = grass_ds['grass'].attrs['long_name'].split(', ')
-
-        # Process grasses using the unified function
-        if 'yield' in grass_ds.data_vars and all('yield' in ctrl_ds.data_vars for ctrl_ds in grass_control_datasets):
-            grass_result_df = process_yields(
-                ds=grass_ds,
+        # Process grasses
+        if 'yield' in ds_grass.data_vars and all('yield' in ctrl_ds.data_vars for ctrl_ds in grass_control_datasets):
+            result_grass_df = process_yields(
+                ds=ds_grass,
                 control_datasets=grass_control_datasets,
                 gdf=gdf,
-                aggregation_dict={},  # Assuming no sub-components for grasses
-                names=grass_names,
+                aggregation_info=None,  # No aggregation info for grasses
+                names_list=grass_names,
                 years=years,
                 epsg_code=EPSG,
-                country_mapping=country_mapping,
-                yield_type='grass'
+                country_mapping=country_mapping
             )
-            grass_results.append(grass_result_df)
         else:
-            logging.warning(f"One or more grass datasets do not contain a 'yield' variable for scenario {scenario_name}.")
+            logging.warning(f"Grass dataset does not contain a 'yield' variable for scenario {scenario_name}.")
             continue
 
-    # Merge crop and grass results
-    for idx, (crop_df, grass_df) in enumerate(zip(crop_results, grass_results)):
-        final_df = pd.merge(crop_df, grass_df, on=['ISO3 Country Code', 'Country'], how='outer')
+        # Merge crop and grass results
+        final_df = pd.merge(result_crop_df, result_grass_df, on=['ISO3 Country Code', 'Country'], how='outer')
         final_df = final_df.sort_values(by='Country').reset_index(drop=True)
         output_filename = f'data/processed/output_{scenario_name}_crops_and_grasses_{idx + 1}.csv'
         final_df.to_csv(output_filename, index=False)
         logging.info(f"Saved combined results to {output_filename}")
 
+        # Store the final_df
+        combined_results.append(final_df)
+
     # For scenarios with multiple files (e.g., 5Tg), compute aggregated results
-    if len(crop_results) > 1 and len(grass_results) > 1:
-        # Average crop results
-        avg_crop_df = pd.concat(crop_results).groupby(['ISO3 Country Code', 'Country']).mean().reset_index()
-        # Average grass results
-        avg_grass_df = pd.concat(grass_results).groupby(['ISO3 Country Code', 'Country']).mean().reset_index()
-        # Merge averaged results
-        final_avg_df = pd.merge(avg_crop_df, avg_grass_df, on=['ISO3 Country Code', 'Country'], how='outer')
-        final_avg_df = final_avg_df.sort_values(by='Country').reset_index(drop=True)
+    if len(combined_results) > 1:
+        # Average combined results
+        avg_combined_df = pd.concat(combined_results).groupby(['ISO3 Country Code', 'Country']).mean().reset_index()
         # Save the aggregated result
         output_filename = f'data/processed/output_{scenario_name}_crops_and_grasses_aggregated.csv'
-        final_avg_df.to_csv(output_filename, index=False)
+        avg_combined_df.to_csv(output_filename, index=False)
         logging.info(f"Saved aggregated results to {output_filename}")
 
 
@@ -484,11 +461,11 @@ def main():
     # Crop aggregation dictionary: maps crop categories to their rain and irrigated components
     crop_aggregation = config['crop_aggregation']
 
-    # Country name mapping for consistency with rutgers_nw_production_raw.csv
+    # Country name mapping for consistency
     country_mapping = config['country_mapping']
 
     # Process each scenario of nuclear winter (different soot levels)
-    for scenario in scenarios:
+    for scenario in scenarios[5:]:
         logging.info(f"Processing scenario: {scenario['name']}")
         process_scenario(
             scenario_name=scenario['name'],
