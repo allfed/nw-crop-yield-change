@@ -73,7 +73,7 @@ This script compares the calculated yield changes with the reference data, compu
 
 ### Project Structure
 
-```lua```
+```lua
 .
 ├── config
 │   └── config.yaml
@@ -129,7 +129,7 @@ This script compares the calculated yield changes with the reference data, compu
 │   ├── 1_yield_change_calculation.py
 │   └── 2_model_evaluation.py
 └── tests
-```lua```
+```
 
 ### Which File Does What?
 
