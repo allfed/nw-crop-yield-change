@@ -14,8 +14,8 @@ It performs the following steps:
 8. Saves the evaluation metrics to a CSV file.
 9. Saves the plots to the reports/figures directory.
 
-AUTHOR: Your Name
-DATE: YYYY-MM-DD
+AUTHOR: Ricky Nathvani
+DATE: 2024-10-04
 """
 
 import pandas as pd

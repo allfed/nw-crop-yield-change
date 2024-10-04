@@ -2,7 +2,7 @@
 
 Code and scripts for calculating percentage changes in crop and grass yields under different soot emission scenarios associated with varying intensities of nuclear winters.
 
-This project processes crop and grass yield data from NetCDF datasets provided by Xia et al. (2022), calculates percentage changes in yields for various crops and grasses across countries for the first 10 years post-nuclear winter, and outputs the results to CSV files. It performs spatial data processing, aggregation, and analysis, and generates visualizations to evaluate the impact of different nuclear winter scenarios on global agriculture.
+This project processes crop and grass yield data from NetCDF datasets provided by [Xia et al. (2022)](https://www.nature.com/articles/s43016-022-00573-0), calculates percentage changes in yields for various crops and grasses across countries for the first 10 years post-nuclear winter, and outputs the results to CSV files. It performs spatial data processing, aggregation, and analysis, and generates visualizations to evaluate the impact of different nuclear winter scenarios on global agriculture.
 
 The code can be run locally using Python. Setup instructions are below.
 
@@ -40,8 +40,8 @@ exit
 
 The raw data is included in the repository under the `data/raw` directory.
 
-- Crop yield and grass production data are sourced from Xia et al. (2022).
-- Country shapefile for spatial analysis is sourced from the ALLFED LosingIndustryCropYields project and is located in `data/external/World_Countries__Generalized_`.
+- Crop yield and grass production data are sourced from [Xia et al. (2022)](https://osf.io/yrbse/).
+- Country shapefile for spatial analysis is sourced from the ALLFED [LosingIndustryCropYields](https://github.com/allfed/LosingIndustryCropYields/) project and is located in `data/external/World_Countries__Generalized_`.
 
 Ensure that the data files are in the correct directories as specified in the project structure below.
 

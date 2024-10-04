@@ -17,7 +17,7 @@ It performs the following steps:
 9. Outputs the results to CSV files sorted alphabetically by country name.
 
 AUTHOR: Ricky Nathvani
-DATE: YYYY-MM-DD
+DATE: 2024-10-04
 """
 
 import geopandas as gpd
