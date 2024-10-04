@@ -11,10 +11,12 @@ It performs the following steps:
 3. Assigns CRS and reprojects yield data to equal-area projection before aggregation.
 4. Aggregates rainfed and irrigated yields for specified crops.
 5. Aggregates yields for grasses (C3grass and C4grass).
-6. Clips yield data to country geometries provided in a shapefile.
-7. Calculates total yield per country and percentage changes compared to averaged control datasets.
-8. Applies country name mappings for consistency.
-9. Outputs the results to CSV files sorted alphabetically by country name.
+6. Downscales the yield data to a finer resolution.
+7. Clips yield data to country geometries provided in a shapefile.
+8. Calculates total yield per country and percentage changes compared to control datasets.
+9. Averages percentage changes across multiple control datasets.
+10. Applies country name mappings for consistency.
+11. Outputs the results to CSV files sorted alphabetically by country name.
 
 AUTHOR: Ricky Nathvani
 DATE: YYYY-MM-DD
@@ -27,6 +29,10 @@ import xarray as xr
 from tqdm import tqdm
 import logging
 import yaml
+import rioxarray
+from rioxarray.exceptions import NoDataInBounds
+from rasterio.enums import Resampling
+from shapely.geometry import mapping
 
 
 def setup_logging():
@@ -71,13 +77,13 @@ def fix_longitude(ds):
     return ds
 
 
-def assign_crs(data_array, epsg_code):
+def assign_crs(data_array, epsg_code=4326):
     """
     Assign a coordinate reference system (CRS) to a DataArray after validating latitude values.
 
     Parameters:
     - data_array (xarray.DataArray): The DataArray to assign CRS to.
-    - epsg_code (int): The EPSG code for the coordinate reference system.
+    - epsg_code (int): The EPSG code for the coordinate reference system (default is 4326).
 
     Returns:
     - xarray.DataArray: The DataArray with assigned CRS.
@@ -91,7 +97,7 @@ def assign_crs(data_array, epsg_code):
     lat = data_array['lat']
     min_lat = lat.min().item()
     max_lat = lat.max().item()
-    logging.info(f"Latitude range before reprojection: min={min_lat}, max={max_lat}")
+    logging.info(f"Latitude range: min={min_lat}, max={max_lat}")
 
     # Validate latitude values, including exact poles
     if min_lat <= -90 or max_lat >= 90:
@@ -126,30 +132,28 @@ def assign_crs(data_array, epsg_code):
         if existing_crs:
             logging.info(f"Existing CRS: {existing_crs}")
         else:
-            logging.info("No existing CRS found. Assigning EPSG:4326 as the source CRS.")
+            logging.info(f"No existing CRS found. Assigning EPSG:{epsg_code} as the source CRS.")
 
         data_array = (
-            data_array.rio.write_crs("EPSG:4326")  # Assuming original CRS is WGS84
-            .rio.set_spatial_dims(x_dim='lon', y_dim='lat')
-            .rio.reproject(f"EPSG:{epsg_code}")
+            data_array.rio.set_spatial_dims(x_dim='lon', y_dim='lat')
+            .rio.write_crs(f"EPSG:{epsg_code}")  # Assigning the CRS
         )
-        logging.info(f"Reprojection to EPSG:{epsg_code} successful.")
+        logging.info(f"Assigned CRS EPSG:{epsg_code} to data array.")
     except Exception as e:
-        logging.error(f"Reprojection failed: {e}")
+        logging.error(f"Assigning CRS failed: {e}")
         raise e
 
     return data_array
 
 
-def aggregate_yields(ds, rain_idx, irr_idx, epsg_code, year):
+def aggregate_yields(ds, rain_idx, irr_idx, year):
     """
-    Extract and sum rainfed and irrigated yields from a dataset, after assigning CRS and reprojecting.
+    Extract and sum rainfed and irrigated yields from a dataset.
 
     Parameters:
     - ds (xarray.Dataset): The dataset containing yield data.
     - rain_idx (int): The index of the rainfed crop in the 'crops' dimension.
     - irr_idx (int): The index of the irrigated crop in the 'crops' dimension.
-    - epsg_code (int): The EPSG code for the coordinate reference system.
     - year (int): The year index to extract.
 
     Returns:
@@ -159,22 +163,17 @@ def aggregate_yields(ds, rain_idx, irr_idx, epsg_code, year):
     rain_yield = ds['yield'].isel(crops=rain_idx, time=year).fillna(0).astype(np.float32)
     irr_yield = ds['yield'].isel(crops=irr_idx, time=year).fillna(0).astype(np.float32)
 
-    # Assign CRS and reproject
-    rain_yield = assign_crs(rain_yield, epsg_code)
-    irr_yield = assign_crs(irr_yield, epsg_code)
-
-    # Sum the reprojected yields
+    # Sum the yields
     total_yield = (rain_yield + irr_yield).astype(np.float32)
     return total_yield
 
 
-def aggregate_grass_yields(ds, epsg_code, year):
+def aggregate_grass_yields(ds, year):
     """
-    Sum the yields of C3grass and C4grass across the 'grass' dimension after assigning CRS and reprojecting.
+    Sum the yields of C3grass and C4grass across the 'grass' dimension.
 
     Parameters:
     - ds (xarray.Dataset): The dataset containing grass yield data.
-    - epsg_code (int): The EPSG code for the coordinate reference system.
     - year (int): The year index to extract.
 
     Returns:
@@ -184,12 +183,58 @@ def aggregate_grass_yields(ds, epsg_code, year):
     for grass_idx in range(len(ds['grass'])):
         # Extract yield for this grass type and the given year
         grass_yield = ds['yield'].isel(grass=grass_idx, time=year).fillna(0).astype(np.float32)
-        # Assign CRS and reproject
-        grass_yield = assign_crs(grass_yield, epsg_code)
         grass_yields.append(grass_yield)
-    # Sum the reprojected yields
+    # Sum the yields
     total_yield = sum(grass_yields)
     return total_yield
+
+
+def downscale_data(data_array, factor=10):
+    """
+    Downscale the data array by a given factor.
+
+    Parameters:
+    - data_array (xarray.DataArray): The data array to downscale.
+    - factor (int): The downscaling factor.
+
+    Returns:
+    - xarray.DataArray: The downscaled data array.
+    """
+    # Assign CRS if not assigned
+    if not data_array.rio.crs:
+        logging.info("CRS not found in data array. Assigning EPSG:4326.")
+        data_array = data_array.rio.set_spatial_dims(x_dim='lon', y_dim='lat').rio.write_crs("EPSG:4326")
+
+    # Get current resolution
+    lat = data_array['lat'].values
+    lon = data_array['lon'].values
+
+    if len(lat) < 2 or len(lon) < 2:
+        logging.warning("Not enough data points to calculate resolution for downscaling.")
+        return data_array
+
+    delta_lat = np.abs(lat[1] - lat[0])
+    delta_lon = np.abs(lon[1] - lon[0])
+
+    logging.info(f"Original resolution: {delta_lat} degrees latitude, {delta_lon} degrees longitude")
+
+    # Calculate new resolution
+    new_delta_lat = delta_lat / factor
+    new_delta_lon = delta_lon / factor
+
+    logging.info(f"New resolution: {new_delta_lat} degrees latitude, {new_delta_lon} degrees longitude")
+
+    # Downscale the raster data
+    downscaled = data_array.rio.reproject(
+        dst_crs="EPSG:4326",
+        resolution=(new_delta_lon, new_delta_lat),
+        resampling=Resampling.nearest
+    )
+
+    # Divide the pixel values by factor squared
+    downscaled = downscaled / (factor * factor)  # Dividing by 10000
+
+    return downscaled
 
 
 def clip_yield_to_country(yield_data, country_geometry, epsg_code):
@@ -204,9 +249,13 @@ def clip_yield_to_country(yield_data, country_geometry, epsg_code):
     Returns:
     - xarray.DataArray: The clipped yield data for the country.
     """
-    clipped_yield = yield_data.rio.clip(
-        country_geometry, crs=f"EPSG:{epsg_code}", drop=False, all_touched=True
-    )
+    try:
+        clipped_yield = yield_data.rio.clip(
+            country_geometry, crs=f"EPSG:{epsg_code}", drop=False, all_touched=True
+        )
+    except NoDataInBounds:
+        logging.warning("No data within the bounds of the country geometry.")
+        clipped_yield = yield_data.copy(deep=True) * 0  # Create an array of zeros
     return clipped_yield
 
 
@@ -231,20 +280,6 @@ def calculate_percentage_change(total_yield_value, reference_yield_value):
 def process_yields(ds, control_datasets, gdf, aggregation_info, names_list, years, epsg_code, country_mapping):
     """
     Unified function to process yield data for both crops and grasses.
-
-    Parameters:
-    - ds (xarray.Dataset): The target dataset containing yield data.
-    - control_datasets (list of xarray.Dataset): List of control datasets.
-    - gdf (geopandas.GeoDataFrame): GeoDataFrame containing country geometries.
-    - aggregation_info (dict or None): For crops, a dictionary mapping main crops to their components.
-                                        For grasses, None.
-    - names_list (list): List of names from the datasets (crop names or grass names).
-    - years (int): Number of years to process.
-    - epsg_code (int): The EPSG code for the coordinate reference system.
-    - country_mapping (dict): Dictionary mapping old country names to new ones.
-
-    Returns:
-    - pandas.DataFrame: DataFrame containing percentage changes in yield for each country and group.
     """
     # Initialize a dictionary to store percentage changes for each country
     percentage_changes = {}
@@ -260,57 +295,97 @@ def process_yields(ds, control_datasets, gdf, aggregation_info, names_list, year
     # Loop over each group
     for group_name, sub_components in tqdm(groups, desc='Processing groups'):
         # Iterate over each year
-        for year in range(years):
+        for year in tqdm(range(years)):
+            logging.info(f"Processing group {group_name}, year {year + 1}")
             # Aggregate yields based on whether we're processing crops or grasses
             if sub_components:
                 # For crops, find indices for rainfed and irrigated components
                 rain_idx = names_list.index(sub_components[0])
                 irr_idx = names_list.index(sub_components[1])
                 # Aggregate yields for target dataset
-                total_yield_year = aggregate_yields(ds, rain_idx, irr_idx, epsg_code, year)
+                total_yield_year = aggregate_yields(ds, rain_idx, irr_idx, year)
             else:
                 # For grasses, aggregate across the 'grass' dimension
-                total_yield_year = aggregate_grass_yields(ds, epsg_code, year)
+                total_yield_year = aggregate_grass_yields(ds, year)
 
-            # Aggregate yields for each control dataset
-            reference_yield_years = []
-            for ctrl_ds in control_datasets:
+            # Assign CRS to total yield data (EPSG:4326)
+            total_yield_year = assign_crs(total_yield_year, epsg_code=4326)
+
+            # Downscale the total yield data
+            total_yield_year = downscale_data(total_yield_year)
+
+            # Reproject to target EPSG code
+            total_yield_year = total_yield_year.rio.reproject(f"EPSG:{epsg_code}")
+
+            # Initialize a list to store the percentage changes for each reference dataset
+            year_percentage_changes = []
+
+            # For each control dataset
+            for ctrl_ds in tqdm(control_datasets):
+                # Aggregate yields for control dataset
                 if sub_components:
-                    reference_yield_year = aggregate_yields(ctrl_ds, rain_idx, irr_idx, epsg_code, year)
+                    reference_yield_year = aggregate_yields(ctrl_ds, rain_idx, irr_idx, year)
                 else:
-                    reference_yield_year = aggregate_grass_yields(ctrl_ds, epsg_code, year)
-                reference_yield_years.append(reference_yield_year)
+                    reference_yield_year = aggregate_grass_yields(ctrl_ds, year)
 
-            # Align and average the reference yield datasets
-            reference_yield_years_aligned = xr.align(*reference_yield_years, join='exact')
-            reference_yield_year_avg = xr.concat(reference_yield_years_aligned, dim='dataset').mean(dim='dataset')
+                # Assign CRS to reference yield data (EPSG:4326)
+                reference_yield_year = assign_crs(reference_yield_year, epsg_code=4326)
 
-            # Iterate over each country polygon in the GeoDataFrame
-            for idx, country in gdf.iterrows():
-                country_name = country['COUNTRY']
-                country_iso = country['ISO']
+                # Downscale the reference yield data
+                reference_yield_year = downscale_data(reference_yield_year)
 
-                # Apply country name mapping if necessary
-                country_name = country_mapping.get(country_name, country_name)
-                country_geometry = [country['geometry']]
+                # Reproject to target EPSG code
+                reference_yield_year = reference_yield_year.rio.reproject(f"EPSG:{epsg_code}")
 
-                try:
-                    # Clip the yield data to the country geometry
-                    clipped_total_yield = clip_yield_to_country(
-                        total_yield_year, country_geometry, epsg_code
-                    )
-                    clipped_reference_yield = clip_yield_to_country(
-                        reference_yield_year_avg, country_geometry, epsg_code
-                    )
+                # Iterate over each country polygon in the GeoDataFrame
+                for idx, country in gdf.iterrows():
+                    country_name = country['COUNTRY']
+                    country_iso = country['ISO']
 
-                    # Calculate the total yield for the country
-                    total_yield_value = clipped_total_yield.sum(skipna=True).item()
-                    reference_yield_value = clipped_reference_yield.sum(skipna=True).item()
+                    # Apply country name mapping if necessary
+                    country_name = country_mapping.get(country_name, country_name)
+                    country_geometry = [mapping(country['geometry'])]
 
-                    # Calculate the percentage change
-                    percentage_change = calculate_percentage_change(
-                        total_yield_value, reference_yield_value
-                    )
+                    try:
+                        # Clip the yield data to the country geometry
+                        clipped_total_yield = clip_yield_to_country(
+                            total_yield_year, country_geometry, epsg_code
+                        )
+                        clipped_reference_yield = clip_yield_to_country(
+                            reference_yield_year, country_geometry, epsg_code
+                        )
+
+                        # Calculate the total yield for the country
+                        total_yield_value = clipped_total_yield.sum(skipna=True).item()
+                        reference_yield_value = clipped_reference_yield.sum(skipna=True).item()
+
+                        # Calculate the percentage change
+                        percentage_change = calculate_percentage_change(
+                            total_yield_value, reference_yield_value
+                        )
+
+                        # Append the percentage change to the list for this year
+                        year_percentage_changes.append({
+                            'country': country_name,
+                            'iso': country_iso,
+                            'percentage_change': percentage_change
+                        })
+
+                    except Exception as e:
+                        logging.error(f"Could not process {country_name} for year {year + 1} and group {group_name}: {e}")
+
+            # Now average the percentage changes across all reference datasets
+            if year_percentage_changes:
+                year_df = pd.DataFrame(year_percentage_changes)
+
+                # Average the percentage changes for each country
+                average_changes = year_df.groupby(['country', 'iso'])['percentage_change'].mean().reset_index()
+
+                # Store the results
+                for _, row in average_changes.iterrows():
+                    country_name = row['country']
+                    country_iso = row['iso']
+                    avg_percentage_change = row['percentage_change']
 
                     # Initialize the dictionary entry for the country if it doesn't exist
                     if country_name not in percentage_changes:
@@ -325,11 +400,8 @@ def process_yields(ds, control_datasets, gdf, aggregation_info, names_list, year
                     else:
                         group_col_name = group_name.lower()
 
-                    # Store the percentage change
-                    percentage_changes[country_name][f'{group_col_name}_year{year + 1}'] = percentage_change
-
-                except Exception as e:
-                    logging.error(f"Could not process {country_name} for year {year + 1} and group {group_name}: {e}")
+                    # Store the average percentage change
+                    percentage_changes[country_name][f'{group_col_name}_year{year + 1}'] = avg_percentage_change
 
     result_df = pd.DataFrame.from_dict(percentage_changes, orient='index').reset_index(drop=True)
 
@@ -458,7 +530,7 @@ def main():
     country_mapping = config['country_mapping']
 
     # Process each scenario of nuclear winter (different soot levels)
-    for scenario in scenarios:
+    for scenario in scenarios[5:]:
         logging.info(f"Processing scenario: {scenario['name']}")
         process_scenario(
             scenario_name=scenario['name'],
