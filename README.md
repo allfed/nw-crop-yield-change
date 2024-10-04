@@ -18,23 +18,23 @@ See [https://python-poetry.org/docs/](https://python-poetry.org/docs/) for insta
 
 Once Poetry is installed, navigate to the root folder of the repository and run:
 
-```bash```
+```bash
 poetry install
-```bash```
+```
 
 This command will install all the required dependencies listed in the pyproject.toml file.
 
 To activate the virtual environment for this project using Poetry, run:
 
-```bash```
+```bash
 poetry shell
-```bash```
+```
 
 To exit the virtual environment, simply type:
 
-```bash```
+```bash
 exit
-```bash```
+```
 
 ### Input Data Management
 
@@ -53,9 +53,9 @@ After setting up the Poetry environment as described above, you can run the anal
 
 To process the yield data and calculate the percentage changes for different nuclear winter scenarios, run:
 
-```bash```
+```bash
 python src/1_yield_change_calculation.py
-```bash```
+```
 
 This script processes the yield data for various crops and grasses under different soot emission scenarios and outputs CSV files containing the percentage changes in yields for each country and year. The outputs are saved in the `data/processed` directory.
 
@@ -63,9 +63,9 @@ This script processes the yield data for various crops and grasses under differe
 
 To evaluate the model's correspondence with the reference data (provided in `data/raw/rutgers_nw_production_raw.csv`), run:
 
-```bash```
+```bash
 python src/2_model_evaluation.py
-```bash```
+```
 
 This script compares the calculated yield changes with the reference data, computes evaluation metrics, and generates plots saved in the `reports/figures` directory.
 
