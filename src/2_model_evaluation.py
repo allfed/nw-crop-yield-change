@@ -7,10 +7,10 @@ It performs the following steps:
 1. Loads the model output data and the reference data from CSV files.
 2. Selects the relevant columns (corn, rice, soy, spring_wheat, and grasses for all 10 years).
 3. Merges the dataframes on 'Country'.
-4. Filters out rows with missing values or values greater than a specified threshold.
-5. Calculates R² and Mean Absolute Difference (MAD) metrics for each country and crop.
-6. Plots histograms of R² and MAD distributions for each crop.
-7. Plots country-level R² and MAD values sorted by area.
+4. Calculates R² and Mean Absolute Difference (MAD) metrics for each country and crop.
+5. Plots histograms of R² and MAD distributions for each crop.
+6. Plots country-level R² and MAD values sorted by area.
+7. Calculates and outputs fractions of countries meeting specified R² and MAD thresholds.
 8. Saves the evaluation metrics to a CSV file.
 9. Saves the plots to the reports/figures directory.
 
@@ -107,91 +107,128 @@ def merge_dataframes(reference_df, output_df, on_column='Country', suffixes=('_r
     return merged_df
 
 
-def filter_data(df, columns_to_check, max_value=100000):
-    """
-    Filters out rows where specified columns have values greater than max_value or NaN.
-
-    Parameters:
-    - df (pandas.DataFrame): The dataframe to filter.
-    - columns_to_check (list): List of column base names to check (without suffixes).
-    - max_value (float): The maximum acceptable value.
-
-    Returns:
-    - pandas.DataFrame: The filtered dataframe.
-    """
-    filtered_df = df.copy()
-    for col in columns_to_check:
-        filtered_df = filtered_df[
-            (filtered_df[f'{col}_reference'] <= max_value) & (filtered_df[f'{col}_output'] <= max_value)
-        ]
-        filtered_df = filtered_df.dropna(subset=[f'{col}_reference', f'{col}_output'])
-    logging.info(f"Filtered data to remove values greater than {max_value} and NaNs")
-    return filtered_df
-
-
-def calculate_metrics_for_country(row, crops, years):
+def calculate_metrics_for_country(row, crops, years, max_value=1e+35):
     """
     Calculates R² and MAD metrics for a single country.
+
+    Parameters:
+    - row (pandas.Series): A row from the merged dataframe representing one country.
+    - crops (list): List of crop names.
+    - years (list): List of years.
+    - max_value (float): Maximum acceptable value for data points.
+
+    Returns:
+    - dict: A dictionary containing the metrics for the country.
     """
     country = row['Country']
     metrics = {'Country': country}
     combined_reference = []
     combined_output = []
     for crop in crops:
-        reference_values = row[[f'{crop}_year{year}_reference' for year in years]].values
-        output_values = row[[f'{crop}_year{year}_output' for year in years]].values
+        # Get the data arrays
+        reference_values = row[[f'{crop}_year{year}_reference' for year in years]].values.astype(float)
+        output_values = row[[f'{crop}_year{year}_output' for year in years]].values.astype(float)
 
-        # Calculate R²
-        try:
-            r2 = r2_score(reference_values, output_values)
-        except ValueError:
-            logging.warning(f"Could not compute R² for {crop} in country {country}. Setting R² to NaN.")
+        # Apply filtering: remove NaNs and values > max_value
+        valid_mask = (~np.isnan(reference_values)) & (~np.isnan(output_values)) & \
+                     (reference_values <= max_value) & (output_values <= max_value)
+        ref_values_filtered = reference_values[valid_mask]
+        out_values_filtered = output_values[valid_mask]
+
+        if len(ref_values_filtered) >= 2:
+            # Calculate R²
+            try:
+                r2 = r2_score(ref_values_filtered, out_values_filtered)
+            except ValueError:
+                logging.warning(f"Could not compute R² for {crop} in country {country}. Setting R² to NaN.")
+                r2 = np.nan
+
+            # Calculate MAD
+            mad = np.mean(np.abs(ref_values_filtered - out_values_filtered))
+        else:
+            logging.warning(f"Not enough valid data points to compute metrics for {crop} in country {country}. Setting values to NaN.")
             r2 = np.nan
-
-        # Calculate MAD
-        mad = np.mean(np.abs(reference_values - output_values))
+            mad = np.nan
 
         # Use title() for proper capitalization
         metrics[f'{crop.title()}_R2'] = r2
         metrics[f'{crop.title()}_MAD'] = mad
 
-        combined_reference.extend(reference_values)
-        combined_output.extend(output_values)
+        # Add to combined arrays
+        combined_reference.extend(ref_values_filtered)
+        combined_output.extend(out_values_filtered)
 
         # Handle special cases for specific crops and years
         if crop == 'soy':
-            reference_values_6_10 = reference_values[5:]
-            output_values_6_10 = output_values[5:]
-            try:
-                r2_6_10 = r2_score(reference_values_6_10, output_values_6_10)
-            except ValueError:
-                logging.warning(f"Could not compute R² for soy (years 6-10) in country {country}. Setting R² to NaN.")
+            # For years 6-10 (indexes 5 to 9)
+            ref_values_6_10 = reference_values[5:10]
+            out_values_6_10 = output_values[5:10]
+
+            # Apply filtering
+            valid_mask_6_10 = (~np.isnan(ref_values_6_10)) & (~np.isnan(out_values_6_10)) & \
+                              (ref_values_6_10 <= max_value) & (out_values_6_10 <= max_value)
+            ref_values_6_10_filtered = ref_values_6_10[valid_mask_6_10]
+            out_values_6_10_filtered = out_values_6_10[valid_mask_6_10]
+
+            if len(ref_values_6_10_filtered) >= 2:
+                try:
+                    r2_6_10 = r2_score(ref_values_6_10_filtered, out_values_6_10_filtered)
+                except ValueError:
+                    logging.warning(f"Could not compute R² for soy (years 6-10) in country {country}. Setting R² to NaN.")
+                    r2_6_10 = np.nan
+
+                mad_6_10 = np.mean(np.abs(ref_values_6_10_filtered - out_values_6_10_filtered))
+            else:
+                logging.warning(f"Not enough valid data points to compute metrics for soy (years 6-10) in country {country}. Setting values to NaN.")
                 r2_6_10 = np.nan
-            mad_6_10 = np.mean(np.abs(reference_values_6_10 - output_values_6_10))
+                mad_6_10 = np.nan
+
             metrics['Soy_R2_6_10'] = r2_6_10
             metrics['Soy_MAD_6_10'] = mad_6_10
 
         if crop == 'spring_wheat':
-            reference_values_5_10 = reference_values[4:]
-            output_values_5_10 = output_values[4:]
-            try:
-                r2_5_10 = r2_score(reference_values_5_10, output_values_5_10)
-            except ValueError:
-                logging.warning(f"Could not compute R² for spring_wheat (years 5-10) in country {country}. Setting R² to NaN.")
+            # For years 5-10 (indexes 4 to 9)
+            ref_values_5_10 = reference_values[4:10]
+            out_values_5_10 = output_values[4:10]
+
+            # Apply filtering
+            valid_mask_5_10 = (~np.isnan(ref_values_5_10)) & (~np.isnan(out_values_5_10)) & \
+                              (ref_values_5_10 <= max_value) & (out_values_5_10 <= max_value)
+            ref_values_5_10_filtered = ref_values_5_10[valid_mask_5_10]
+            out_values_5_10_filtered = out_values_5_10[valid_mask_5_10]
+
+            if len(ref_values_5_10_filtered) >= 2:
+                try:
+                    r2_5_10 = r2_score(ref_values_5_10_filtered, out_values_5_10_filtered)
+                except ValueError:
+                    logging.warning(f"Could not compute R² for spring_wheat (years 5-10) in country {country}. Setting R² to NaN.")
+                    r2_5_10 = np.nan
+
+                mad_5_10 = np.mean(np.abs(ref_values_5_10_filtered - out_values_5_10_filtered))
+            else:
+                logging.warning(f"Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country {country}. Setting values to NaN.")
                 r2_5_10 = np.nan
-            mad_5_10 = np.mean(np.abs(reference_values_5_10 - output_values_5_10))
+                mad_5_10 = np.nan
+
             metrics['Spring_Wheat_R2_5_10'] = r2_5_10
             metrics['Spring_Wheat_MAD_5_10'] = mad_5_10
 
-    # Calculate combined R² and MAD
+    # After looping through all crops, compute combined metrics
     combined_reference = np.array(combined_reference)
     combined_output = np.array(combined_output)
-    try:
-        combined_r2 = r2_score(combined_reference, combined_output)
-    except ValueError:
-        logging.warning(f"Could not compute combined R² for country {country}. Setting R² to NaN.")
+
+    if len(combined_reference) >= 2:
+        try:
+            combined_r2 = r2_score(combined_reference, combined_output)
+        except ValueError:
+            logging.warning(f"Could not compute combined R² for country {country}. Setting R² to NaN.")
+            combined_r2 = np.nan
+
+        combined_mad = np.mean(np.abs(combined_reference - combined_output))
+    else:
+        logging.warning(f"Not enough valid data points to compute combined metrics for country {country}. Setting values to NaN.")
         combined_r2 = np.nan
-    combined_mad = np.mean(np.abs(combined_reference - combined_output))
+        combined_mad = np.nan
 
     metrics['Combined_R2'] = combined_r2
     metrics['Combined_MAD'] = combined_mad
@@ -234,25 +271,25 @@ def plot_histograms(results_df, crops, output_filename):
 
     # Existing Corn, Rice, Soy, Spring Wheat, and Grasses plots
     for i, crop in enumerate(crops):
-        crop_cap = crop.capitalize()
+        crop_title = crop.title()
         # R² Histogram
-        axs[0, i].hist(results_df[f'{crop_cap}_R2'].dropna(), bins=bins, color='skyblue', edgecolor='black')
-        axs[0, i].axvline(results_df[f'{crop_cap}_R2'].mean(), color='red', linestyle='dashed', linewidth=1.5,
-                          label=f"Mean: {results_df[f'{crop_cap}_R2'].mean():.2f}")
-        axs[0, i].axvline(results_df[f'{crop_cap}_R2'].median(), color='blue', linestyle='dashed', linewidth=1.5,
-                          label=f"Median: {results_df[f'{crop_cap}_R2'].median():.2f}")
-        axs[0, i].set_title(f'{crop_cap} R² Distribution')
+        axs[0, i].hist(results_df[f'{crop_title}_R2'].dropna(), bins=bins, color='skyblue', edgecolor='black')
+        axs[0, i].axvline(results_df[f'{crop_title}_R2'].mean(), color='red', linestyle='dashed', linewidth=1.5,
+                          label=f"Mean: {results_df[f'{crop_title}_R2'].mean():.2f}")
+        axs[0, i].axvline(results_df[f'{crop_title}_R2'].median(), color='blue', linestyle='dashed', linewidth=1.5,
+                          label=f"Median: {results_df[f'{crop_title}_R2'].median():.2f}")
+        axs[0, i].set_title(f'{crop_title} R² Distribution')
         axs[0, i].set_xlabel('R² Value')
         axs[0, i].set_ylabel('Frequency')
         axs[0, i].legend()
 
         # MAD Histogram
-        axs[1, i].hist(results_df[f'{crop_cap}_MAD'].dropna(), bins=bins, color='lightgreen', edgecolor='black')
-        axs[1, i].axvline(results_df[f'{crop_cap}_MAD'].mean(), color='red', linestyle='dashed', linewidth=1.5,
-                          label=f"Mean: {results_df[f'{crop_cap}_MAD'].mean():.2f}")
-        axs[1, i].axvline(results_df[f'{crop_cap}_MAD'].median(), color='blue', linestyle='dashed', linewidth=1.5,
-                          label=f"Median: {results_df[f'{crop_cap}_MAD'].median():.2f}")
-        axs[1, i].set_title(f'{crop_cap} MAD Distribution')
+        axs[1, i].hist(results_df[f'{crop_title}_MAD'].dropna(), bins=bins, color='lightgreen', edgecolor='black')
+        axs[1, i].axvline(results_df[f'{crop_title}_MAD'].mean(), color='red', linestyle='dashed', linewidth=1.5,
+                          label=f"Mean: {results_df[f'{crop_title}_MAD'].mean():.2f}")
+        axs[1, i].axvline(results_df[f'{crop_title}_MAD'].median(), color='blue', linestyle='dashed', linewidth=1.5,
+                          label=f"Median: {results_df[f'{crop_title}_MAD'].median():.2f}")
+        axs[1, i].set_title(f'{crop_title} MAD Distribution')
         axs[1, i].set_xlabel('MAD Value')
         axs[1, i].set_ylabel('Frequency')
         axs[1, i].legend()
@@ -437,6 +474,68 @@ def plot_country_level_metrics(results_df, config):
     plt.close()
 
 
+def calculate_and_output_fractions(results_df, output_dir):
+    """
+    Calculates and outputs the fraction of countries where both R² > 0.8 and MAD < 10,
+    and where both R² > 0.9 and MAD < 5, for each crop.
+
+    Parameters:
+    - results_df (pandas.DataFrame): DataFrame containing the metrics.
+    - output_dir (str): Directory to save the output CSV file.
+    """
+    crops = ['Corn', 'Rice', 'Soy', 'Spring_Wheat', 'Grasses', 'Combined']
+    thresholds = [
+        {'R2': 0.8, 'MAD': 10},
+        {'R2': 0.9, 'MAD': 5}
+    ]
+    fraction_results = []
+    for crop in crops:
+        # For special cases, handle Soy and Spring Wheat with different years
+        if crop == 'Soy':
+            variants = [
+                {'r2_col': 'Soy_R2', 'mad_col': 'Soy_MAD', 'label': 'All Years'},
+                {'r2_col': 'Soy_R2_6_10', 'mad_col': 'Soy_MAD_6_10', 'label': 'Years 6-10'}
+            ]
+        elif crop == 'Spring_Wheat':
+            variants = [
+                {'r2_col': 'Spring_Wheat_R2', 'mad_col': 'Spring_Wheat_MAD', 'label': 'All Years'},
+                {'r2_col': 'Spring_Wheat_R2_5_10', 'mad_col': 'Spring_Wheat_MAD_5_10', 'label': 'Years 5-10'}
+            ]
+        else:
+            variants = [{'r2_col': f'{crop}_R2', 'mad_col': f'{crop}_MAD', 'label': 'All Years'}]
+
+        for variant in variants:
+            r2_col = variant['r2_col']
+            mad_col = variant['mad_col']
+            label = variant['label']
+            df = results_df[[r2_col, mad_col]].dropna()
+            n_countries = len(df)
+            if n_countries == 0:
+                print(f'No data for {crop} {label}')
+                continue
+            for threshold in thresholds:
+                r2_threshold = threshold['R2']
+                mad_threshold = threshold['MAD']
+                n_pass = ((df[r2_col] > r2_threshold) & (df[mad_col] < mad_threshold)).sum()
+                fraction = n_pass / n_countries
+                print(f"{crop} {label}: Fraction of countries with R² > {r2_threshold} and MAD < {mad_threshold}: {fraction:.2%} ({n_pass}/{n_countries})")
+                # Collect results
+                fraction_results.append({
+                    'Crop': crop,
+                    'Variant': label,
+                    'R2_Threshold': r2_threshold,
+                    'MAD_Threshold': mad_threshold,
+                    'Fraction': fraction,
+                    'Countries_Passed': n_pass,
+                    'Total_Countries': n_countries
+                })
+    # Create DataFrame and save to CSV
+    fractions_df = pd.DataFrame(fraction_results)
+    fractions_filename = os.path.join(output_dir, 'fraction_of_countries_metrics.csv')
+    fractions_df.to_csv(fractions_filename, index=False)
+    logging.info(f"Saved fraction of countries metrics to {fractions_filename}")
+
+
 def main():
     """
     Main function to perform model evaluation.
@@ -467,18 +566,12 @@ def main():
     # Merge dataframes
     merged_df = merge_dataframes(reference_df, output_df, on_column='Country', suffixes=('_reference', '_output'))
 
-    # Filter data
-    columns_to_check = []
-    for crop in crops:
-        for year in years:
-            columns_to_check.append(f'{crop}_year{year}')
-    filtered_df = filter_data(merged_df, columns_to_check, max_value=100000)
-
-    # Exclude specific countries if necessary
-    # filtered_df = filtered_df[~filtered_df['Country'].isin(['Kyrgyzstan'])]
+    # Convert all columns except 'Country' to numeric
+    numeric_columns = merged_df.columns.drop('Country')
+    merged_df[numeric_columns] = merged_df[numeric_columns].apply(pd.to_numeric, errors='coerce')
 
     # Calculate metrics
-    results_df = calculate_metrics(filtered_df, crops, years)
+    results_df = calculate_metrics(merged_df, crops, years)
 
     # Save metrics to CSV
     reports_dir = 'reports'
@@ -493,6 +586,9 @@ def main():
 
     # Plot country-level metrics
     plot_country_level_metrics(results_df, config)
+
+    # Calculate and output fractions
+    calculate_and_output_fractions(results_df, reports_dir)
 
 
 if __name__ == '__main__':
