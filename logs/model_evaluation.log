@@ -8292,3 +8292,808 @@
 2024-10-04 17:28:37,163 - INFO - Saved country R² zoomed plot to reports/figures/country_r2_values_zoomed.png
 2024-10-04 17:28:37,995 - INFO - Saved country MAD plot to reports/figures/country_mad_values.png
 2024-10-04 17:28:38,018 - INFO - Saved fraction of countries metrics to reports/fraction_of_countries_metrics.csv
+2024-10-04 18:20:59,818 - INFO - Loaded reference data from data/raw/rutgers_nw_production_raw.csv
+2024-10-04 18:20:59,818 - INFO - Loaded model output data from data/processed/output_150Tg_crops_and_grasses_1.csv
+2024-10-04 18:20:59,820 - INFO - Merged dataframes on column 'Country'
+2024-10-04 18:20:59,831 - WARNING - Not enough valid data points to compute metrics for soy in country Afghanistan. Setting values to NaN.
+2024-10-04 18:20:59,831 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Afghanistan. Setting values to NaN.
+2024-10-04 18:20:59,833 - WARNING - Not enough valid data points to compute metrics for soy in country Albania. Setting values to NaN.
+2024-10-04 18:20:59,834 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Albania. Setting values to NaN.
+2024-10-04 18:20:59,836 - WARNING - Not enough valid data points to compute metrics for rice in country Algeria. Setting values to NaN.
+2024-10-04 18:20:59,836 - WARNING - Not enough valid data points to compute metrics for soy in country Algeria. Setting values to NaN.
+2024-10-04 18:20:59,836 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Algeria. Setting values to NaN.
+2024-10-04 18:20:59,838 - WARNING - Not enough valid data points to compute metrics for corn in country American Samoa. Setting values to NaN.
+2024-10-04 18:20:59,838 - WARNING - Not enough valid data points to compute metrics for rice in country American Samoa. Setting values to NaN.
+2024-10-04 18:20:59,839 - WARNING - Not enough valid data points to compute metrics for soy in country American Samoa. Setting values to NaN.
+2024-10-04 18:20:59,839 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country American Samoa. Setting values to NaN.
+2024-10-04 18:20:59,839 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country American Samoa. Setting values to NaN.
+2024-10-04 18:20:59,839 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country American Samoa. Setting values to NaN.
+2024-10-04 18:20:59,839 - WARNING - Not enough valid data points to compute metrics for grasses in country American Samoa. Setting values to NaN.
+2024-10-04 18:20:59,839 - WARNING - Not enough valid data points to compute combined metrics for country American Samoa. Setting values to NaN.
+2024-10-04 18:20:59,841 - WARNING - Not enough valid data points to compute metrics for soy in country Angola. Setting values to NaN.
+2024-10-04 18:20:59,841 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Angola. Setting values to NaN.
+2024-10-04 18:20:59,842 - WARNING - Not enough valid data points to compute metrics for corn in country Antigua and Barbuda. Setting values to NaN.
+2024-10-04 18:20:59,843 - WARNING - Not enough valid data points to compute metrics for rice in country Antigua and Barbuda. Setting values to NaN.
+2024-10-04 18:20:59,843 - WARNING - Not enough valid data points to compute metrics for soy in country Antigua and Barbuda. Setting values to NaN.
+2024-10-04 18:20:59,843 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Antigua and Barbuda. Setting values to NaN.
+2024-10-04 18:20:59,843 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Antigua and Barbuda. Setting values to NaN.
+2024-10-04 18:20:59,843 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Antigua and Barbuda. Setting values to NaN.
+2024-10-04 18:20:59,843 - WARNING - Not enough valid data points to compute metrics for grasses in country Antigua and Barbuda. Setting values to NaN.
+2024-10-04 18:20:59,844 - WARNING - Not enough valid data points to compute combined metrics for country Antigua and Barbuda. Setting values to NaN.
+2024-10-04 18:20:59,850 - WARNING - Not enough valid data points to compute metrics for corn in country Aruba. Setting values to NaN.
+2024-10-04 18:20:59,850 - WARNING - Not enough valid data points to compute metrics for rice in country Aruba. Setting values to NaN.
+2024-10-04 18:20:59,851 - WARNING - Not enough valid data points to compute metrics for soy in country Aruba. Setting values to NaN.
+2024-10-04 18:20:59,851 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Aruba. Setting values to NaN.
+2024-10-04 18:20:59,851 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Aruba. Setting values to NaN.
+2024-10-04 18:20:59,851 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Aruba. Setting values to NaN.
+2024-10-04 18:20:59,851 - WARNING - Not enough valid data points to compute metrics for grasses in country Aruba. Setting values to NaN.
+2024-10-04 18:20:59,851 - WARNING - Not enough valid data points to compute combined metrics for country Aruba. Setting values to NaN.
+2024-10-04 18:20:59,855 - WARNING - Not enough valid data points to compute metrics for rice in country Austria. Setting values to NaN.
+2024-10-04 18:20:59,861 - WARNING - Not enough valid data points to compute metrics for corn in country Bahamas. Setting values to NaN.
+2024-10-04 18:20:59,861 - WARNING - Not enough valid data points to compute metrics for rice in country Bahamas. Setting values to NaN.
+2024-10-04 18:20:59,861 - WARNING - Not enough valid data points to compute metrics for soy in country Bahamas. Setting values to NaN.
+2024-10-04 18:20:59,862 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Bahamas. Setting values to NaN.
+2024-10-04 18:20:59,862 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Bahamas. Setting values to NaN.
+2024-10-04 18:20:59,862 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Bahamas. Setting values to NaN.
+2024-10-04 18:20:59,862 - WARNING - Not enough valid data points to compute metrics for grasses in country Bahamas. Setting values to NaN.
+2024-10-04 18:20:59,862 - WARNING - Not enough valid data points to compute combined metrics for country Bahamas. Setting values to NaN.
+2024-10-04 18:20:59,863 - WARNING - Not enough valid data points to compute metrics for rice in country Bahrain. Setting values to NaN.
+2024-10-04 18:20:59,863 - WARNING - Not enough valid data points to compute metrics for soy in country Bahrain. Setting values to NaN.
+2024-10-04 18:20:59,863 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Bahrain. Setting values to NaN.
+2024-10-04 18:20:59,864 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Bahrain. Setting values to NaN.
+2024-10-04 18:20:59,864 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Bahrain. Setting values to NaN.
+2024-10-04 18:20:59,868 - WARNING - Not enough valid data points to compute metrics for corn in country Barbados. Setting values to NaN.
+2024-10-04 18:20:59,869 - WARNING - Not enough valid data points to compute metrics for rice in country Barbados. Setting values to NaN.
+2024-10-04 18:20:59,869 - WARNING - Not enough valid data points to compute metrics for soy in country Barbados. Setting values to NaN.
+2024-10-04 18:20:59,869 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Barbados. Setting values to NaN.
+2024-10-04 18:20:59,869 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Barbados. Setting values to NaN.
+2024-10-04 18:20:59,869 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Barbados. Setting values to NaN.
+2024-10-04 18:20:59,870 - WARNING - Not enough valid data points to compute metrics for grasses in country Barbados. Setting values to NaN.
+2024-10-04 18:20:59,870 - WARNING - Not enough valid data points to compute combined metrics for country Barbados. Setting values to NaN.
+2024-10-04 18:20:59,871 - WARNING - Not enough valid data points to compute metrics for rice in country Belarus. Setting values to NaN.
+2024-10-04 18:20:59,874 - WARNING - Not enough valid data points to compute metrics for rice in country Belgium. Setting values to NaN.
+2024-10-04 18:20:59,874 - WARNING - Not enough valid data points to compute metrics for soy in country Belgium. Setting values to NaN.
+2024-10-04 18:20:59,874 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Belgium. Setting values to NaN.
+2024-10-04 18:20:59,880 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Benin. Setting values to NaN.
+2024-10-04 18:20:59,881 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Benin. Setting values to NaN.
+2024-10-04 18:20:59,882 - WARNING - Not enough valid data points to compute metrics for corn in country Bermuda. Setting values to NaN.
+2024-10-04 18:20:59,882 - WARNING - Not enough valid data points to compute metrics for rice in country Bermuda. Setting values to NaN.
+2024-10-04 18:20:59,883 - WARNING - Not enough valid data points to compute metrics for soy in country Bermuda. Setting values to NaN.
+2024-10-04 18:20:59,883 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Bermuda. Setting values to NaN.
+2024-10-04 18:20:59,883 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Bermuda. Setting values to NaN.
+2024-10-04 18:20:59,883 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Bermuda. Setting values to NaN.
+2024-10-04 18:20:59,883 - WARNING - Not enough valid data points to compute metrics for grasses in country Bermuda. Setting values to NaN.
+2024-10-04 18:20:59,883 - WARNING - Not enough valid data points to compute combined metrics for country Bermuda. Setting values to NaN.
+2024-10-04 18:20:59,891 - WARNING - Not enough valid data points to compute metrics for corn in country Bonaire, Saint Eustatius and Saba. Setting values to NaN.
+2024-10-04 18:20:59,891 - WARNING - Not enough valid data points to compute metrics for rice in country Bonaire, Saint Eustatius and Saba. Setting values to NaN.
+2024-10-04 18:20:59,891 - WARNING - Not enough valid data points to compute metrics for soy in country Bonaire, Saint Eustatius and Saba. Setting values to NaN.
+2024-10-04 18:20:59,891 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Bonaire, Saint Eustatius and Saba. Setting values to NaN.
+2024-10-04 18:20:59,892 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Bonaire, Saint Eustatius and Saba. Setting values to NaN.
+2024-10-04 18:20:59,892 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Bonaire, Saint Eustatius and Saba. Setting values to NaN.
+2024-10-04 18:20:59,892 - WARNING - Not enough valid data points to compute metrics for grasses in country Bonaire, Saint Eustatius and Saba. Setting values to NaN.
+2024-10-04 18:20:59,892 - WARNING - Not enough valid data points to compute combined metrics for country Bonaire, Saint Eustatius and Saba. Setting values to NaN.
+2024-10-04 18:20:59,893 - WARNING - Not enough valid data points to compute metrics for rice in country Bosnia and Herzegovina. Setting values to NaN.
+2024-10-04 18:20:59,899 - WARNING - Not enough valid data points to compute metrics for corn in country Bouvet Island. Setting values to NaN.
+2024-10-04 18:20:59,899 - WARNING - Not enough valid data points to compute metrics for rice in country Bouvet Island. Setting values to NaN.
+2024-10-04 18:20:59,899 - WARNING - Not enough valid data points to compute metrics for soy in country Bouvet Island. Setting values to NaN.
+2024-10-04 18:20:59,899 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Bouvet Island. Setting values to NaN.
+2024-10-04 18:20:59,900 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Bouvet Island. Setting values to NaN.
+2024-10-04 18:20:59,900 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Bouvet Island. Setting values to NaN.
+2024-10-04 18:20:59,900 - WARNING - Not enough valid data points to compute metrics for grasses in country Bouvet Island. Setting values to NaN.
+2024-10-04 18:20:59,900 - WARNING - Not enough valid data points to compute combined metrics for country Bouvet Island. Setting values to NaN.
+2024-10-04 18:20:59,905 - WARNING - Not enough valid data points to compute metrics for corn in country British Indian Ocean Territory. Setting values to NaN.
+2024-10-04 18:20:59,906 - WARNING - Not enough valid data points to compute metrics for rice in country British Indian Ocean Territory. Setting values to NaN.
+2024-10-04 18:20:59,906 - WARNING - Not enough valid data points to compute metrics for soy in country British Indian Ocean Territory. Setting values to NaN.
+2024-10-04 18:20:59,906 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country British Indian Ocean Territory. Setting values to NaN.
+2024-10-04 18:20:59,907 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country British Indian Ocean Territory. Setting values to NaN.
+2024-10-04 18:20:59,907 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country British Indian Ocean Territory. Setting values to NaN.
+2024-10-04 18:20:59,907 - WARNING - Not enough valid data points to compute metrics for grasses in country British Indian Ocean Territory. Setting values to NaN.
+2024-10-04 18:20:59,907 - WARNING - Not enough valid data points to compute combined metrics for country British Indian Ocean Territory. Setting values to NaN.
+2024-10-04 18:20:59,908 - WARNING - Not enough valid data points to compute metrics for corn in country British Virgin Islands. Setting values to NaN.
+2024-10-04 18:20:59,908 - WARNING - Not enough valid data points to compute metrics for rice in country British Virgin Islands. Setting values to NaN.
+2024-10-04 18:20:59,908 - WARNING - Not enough valid data points to compute metrics for soy in country British Virgin Islands. Setting values to NaN.
+2024-10-04 18:20:59,908 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country British Virgin Islands. Setting values to NaN.
+2024-10-04 18:20:59,909 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country British Virgin Islands. Setting values to NaN.
+2024-10-04 18:20:59,909 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country British Virgin Islands. Setting values to NaN.
+2024-10-04 18:20:59,909 - WARNING - Not enough valid data points to compute metrics for grasses in country British Virgin Islands. Setting values to NaN.
+2024-10-04 18:20:59,909 - WARNING - Not enough valid data points to compute combined metrics for country British Virgin Islands. Setting values to NaN.
+2024-10-04 18:20:59,909 - WARNING - Not enough valid data points to compute metrics for corn in country Brunei. Setting values to NaN.
+2024-10-04 18:20:59,909 - WARNING - Not enough valid data points to compute metrics for rice in country Brunei. Setting values to NaN.
+2024-10-04 18:20:59,910 - WARNING - Not enough valid data points to compute metrics for soy in country Brunei. Setting values to NaN.
+2024-10-04 18:20:59,910 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Brunei. Setting values to NaN.
+2024-10-04 18:20:59,910 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Brunei. Setting values to NaN.
+2024-10-04 18:20:59,910 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Brunei. Setting values to NaN.
+2024-10-04 18:20:59,911 - WARNING - Not enough valid data points to compute metrics for grasses in country Brunei. Setting values to NaN.
+2024-10-04 18:20:59,911 - WARNING - Not enough valid data points to compute combined metrics for country Brunei. Setting values to NaN.
+2024-10-04 18:20:59,916 - WARNING - Not enough valid data points to compute metrics for soy in country Burkina Faso. Setting values to NaN.
+2024-10-04 18:20:59,916 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Burkina Faso. Setting values to NaN.
+2024-10-04 18:20:59,920 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Burundi. Setting values to NaN.
+2024-10-04 18:20:59,920 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Burundi. Setting values to NaN.
+2024-10-04 18:20:59,924 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Cambodia. Setting values to NaN.
+2024-10-04 18:20:59,924 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Cambodia. Setting values to NaN.
+2024-10-04 18:20:59,932 - WARNING - Not enough valid data points to compute metrics for corn in country Cape Verde. Setting values to NaN.
+2024-10-04 18:20:59,932 - WARNING - Not enough valid data points to compute metrics for rice in country Cape Verde. Setting values to NaN.
+2024-10-04 18:20:59,932 - WARNING - Not enough valid data points to compute metrics for soy in country Cape Verde. Setting values to NaN.
+2024-10-04 18:20:59,932 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Cape Verde. Setting values to NaN.
+2024-10-04 18:20:59,932 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Cape Verde. Setting values to NaN.
+2024-10-04 18:20:59,932 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Cape Verde. Setting values to NaN.
+2024-10-04 18:20:59,933 - WARNING - Not enough valid data points to compute metrics for grasses in country Cape Verde. Setting values to NaN.
+2024-10-04 18:20:59,933 - WARNING - Not enough valid data points to compute combined metrics for country Cape Verde. Setting values to NaN.
+2024-10-04 18:20:59,933 - WARNING - Not enough valid data points to compute metrics for corn in country Cayman Islands. Setting values to NaN.
+2024-10-04 18:20:59,933 - WARNING - Not enough valid data points to compute metrics for rice in country Cayman Islands. Setting values to NaN.
+2024-10-04 18:20:59,934 - WARNING - Not enough valid data points to compute metrics for soy in country Cayman Islands. Setting values to NaN.
+2024-10-04 18:20:59,934 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Cayman Islands. Setting values to NaN.
+2024-10-04 18:20:59,934 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Cayman Islands. Setting values to NaN.
+2024-10-04 18:20:59,934 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Cayman Islands. Setting values to NaN.
+2024-10-04 18:20:59,934 - WARNING - Not enough valid data points to compute metrics for grasses in country Cayman Islands. Setting values to NaN.
+2024-10-04 18:20:59,934 - WARNING - Not enough valid data points to compute combined metrics for country Cayman Islands. Setting values to NaN.
+2024-10-04 18:20:59,936 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Central African Republic. Setting values to NaN.
+2024-10-04 18:20:59,936 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Central African Republic. Setting values to NaN.
+2024-10-04 18:20:59,939 - WARNING - Not enough valid data points to compute metrics for soy in country Chad. Setting values to NaN.
+2024-10-04 18:20:59,940 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Chad. Setting values to NaN.
+2024-10-04 18:20:59,948 - WARNING - Not enough valid data points to compute metrics for corn in country Christmas Island. Setting values to NaN.
+2024-10-04 18:20:59,948 - WARNING - Not enough valid data points to compute metrics for rice in country Christmas Island. Setting values to NaN.
+2024-10-04 18:20:59,949 - WARNING - Not enough valid data points to compute metrics for soy in country Christmas Island. Setting values to NaN.
+2024-10-04 18:20:59,949 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Christmas Island. Setting values to NaN.
+2024-10-04 18:20:59,949 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Christmas Island. Setting values to NaN.
+2024-10-04 18:20:59,949 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Christmas Island. Setting values to NaN.
+2024-10-04 18:20:59,949 - WARNING - Not enough valid data points to compute metrics for grasses in country Christmas Island. Setting values to NaN.
+2024-10-04 18:20:59,949 - WARNING - Not enough valid data points to compute combined metrics for country Christmas Island. Setting values to NaN.
+2024-10-04 18:20:59,950 - WARNING - Not enough valid data points to compute metrics for corn in country Cocos Islands. Setting values to NaN.
+2024-10-04 18:20:59,950 - WARNING - Not enough valid data points to compute metrics for rice in country Cocos Islands. Setting values to NaN.
+2024-10-04 18:20:59,950 - WARNING - Not enough valid data points to compute metrics for soy in country Cocos Islands. Setting values to NaN.
+2024-10-04 18:20:59,950 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Cocos Islands. Setting values to NaN.
+2024-10-04 18:20:59,950 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Cocos Islands. Setting values to NaN.
+2024-10-04 18:20:59,950 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Cocos Islands. Setting values to NaN.
+2024-10-04 18:20:59,951 - WARNING - Not enough valid data points to compute metrics for grasses in country Cocos Islands. Setting values to NaN.
+2024-10-04 18:20:59,951 - WARNING - Not enough valid data points to compute combined metrics for country Cocos Islands. Setting values to NaN.
+2024-10-04 18:20:59,955 - WARNING - Not enough valid data points to compute metrics for corn in country Comoros. Setting values to NaN.
+2024-10-04 18:20:59,956 - WARNING - Not enough valid data points to compute metrics for rice in country Comoros. Setting values to NaN.
+2024-10-04 18:20:59,956 - WARNING - Not enough valid data points to compute metrics for soy in country Comoros. Setting values to NaN.
+2024-10-04 18:20:59,956 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Comoros. Setting values to NaN.
+2024-10-04 18:20:59,957 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Comoros. Setting values to NaN.
+2024-10-04 18:20:59,957 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Comoros. Setting values to NaN.
+2024-10-04 18:20:59,957 - WARNING - Not enough valid data points to compute metrics for grasses in country Comoros. Setting values to NaN.
+2024-10-04 18:20:59,957 - WARNING - Not enough valid data points to compute combined metrics for country Comoros. Setting values to NaN.
+2024-10-04 18:20:59,957 - WARNING - Not enough valid data points to compute metrics for corn in country Cook Islands. Setting values to NaN.
+2024-10-04 18:20:59,958 - WARNING - Not enough valid data points to compute metrics for rice in country Cook Islands. Setting values to NaN.
+2024-10-04 18:20:59,958 - WARNING - Not enough valid data points to compute metrics for soy in country Cook Islands. Setting values to NaN.
+2024-10-04 18:20:59,958 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Cook Islands. Setting values to NaN.
+2024-10-04 18:20:59,958 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Cook Islands. Setting values to NaN.
+2024-10-04 18:20:59,958 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Cook Islands. Setting values to NaN.
+2024-10-04 18:20:59,958 - WARNING - Not enough valid data points to compute metrics for grasses in country Cook Islands. Setting values to NaN.
+2024-10-04 18:20:59,959 - WARNING - Not enough valid data points to compute combined metrics for country Cook Islands. Setting values to NaN.
+2024-10-04 18:20:59,960 - WARNING - Not enough valid data points to compute metrics for soy in country Costa Rica. Setting values to NaN.
+2024-10-04 18:20:59,960 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Costa Rica. Setting values to NaN.
+2024-10-04 18:20:59,960 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Costa Rica. Setting values to NaN.
+2024-10-04 18:20:59,960 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Costa Rica. Setting values to NaN.
+2024-10-04 18:20:59,962 - WARNING - Not enough valid data points to compute metrics for rice in country Croatia. Setting values to NaN.
+2024-10-04 18:20:59,965 - WARNING - Not enough valid data points to compute metrics for soy in country Cuba. Setting values to NaN.
+2024-10-04 18:20:59,965 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Cuba. Setting values to NaN.
+2024-10-04 18:20:59,966 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Cuba. Setting values to NaN.
+2024-10-04 18:20:59,966 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Cuba. Setting values to NaN.
+2024-10-04 18:20:59,967 - WARNING - Not enough valid data points to compute metrics for rice in country Cyprus. Setting values to NaN.
+2024-10-04 18:20:59,967 - WARNING - Not enough valid data points to compute metrics for soy in country Cyprus. Setting values to NaN.
+2024-10-04 18:20:59,968 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Cyprus. Setting values to NaN.
+2024-10-04 18:20:59,970 - WARNING - Not enough valid data points to compute metrics for rice in country Czech Republic. Setting values to NaN.
+2024-10-04 18:20:59,970 - WARNING - Not enough valid data points to compute metrics for soy in country Czech Republic. Setting values to NaN.
+2024-10-04 18:20:59,970 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Czech Republic. Setting values to NaN.
+2024-10-04 18:20:59,974 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Democratic Republic of the Congo. Setting values to NaN.
+2024-10-04 18:20:59,974 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Democratic Republic of the Congo. Setting values to NaN.
+2024-10-04 18:20:59,976 - WARNING - Not enough valid data points to compute metrics for rice in country Denmark. Setting values to NaN.
+2024-10-04 18:20:59,976 - WARNING - Not enough valid data points to compute metrics for soy in country Denmark. Setting values to NaN.
+2024-10-04 18:20:59,976 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Denmark. Setting values to NaN.
+2024-10-04 18:20:59,981 - WARNING - Not enough valid data points to compute metrics for corn in country Dominica. Setting values to NaN.
+2024-10-04 18:20:59,981 - WARNING - Not enough valid data points to compute metrics for rice in country Dominica. Setting values to NaN.
+2024-10-04 18:20:59,981 - WARNING - Not enough valid data points to compute metrics for soy in country Dominica. Setting values to NaN.
+2024-10-04 18:20:59,981 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Dominica. Setting values to NaN.
+2024-10-04 18:20:59,982 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Dominica. Setting values to NaN.
+2024-10-04 18:20:59,982 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Dominica. Setting values to NaN.
+2024-10-04 18:20:59,982 - WARNING - Not enough valid data points to compute metrics for grasses in country Dominica. Setting values to NaN.
+2024-10-04 18:20:59,982 - WARNING - Not enough valid data points to compute combined metrics for country Dominica. Setting values to NaN.
+2024-10-04 18:20:59,983 - WARNING - Not enough valid data points to compute metrics for soy in country Dominican Republic. Setting values to NaN.
+2024-10-04 18:20:59,983 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Dominican Republic. Setting values to NaN.
+2024-10-04 18:20:59,984 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Dominican Republic. Setting values to NaN.
+2024-10-04 18:20:59,984 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Dominican Republic. Setting values to NaN.
+2024-10-04 18:20:59,986 - WARNING - Not enough valid data points to compute metrics for soy in country Ecuador. Setting values to NaN.
+2024-10-04 18:20:59,986 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Ecuador. Setting values to NaN.
+2024-10-04 18:20:59,993 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country El Salvador. Setting values to NaN.
+2024-10-04 18:20:59,994 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country El Salvador. Setting values to NaN.
+2024-10-04 18:20:59,995 - WARNING - Not enough valid data points to compute metrics for rice in country Equatorial Guinea. Setting values to NaN.
+2024-10-04 18:20:59,996 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Equatorial Guinea. Setting values to NaN.
+2024-10-04 18:20:59,996 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Equatorial Guinea. Setting values to NaN.
+2024-10-04 18:20:59,998 - WARNING - Not enough valid data points to compute metrics for soy in country Eritrea. Setting values to NaN.
+2024-10-04 18:20:59,998 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Eritrea. Setting values to NaN.
+2024-10-04 18:21:00,000 - WARNING - Not enough valid data points to compute metrics for corn in country Estonia. Setting values to NaN.
+2024-10-04 18:21:00,000 - WARNING - Not enough valid data points to compute metrics for rice in country Estonia. Setting values to NaN.
+2024-10-04 18:21:00,001 - WARNING - Not enough valid data points to compute metrics for soy in country Estonia. Setting values to NaN.
+2024-10-04 18:21:00,001 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Estonia. Setting values to NaN.
+2024-10-04 18:21:00,006 - WARNING - Not enough valid data points to compute metrics for corn in country Falkland Islands. Setting values to NaN.
+2024-10-04 18:21:00,007 - WARNING - Not enough valid data points to compute metrics for rice in country Falkland Islands. Setting values to NaN.
+2024-10-04 18:21:00,007 - WARNING - Not enough valid data points to compute metrics for soy in country Falkland Islands. Setting values to NaN.
+2024-10-04 18:21:00,007 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Falkland Islands. Setting values to NaN.
+2024-10-04 18:21:00,007 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Falkland Islands. Setting values to NaN.
+2024-10-04 18:21:00,007 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Falkland Islands. Setting values to NaN.
+2024-10-04 18:21:00,008 - WARNING - Not enough valid data points to compute metrics for grasses in country Falkland Islands. Setting values to NaN.
+2024-10-04 18:21:00,008 - WARNING - Not enough valid data points to compute combined metrics for country Falkland Islands. Setting values to NaN.
+2024-10-04 18:21:00,008 - WARNING - Not enough valid data points to compute metrics for corn in country Faroe Islands. Setting values to NaN.
+2024-10-04 18:21:00,008 - WARNING - Not enough valid data points to compute metrics for rice in country Faroe Islands. Setting values to NaN.
+2024-10-04 18:21:00,009 - WARNING - Not enough valid data points to compute metrics for soy in country Faroe Islands. Setting values to NaN.
+2024-10-04 18:21:00,009 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Faroe Islands. Setting values to NaN.
+2024-10-04 18:21:00,009 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Faroe Islands. Setting values to NaN.
+2024-10-04 18:21:00,009 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Faroe Islands. Setting values to NaN.
+2024-10-04 18:21:00,009 - WARNING - Not enough valid data points to compute metrics for grasses in country Faroe Islands. Setting values to NaN.
+2024-10-04 18:21:00,009 - WARNING - Not enough valid data points to compute combined metrics for country Faroe Islands. Setting values to NaN.
+2024-10-04 18:21:00,009 - WARNING - Not enough valid data points to compute metrics for corn in country Fiji. Setting values to NaN.
+2024-10-04 18:21:00,010 - WARNING - Not enough valid data points to compute metrics for rice in country Fiji. Setting values to NaN.
+2024-10-04 18:21:00,010 - WARNING - Not enough valid data points to compute metrics for soy in country Fiji. Setting values to NaN.
+2024-10-04 18:21:00,010 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Fiji. Setting values to NaN.
+2024-10-04 18:21:00,010 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Fiji. Setting values to NaN.
+2024-10-04 18:21:00,010 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Fiji. Setting values to NaN.
+2024-10-04 18:21:00,010 - WARNING - Not enough valid data points to compute metrics for grasses in country Fiji. Setting values to NaN.
+2024-10-04 18:21:00,011 - WARNING - Not enough valid data points to compute combined metrics for country Fiji. Setting values to NaN.
+2024-10-04 18:21:00,018 - WARNING - Not enough valid data points to compute metrics for soy in country French Guiana. Setting values to NaN.
+2024-10-04 18:21:00,018 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country French Guiana. Setting values to NaN.
+2024-10-04 18:21:00,019 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country French Guiana. Setting values to NaN.
+2024-10-04 18:21:00,019 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country French Guiana. Setting values to NaN.
+2024-10-04 18:21:00,020 - WARNING - Not enough valid data points to compute metrics for corn in country French Polynesia. Setting values to NaN.
+2024-10-04 18:21:00,020 - WARNING - Not enough valid data points to compute metrics for rice in country French Polynesia. Setting values to NaN.
+2024-10-04 18:21:00,021 - WARNING - Not enough valid data points to compute metrics for soy in country French Polynesia. Setting values to NaN.
+2024-10-04 18:21:00,022 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country French Polynesia. Setting values to NaN.
+2024-10-04 18:21:00,022 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country French Polynesia. Setting values to NaN.
+2024-10-04 18:21:00,022 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country French Polynesia. Setting values to NaN.
+2024-10-04 18:21:00,022 - WARNING - Not enough valid data points to compute metrics for grasses in country French Polynesia. Setting values to NaN.
+2024-10-04 18:21:00,022 - WARNING - Not enough valid data points to compute combined metrics for country French Polynesia. Setting values to NaN.
+2024-10-04 18:21:00,023 - WARNING - Not enough valid data points to compute metrics for corn in country French Southern Territories. Setting values to NaN.
+2024-10-04 18:21:00,023 - WARNING - Not enough valid data points to compute metrics for rice in country French Southern Territories. Setting values to NaN.
+2024-10-04 18:21:00,023 - WARNING - Not enough valid data points to compute metrics for soy in country French Southern Territories. Setting values to NaN.
+2024-10-04 18:21:00,024 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country French Southern Territories. Setting values to NaN.
+2024-10-04 18:21:00,024 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country French Southern Territories. Setting values to NaN.
+2024-10-04 18:21:00,024 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country French Southern Territories. Setting values to NaN.
+2024-10-04 18:21:00,024 - WARNING - Not enough valid data points to compute metrics for grasses in country French Southern Territories. Setting values to NaN.
+2024-10-04 18:21:00,024 - WARNING - Not enough valid data points to compute combined metrics for country French Southern Territories. Setting values to NaN.
+2024-10-04 18:21:00,026 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Gabon. Setting values to NaN.
+2024-10-04 18:21:00,026 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Gabon. Setting values to NaN.
+2024-10-04 18:21:00,028 - WARNING - Not enough valid data points to compute metrics for soy in country Gambia. Setting values to NaN.
+2024-10-04 18:21:00,028 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Gambia. Setting values to NaN.
+2024-10-04 18:21:00,029 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Gambia. Setting values to NaN.
+2024-10-04 18:21:00,029 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Gambia. Setting values to NaN.
+2024-10-04 18:21:00,034 - WARNING - Not enough valid data points to compute metrics for rice in country Germany. Setting values to NaN.
+2024-10-04 18:21:00,037 - WARNING - Not enough valid data points to compute metrics for soy in country Ghana. Setting values to NaN.
+2024-10-04 18:21:00,037 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Ghana. Setting values to NaN.
+2024-10-04 18:21:00,038 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Ghana. Setting values to NaN.
+2024-10-04 18:21:00,038 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Ghana. Setting values to NaN.
+2024-10-04 18:21:00,041 - WARNING - Not enough valid data points to compute metrics for soy in country Greece. Setting values to NaN.
+2024-10-04 18:21:00,041 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Greece. Setting values to NaN.
+2024-10-04 18:21:00,043 - WARNING - Not enough valid data points to compute metrics for corn in country Grenada. Setting values to NaN.
+2024-10-04 18:21:00,043 - WARNING - Not enough valid data points to compute metrics for rice in country Grenada. Setting values to NaN.
+2024-10-04 18:21:00,043 - WARNING - Not enough valid data points to compute metrics for soy in country Grenada. Setting values to NaN.
+2024-10-04 18:21:00,043 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Grenada. Setting values to NaN.
+2024-10-04 18:21:00,043 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Grenada. Setting values to NaN.
+2024-10-04 18:21:00,044 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Grenada. Setting values to NaN.
+2024-10-04 18:21:00,044 - WARNING - Not enough valid data points to compute metrics for grasses in country Grenada. Setting values to NaN.
+2024-10-04 18:21:00,044 - WARNING - Not enough valid data points to compute combined metrics for country Grenada. Setting values to NaN.
+2024-10-04 18:21:00,044 - WARNING - Not enough valid data points to compute metrics for corn in country Guadeloupe. Setting values to NaN.
+2024-10-04 18:21:00,044 - WARNING - Not enough valid data points to compute metrics for rice in country Guadeloupe. Setting values to NaN.
+2024-10-04 18:21:00,045 - WARNING - Not enough valid data points to compute metrics for soy in country Guadeloupe. Setting values to NaN.
+2024-10-04 18:21:00,045 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Guadeloupe. Setting values to NaN.
+2024-10-04 18:21:00,045 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Guadeloupe. Setting values to NaN.
+2024-10-04 18:21:00,045 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Guadeloupe. Setting values to NaN.
+2024-10-04 18:21:00,045 - WARNING - Not enough valid data points to compute metrics for grasses in country Guadeloupe. Setting values to NaN.
+2024-10-04 18:21:00,045 - WARNING - Not enough valid data points to compute combined metrics for country Guadeloupe. Setting values to NaN.
+2024-10-04 18:21:00,046 - WARNING - Not enough valid data points to compute metrics for corn in country Guam. Setting values to NaN.
+2024-10-04 18:21:00,046 - WARNING - Not enough valid data points to compute metrics for rice in country Guam. Setting values to NaN.
+2024-10-04 18:21:00,046 - WARNING - Not enough valid data points to compute metrics for soy in country Guam. Setting values to NaN.
+2024-10-04 18:21:00,046 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Guam. Setting values to NaN.
+2024-10-04 18:21:00,046 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Guam. Setting values to NaN.
+2024-10-04 18:21:00,046 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Guam. Setting values to NaN.
+2024-10-04 18:21:00,047 - WARNING - Not enough valid data points to compute metrics for grasses in country Guam. Setting values to NaN.
+2024-10-04 18:21:00,047 - WARNING - Not enough valid data points to compute combined metrics for country Guam. Setting values to NaN.
+2024-10-04 18:21:00,051 - WARNING - Not enough valid data points to compute metrics for rice in country Guernsey. Setting values to NaN.
+2024-10-04 18:21:00,051 - WARNING - Not enough valid data points to compute metrics for soy in country Guernsey. Setting values to NaN.
+2024-10-04 18:21:00,051 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Guernsey. Setting values to NaN.
+2024-10-04 18:21:00,054 - WARNING - Not enough valid data points to compute metrics for soy in country Guinea. Setting values to NaN.
+2024-10-04 18:21:00,054 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Guinea. Setting values to NaN.
+2024-10-04 18:21:00,055 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Guinea. Setting values to NaN.
+2024-10-04 18:21:00,055 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Guinea. Setting values to NaN.
+2024-10-04 18:21:00,058 - WARNING - Not enough valid data points to compute metrics for soy in country Guinea-Bissau. Setting values to NaN.
+2024-10-04 18:21:00,058 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Guinea-Bissau. Setting values to NaN.
+2024-10-04 18:21:00,058 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Guinea-Bissau. Setting values to NaN.
+2024-10-04 18:21:00,058 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Guinea-Bissau. Setting values to NaN.
+2024-10-04 18:21:00,060 - WARNING - Not enough valid data points to compute metrics for soy in country Guyana. Setting values to NaN.
+2024-10-04 18:21:00,060 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Guyana. Setting values to NaN.
+2024-10-04 18:21:00,060 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Guyana. Setting values to NaN.
+2024-10-04 18:21:00,061 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Guyana. Setting values to NaN.
+2024-10-04 18:21:00,062 - WARNING - Not enough valid data points to compute metrics for soy in country Haiti. Setting values to NaN.
+2024-10-04 18:21:00,062 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Haiti. Setting values to NaN.
+2024-10-04 18:21:00,063 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Haiti. Setting values to NaN.
+2024-10-04 18:21:00,063 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Haiti. Setting values to NaN.
+2024-10-04 18:21:00,064 - WARNING - Not enough valid data points to compute metrics for corn in country Heard Island and McDonald Islands. Setting values to NaN.
+2024-10-04 18:21:00,065 - WARNING - Not enough valid data points to compute metrics for rice in country Heard Island and McDonald Islands. Setting values to NaN.
+2024-10-04 18:21:00,065 - WARNING - Not enough valid data points to compute metrics for soy in country Heard Island and McDonald Islands. Setting values to NaN.
+2024-10-04 18:21:00,065 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Heard Island and McDonald Islands. Setting values to NaN.
+2024-10-04 18:21:00,065 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Heard Island and McDonald Islands. Setting values to NaN.
+2024-10-04 18:21:00,065 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Heard Island and McDonald Islands. Setting values to NaN.
+2024-10-04 18:21:00,066 - WARNING - Not enough valid data points to compute metrics for grasses in country Heard Island and McDonald Islands. Setting values to NaN.
+2024-10-04 18:21:00,066 - WARNING - Not enough valid data points to compute combined metrics for country Heard Island and McDonald Islands. Setting values to NaN.
+2024-10-04 18:21:00,068 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Honduras. Setting values to NaN.
+2024-10-04 18:21:00,068 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Honduras. Setting values to NaN.
+2024-10-04 18:21:00,070 - WARNING - Not enough valid data points to compute metrics for rice in country Hungary. Setting values to NaN.
+2024-10-04 18:21:00,073 - WARNING - Not enough valid data points to compute metrics for corn in country Iceland. Setting values to NaN.
+2024-10-04 18:21:00,074 - WARNING - Not enough valid data points to compute metrics for soy in country Iceland. Setting values to NaN.
+2024-10-04 18:21:00,074 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Iceland. Setting values to NaN.
+2024-10-04 18:21:00,081 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Indonesia. Setting values to NaN.
+2024-10-04 18:21:00,081 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Indonesia. Setting values to NaN.
+2024-10-04 18:21:00,090 - WARNING - Not enough valid data points to compute metrics for corn in country Ireland. Setting values to NaN.
+2024-10-04 18:21:00,090 - WARNING - Not enough valid data points to compute metrics for rice in country Ireland. Setting values to NaN.
+2024-10-04 18:21:00,090 - WARNING - Not enough valid data points to compute metrics for soy in country Ireland. Setting values to NaN.
+2024-10-04 18:21:00,090 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Ireland. Setting values to NaN.
+2024-10-04 18:21:00,093 - WARNING - Not enough valid data points to compute metrics for rice in country Isle of Man. Setting values to NaN.
+2024-10-04 18:21:00,093 - WARNING - Not enough valid data points to compute metrics for soy in country Isle of Man. Setting values to NaN.
+2024-10-04 18:21:00,093 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Isle of Man. Setting values to NaN.
+2024-10-04 18:21:00,095 - WARNING - Not enough valid data points to compute metrics for rice in country Israel. Setting values to NaN.
+2024-10-04 18:21:00,095 - WARNING - Not enough valid data points to compute metrics for soy in country Israel. Setting values to NaN.
+2024-10-04 18:21:00,095 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Israel. Setting values to NaN.
+2024-10-04 18:21:00,101 - WARNING - Not enough valid data points to compute metrics for rice in country Jamaica. Setting values to NaN.
+2024-10-04 18:21:00,101 - WARNING - Not enough valid data points to compute metrics for soy in country Jamaica. Setting values to NaN.
+2024-10-04 18:21:00,102 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Jamaica. Setting values to NaN.
+2024-10-04 18:21:00,102 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Jamaica. Setting values to NaN.
+2024-10-04 18:21:00,102 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Jamaica. Setting values to NaN.
+2024-10-04 18:21:00,108 - WARNING - Not enough valid data points to compute metrics for rice in country Jersey. Setting values to NaN.
+2024-10-04 18:21:00,108 - WARNING - Not enough valid data points to compute metrics for soy in country Jersey. Setting values to NaN.
+2024-10-04 18:21:00,108 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Jersey. Setting values to NaN.
+2024-10-04 18:21:00,111 - WARNING - Not enough valid data points to compute metrics for rice in country Jordan. Setting values to NaN.
+2024-10-04 18:21:00,111 - WARNING - Not enough valid data points to compute metrics for soy in country Jordan. Setting values to NaN.
+2024-10-04 18:21:00,111 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Jordan. Setting values to NaN.
+2024-10-04 18:21:00,119 - WARNING - Not enough valid data points to compute metrics for corn in country Kiribati. Setting values to NaN.
+2024-10-04 18:21:00,120 - WARNING - Not enough valid data points to compute metrics for rice in country Kiribati. Setting values to NaN.
+2024-10-04 18:21:00,120 - WARNING - Not enough valid data points to compute metrics for soy in country Kiribati. Setting values to NaN.
+2024-10-04 18:21:00,120 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Kiribati. Setting values to NaN.
+2024-10-04 18:21:00,120 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Kiribati. Setting values to NaN.
+2024-10-04 18:21:00,120 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Kiribati. Setting values to NaN.
+2024-10-04 18:21:00,121 - WARNING - Not enough valid data points to compute metrics for grasses in country Kiribati. Setting values to NaN.
+2024-10-04 18:21:00,121 - WARNING - Not enough valid data points to compute combined metrics for country Kiribati. Setting values to NaN.
+2024-10-04 18:21:00,123 - WARNING - Not enough valid data points to compute metrics for soy in country Kuwait. Setting values to NaN.
+2024-10-04 18:21:00,123 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Kuwait. Setting values to NaN.
+2024-10-04 18:21:00,131 - WARNING - Not enough valid data points to compute metrics for rice in country Latvia. Setting values to NaN.
+2024-10-04 18:21:00,132 - WARNING - Not enough valid data points to compute metrics for soy in country Latvia. Setting values to NaN.
+2024-10-04 18:21:00,132 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Latvia. Setting values to NaN.
+2024-10-04 18:21:00,134 - WARNING - Not enough valid data points to compute metrics for rice in country Lebanon. Setting values to NaN.
+2024-10-04 18:21:00,134 - WARNING - Not enough valid data points to compute metrics for soy in country Lebanon. Setting values to NaN.
+2024-10-04 18:21:00,134 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Lebanon. Setting values to NaN.
+2024-10-04 18:21:00,136 - WARNING - Not enough valid data points to compute metrics for rice in country Lesotho. Setting values to NaN.
+2024-10-04 18:21:00,142 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Liberia. Setting values to NaN.
+2024-10-04 18:21:00,142 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Liberia. Setting values to NaN.
+2024-10-04 18:21:00,143 - WARNING - Not enough valid data points to compute metrics for corn in country Libya. Setting values to NaN.
+2024-10-04 18:21:00,143 - WARNING - Not enough valid data points to compute metrics for rice in country Libya. Setting values to NaN.
+2024-10-04 18:21:00,143 - WARNING - Not enough valid data points to compute metrics for soy in country Libya. Setting values to NaN.
+2024-10-04 18:21:00,143 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Libya. Setting values to NaN.
+2024-10-04 18:21:00,146 - WARNING - Not enough valid data points to compute metrics for rice in country Lithuania. Setting values to NaN.
+2024-10-04 18:21:00,146 - WARNING - Not enough valid data points to compute metrics for soy in country Lithuania. Setting values to NaN.
+2024-10-04 18:21:00,146 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Lithuania. Setting values to NaN.
+2024-10-04 18:21:00,148 - WARNING - Not enough valid data points to compute metrics for rice in country Luxembourg. Setting values to NaN.
+2024-10-04 18:21:00,149 - WARNING - Not enough valid data points to compute metrics for soy in country Luxembourg. Setting values to NaN.
+2024-10-04 18:21:00,149 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Luxembourg. Setting values to NaN.
+2024-10-04 18:21:00,152 - WARNING - Not enough valid data points to compute metrics for soy in country Macedonia. Setting values to NaN.
+2024-10-04 18:21:00,152 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Macedonia. Setting values to NaN.
+2024-10-04 18:21:00,155 - WARNING - Not enough valid data points to compute metrics for soy in country Madagascar. Setting values to NaN.
+2024-10-04 18:21:00,155 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Madagascar. Setting values to NaN.
+2024-10-04 18:21:00,156 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Madagascar. Setting values to NaN.
+2024-10-04 18:21:00,156 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Madagascar. Setting values to NaN.
+2024-10-04 18:21:00,158 - WARNING - Not enough valid data points to compute metrics for soy in country Malawi. Setting values to NaN.
+2024-10-04 18:21:00,158 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Malawi. Setting values to NaN.
+2024-10-04 18:21:00,161 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Malaysia. Setting values to NaN.
+2024-10-04 18:21:00,161 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Malaysia. Setting values to NaN.
+2024-10-04 18:21:00,162 - WARNING - Not enough valid data points to compute metrics for corn in country Maldives. Setting values to NaN.
+2024-10-04 18:21:00,163 - WARNING - Not enough valid data points to compute metrics for rice in country Maldives. Setting values to NaN.
+2024-10-04 18:21:00,163 - WARNING - Not enough valid data points to compute metrics for soy in country Maldives. Setting values to NaN.
+2024-10-04 18:21:00,163 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Maldives. Setting values to NaN.
+2024-10-04 18:21:00,163 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Maldives. Setting values to NaN.
+2024-10-04 18:21:00,163 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Maldives. Setting values to NaN.
+2024-10-04 18:21:00,164 - WARNING - Not enough valid data points to compute metrics for grasses in country Maldives. Setting values to NaN.
+2024-10-04 18:21:00,164 - WARNING - Not enough valid data points to compute combined metrics for country Maldives. Setting values to NaN.
+2024-10-04 18:21:00,165 - WARNING - Not enough valid data points to compute metrics for soy in country Mali. Setting values to NaN.
+2024-10-04 18:21:00,165 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Mali. Setting values to NaN.
+2024-10-04 18:21:00,167 - WARNING - Not enough valid data points to compute metrics for corn in country Malta. Setting values to NaN.
+2024-10-04 18:21:00,167 - WARNING - Not enough valid data points to compute metrics for rice in country Malta. Setting values to NaN.
+2024-10-04 18:21:00,168 - WARNING - Not enough valid data points to compute metrics for soy in country Malta. Setting values to NaN.
+2024-10-04 18:21:00,168 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Malta. Setting values to NaN.
+2024-10-04 18:21:00,168 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Malta. Setting values to NaN.
+2024-10-04 18:21:00,168 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Malta. Setting values to NaN.
+2024-10-04 18:21:00,169 - WARNING - Not enough valid data points to compute metrics for grasses in country Malta. Setting values to NaN.
+2024-10-04 18:21:00,169 - WARNING - Not enough valid data points to compute combined metrics for country Malta. Setting values to NaN.
+2024-10-04 18:21:00,169 - WARNING - Not enough valid data points to compute metrics for corn in country Marshall Islands. Setting values to NaN.
+2024-10-04 18:21:00,169 - WARNING - Not enough valid data points to compute metrics for rice in country Marshall Islands. Setting values to NaN.
+2024-10-04 18:21:00,170 - WARNING - Not enough valid data points to compute metrics for soy in country Marshall Islands. Setting values to NaN.
+2024-10-04 18:21:00,170 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Marshall Islands. Setting values to NaN.
+2024-10-04 18:21:00,170 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Marshall Islands. Setting values to NaN.
+2024-10-04 18:21:00,170 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Marshall Islands. Setting values to NaN.
+2024-10-04 18:21:00,170 - WARNING - Not enough valid data points to compute metrics for grasses in country Marshall Islands. Setting values to NaN.
+2024-10-04 18:21:00,171 - WARNING - Not enough valid data points to compute combined metrics for country Marshall Islands. Setting values to NaN.
+2024-10-04 18:21:00,171 - WARNING - Not enough valid data points to compute metrics for corn in country Martinique. Setting values to NaN.
+2024-10-04 18:21:00,171 - WARNING - Not enough valid data points to compute metrics for rice in country Martinique. Setting values to NaN.
+2024-10-04 18:21:00,172 - WARNING - Not enough valid data points to compute metrics for soy in country Martinique. Setting values to NaN.
+2024-10-04 18:21:00,172 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Martinique. Setting values to NaN.
+2024-10-04 18:21:00,172 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Martinique. Setting values to NaN.
+2024-10-04 18:21:00,172 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Martinique. Setting values to NaN.
+2024-10-04 18:21:00,172 - WARNING - Not enough valid data points to compute metrics for grasses in country Martinique. Setting values to NaN.
+2024-10-04 18:21:00,172 - WARNING - Not enough valid data points to compute combined metrics for country Martinique. Setting values to NaN.
+2024-10-04 18:21:00,174 - WARNING - Not enough valid data points to compute metrics for soy in country Mauritania. Setting values to NaN.
+2024-10-04 18:21:00,174 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Mauritania. Setting values to NaN.
+2024-10-04 18:21:00,174 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Mauritania. Setting values to NaN.
+2024-10-04 18:21:00,174 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Mauritania. Setting values to NaN.
+2024-10-04 18:21:00,175 - WARNING - Not enough valid data points to compute metrics for corn in country Mauritius. Setting values to NaN.
+2024-10-04 18:21:00,176 - WARNING - Not enough valid data points to compute metrics for rice in country Mauritius. Setting values to NaN.
+2024-10-04 18:21:00,176 - WARNING - Not enough valid data points to compute metrics for soy in country Mauritius. Setting values to NaN.
+2024-10-04 18:21:00,176 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Mauritius. Setting values to NaN.
+2024-10-04 18:21:00,176 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Mauritius. Setting values to NaN.
+2024-10-04 18:21:00,176 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Mauritius. Setting values to NaN.
+2024-10-04 18:21:00,177 - WARNING - Not enough valid data points to compute metrics for grasses in country Mauritius. Setting values to NaN.
+2024-10-04 18:21:00,177 - WARNING - Not enough valid data points to compute combined metrics for country Mauritius. Setting values to NaN.
+2024-10-04 18:21:00,177 - WARNING - Not enough valid data points to compute metrics for corn in country Mayotte. Setting values to NaN.
+2024-10-04 18:21:00,177 - WARNING - Not enough valid data points to compute metrics for rice in country Mayotte. Setting values to NaN.
+2024-10-04 18:21:00,177 - WARNING - Not enough valid data points to compute metrics for soy in country Mayotte. Setting values to NaN.
+2024-10-04 18:21:00,177 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Mayotte. Setting values to NaN.
+2024-10-04 18:21:00,178 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Mayotte. Setting values to NaN.
+2024-10-04 18:21:00,178 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Mayotte. Setting values to NaN.
+2024-10-04 18:21:00,178 - WARNING - Not enough valid data points to compute metrics for grasses in country Mayotte. Setting values to NaN.
+2024-10-04 18:21:00,178 - WARNING - Not enough valid data points to compute combined metrics for country Mayotte. Setting values to NaN.
+2024-10-04 18:21:00,182 - WARNING - Not enough valid data points to compute metrics for corn in country Micronesia. Setting values to NaN.
+2024-10-04 18:21:00,182 - WARNING - Not enough valid data points to compute metrics for rice in country Micronesia. Setting values to NaN.
+2024-10-04 18:21:00,182 - WARNING - Not enough valid data points to compute metrics for soy in country Micronesia. Setting values to NaN.
+2024-10-04 18:21:00,182 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Micronesia. Setting values to NaN.
+2024-10-04 18:21:00,183 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Micronesia. Setting values to NaN.
+2024-10-04 18:21:00,183 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Micronesia. Setting values to NaN.
+2024-10-04 18:21:00,183 - WARNING - Not enough valid data points to compute metrics for grasses in country Micronesia. Setting values to NaN.
+2024-10-04 18:21:00,183 - WARNING - Not enough valid data points to compute combined metrics for country Micronesia. Setting values to NaN.
+2024-10-04 18:21:00,184 - WARNING - Not enough valid data points to compute metrics for rice in country Moldova. Setting values to NaN.
+2024-10-04 18:21:00,191 - WARNING - Not enough valid data points to compute metrics for rice in country Montenegro. Setting values to NaN.
+2024-10-04 18:21:00,194 - WARNING - Not enough valid data points to compute metrics for corn in country Montserrat. Setting values to NaN.
+2024-10-04 18:21:00,194 - WARNING - Not enough valid data points to compute metrics for rice in country Montserrat. Setting values to NaN.
+2024-10-04 18:21:00,194 - WARNING - Not enough valid data points to compute metrics for soy in country Montserrat. Setting values to NaN.
+2024-10-04 18:21:00,194 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Montserrat. Setting values to NaN.
+2024-10-04 18:21:00,195 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Montserrat. Setting values to NaN.
+2024-10-04 18:21:00,195 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Montserrat. Setting values to NaN.
+2024-10-04 18:21:00,195 - WARNING - Not enough valid data points to compute metrics for grasses in country Montserrat. Setting values to NaN.
+2024-10-04 18:21:00,195 - WARNING - Not enough valid data points to compute combined metrics for country Montserrat. Setting values to NaN.
+2024-10-04 18:21:00,196 - WARNING - Not enough valid data points to compute metrics for soy in country Morocco. Setting values to NaN.
+2024-10-04 18:21:00,196 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Morocco. Setting values to NaN.
+2024-10-04 18:21:00,209 - WARNING - Not enough valid data points to compute metrics for corn in country Nauru. Setting values to NaN.
+2024-10-04 18:21:00,210 - WARNING - Not enough valid data points to compute metrics for rice in country Nauru. Setting values to NaN.
+2024-10-04 18:21:00,210 - WARNING - Not enough valid data points to compute metrics for soy in country Nauru. Setting values to NaN.
+2024-10-04 18:21:00,210 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Nauru. Setting values to NaN.
+2024-10-04 18:21:00,210 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Nauru. Setting values to NaN.
+2024-10-04 18:21:00,210 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Nauru. Setting values to NaN.
+2024-10-04 18:21:00,210 - WARNING - Not enough valid data points to compute metrics for grasses in country Nauru. Setting values to NaN.
+2024-10-04 18:21:00,210 - WARNING - Not enough valid data points to compute combined metrics for country Nauru. Setting values to NaN.
+2024-10-04 18:21:00,215 - WARNING - Not enough valid data points to compute metrics for rice in country Netherlands. Setting values to NaN.
+2024-10-04 18:21:00,215 - WARNING - Not enough valid data points to compute metrics for soy in country Netherlands. Setting values to NaN.
+2024-10-04 18:21:00,215 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Netherlands. Setting values to NaN.
+2024-10-04 18:21:00,217 - WARNING - Not enough valid data points to compute metrics for corn in country New Caledonia. Setting values to NaN.
+2024-10-04 18:21:00,217 - WARNING - Not enough valid data points to compute metrics for rice in country New Caledonia. Setting values to NaN.
+2024-10-04 18:21:00,218 - WARNING - Not enough valid data points to compute metrics for soy in country New Caledonia. Setting values to NaN.
+2024-10-04 18:21:00,218 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country New Caledonia. Setting values to NaN.
+2024-10-04 18:21:00,218 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country New Caledonia. Setting values to NaN.
+2024-10-04 18:21:00,218 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country New Caledonia. Setting values to NaN.
+2024-10-04 18:21:00,218 - WARNING - Not enough valid data points to compute metrics for grasses in country New Caledonia. Setting values to NaN.
+2024-10-04 18:21:00,218 - WARNING - Not enough valid data points to compute combined metrics for country New Caledonia. Setting values to NaN.
+2024-10-04 18:21:00,219 - WARNING - Not enough valid data points to compute metrics for rice in country New Zealand. Setting values to NaN.
+2024-10-04 18:21:00,219 - WARNING - Not enough valid data points to compute metrics for soy in country New Zealand. Setting values to NaN.
+2024-10-04 18:21:00,219 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country New Zealand. Setting values to NaN.
+2024-10-04 18:21:00,223 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Nicaragua. Setting values to NaN.
+2024-10-04 18:21:00,224 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Nicaragua. Setting values to NaN.
+2024-10-04 18:21:00,231 - WARNING - Not enough valid data points to compute metrics for corn in country Niue. Setting values to NaN.
+2024-10-04 18:21:00,231 - WARNING - Not enough valid data points to compute metrics for rice in country Niue. Setting values to NaN.
+2024-10-04 18:21:00,232 - WARNING - Not enough valid data points to compute metrics for soy in country Niue. Setting values to NaN.
+2024-10-04 18:21:00,232 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Niue. Setting values to NaN.
+2024-10-04 18:21:00,232 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Niue. Setting values to NaN.
+2024-10-04 18:21:00,232 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Niue. Setting values to NaN.
+2024-10-04 18:21:00,232 - WARNING - Not enough valid data points to compute metrics for grasses in country Niue. Setting values to NaN.
+2024-10-04 18:21:00,232 - WARNING - Not enough valid data points to compute combined metrics for country Niue. Setting values to NaN.
+2024-10-04 18:21:00,233 - WARNING - Not enough valid data points to compute metrics for corn in country Norfolk Island. Setting values to NaN.
+2024-10-04 18:21:00,233 - WARNING - Not enough valid data points to compute metrics for rice in country Norfolk Island. Setting values to NaN.
+2024-10-04 18:21:00,233 - WARNING - Not enough valid data points to compute metrics for soy in country Norfolk Island. Setting values to NaN.
+2024-10-04 18:21:00,233 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Norfolk Island. Setting values to NaN.
+2024-10-04 18:21:00,234 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Norfolk Island. Setting values to NaN.
+2024-10-04 18:21:00,234 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Norfolk Island. Setting values to NaN.
+2024-10-04 18:21:00,234 - WARNING - Not enough valid data points to compute metrics for grasses in country Norfolk Island. Setting values to NaN.
+2024-10-04 18:21:00,234 - WARNING - Not enough valid data points to compute combined metrics for country Norfolk Island. Setting values to NaN.
+2024-10-04 18:21:00,238 - WARNING - Not enough valid data points to compute metrics for corn in country Northern Mariana Islands. Setting values to NaN.
+2024-10-04 18:21:00,238 - WARNING - Not enough valid data points to compute metrics for rice in country Northern Mariana Islands. Setting values to NaN.
+2024-10-04 18:21:00,239 - WARNING - Not enough valid data points to compute metrics for soy in country Northern Mariana Islands. Setting values to NaN.
+2024-10-04 18:21:00,239 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Northern Mariana Islands. Setting values to NaN.
+2024-10-04 18:21:00,239 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Northern Mariana Islands. Setting values to NaN.
+2024-10-04 18:21:00,239 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Northern Mariana Islands. Setting values to NaN.
+2024-10-04 18:21:00,239 - WARNING - Not enough valid data points to compute metrics for grasses in country Northern Mariana Islands. Setting values to NaN.
+2024-10-04 18:21:00,239 - WARNING - Not enough valid data points to compute combined metrics for country Northern Mariana Islands. Setting values to NaN.
+2024-10-04 18:21:00,240 - WARNING - Not enough valid data points to compute metrics for corn in country Norway. Setting values to NaN.
+2024-10-04 18:21:00,243 - WARNING - Not enough valid data points to compute metrics for rice in country Oman. Setting values to NaN.
+2024-10-04 18:21:00,249 - WARNING - Not enough valid data points to compute metrics for corn in country Palau. Setting values to NaN.
+2024-10-04 18:21:00,249 - WARNING - Not enough valid data points to compute metrics for rice in country Palau. Setting values to NaN.
+2024-10-04 18:21:00,249 - WARNING - Not enough valid data points to compute metrics for soy in country Palau. Setting values to NaN.
+2024-10-04 18:21:00,249 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Palau. Setting values to NaN.
+2024-10-04 18:21:00,250 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Palau. Setting values to NaN.
+2024-10-04 18:21:00,250 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Palau. Setting values to NaN.
+2024-10-04 18:21:00,250 - WARNING - Not enough valid data points to compute metrics for grasses in country Palau. Setting values to NaN.
+2024-10-04 18:21:00,250 - WARNING - Not enough valid data points to compute combined metrics for country Palau. Setting values to NaN.
+2024-10-04 18:21:00,250 - WARNING - Not enough valid data points to compute metrics for corn in country Palestina. Setting values to NaN.
+2024-10-04 18:21:00,251 - WARNING - Not enough valid data points to compute metrics for rice in country Palestina. Setting values to NaN.
+2024-10-04 18:21:00,251 - WARNING - Not enough valid data points to compute metrics for soy in country Palestina. Setting values to NaN.
+2024-10-04 18:21:00,251 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Palestina. Setting values to NaN.
+2024-10-04 18:21:00,251 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Palestina. Setting values to NaN.
+2024-10-04 18:21:00,251 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Palestina. Setting values to NaN.
+2024-10-04 18:21:00,251 - WARNING - Not enough valid data points to compute metrics for grasses in country Palestina. Setting values to NaN.
+2024-10-04 18:21:00,251 - WARNING - Not enough valid data points to compute combined metrics for country Palestina. Setting values to NaN.
+2024-10-04 18:21:00,253 - WARNING - Not enough valid data points to compute metrics for soy in country Panama. Setting values to NaN.
+2024-10-04 18:21:00,253 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Panama. Setting values to NaN.
+2024-10-04 18:21:00,253 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Panama. Setting values to NaN.
+2024-10-04 18:21:00,253 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Panama. Setting values to NaN.
+2024-10-04 18:21:00,255 - WARNING - Not enough valid data points to compute metrics for corn in country Papua New Guinea. Setting values to NaN.
+2024-10-04 18:21:00,256 - WARNING - Not enough valid data points to compute metrics for rice in country Papua New Guinea. Setting values to NaN.
+2024-10-04 18:21:00,256 - WARNING - Not enough valid data points to compute metrics for soy in country Papua New Guinea. Setting values to NaN.
+2024-10-04 18:21:00,256 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Papua New Guinea. Setting values to NaN.
+2024-10-04 18:21:00,256 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Papua New Guinea. Setting values to NaN.
+2024-10-04 18:21:00,256 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Papua New Guinea. Setting values to NaN.
+2024-10-04 18:21:00,262 - WARNING - Not enough valid data points to compute metrics for soy in country Peru. Setting values to NaN.
+2024-10-04 18:21:00,262 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Peru. Setting values to NaN.
+2024-10-04 18:21:00,264 - WARNING - Not enough valid data points to compute metrics for soy in country Philippines. Setting values to NaN.
+2024-10-04 18:21:00,264 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Philippines. Setting values to NaN.
+2024-10-04 18:21:00,265 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Philippines. Setting values to NaN.
+2024-10-04 18:21:00,265 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Philippines. Setting values to NaN.
+2024-10-04 18:21:00,266 - WARNING - Not enough valid data points to compute metrics for corn in country Pitcairn Islands. Setting values to NaN.
+2024-10-04 18:21:00,266 - WARNING - Not enough valid data points to compute metrics for rice in country Pitcairn Islands. Setting values to NaN.
+2024-10-04 18:21:00,266 - WARNING - Not enough valid data points to compute metrics for soy in country Pitcairn Islands. Setting values to NaN.
+2024-10-04 18:21:00,266 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Pitcairn Islands. Setting values to NaN.
+2024-10-04 18:21:00,267 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Pitcairn Islands. Setting values to NaN.
+2024-10-04 18:21:00,267 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Pitcairn Islands. Setting values to NaN.
+2024-10-04 18:21:00,267 - WARNING - Not enough valid data points to compute metrics for grasses in country Pitcairn Islands. Setting values to NaN.
+2024-10-04 18:21:00,267 - WARNING - Not enough valid data points to compute combined metrics for country Pitcairn Islands. Setting values to NaN.
+2024-10-04 18:21:00,268 - WARNING - Not enough valid data points to compute metrics for rice in country Poland. Setting values to NaN.
+2024-10-04 18:21:00,268 - WARNING - Not enough valid data points to compute metrics for soy in country Poland. Setting values to NaN.
+2024-10-04 18:21:00,268 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Poland. Setting values to NaN.
+2024-10-04 18:21:00,271 - WARNING - Not enough valid data points to compute metrics for soy in country Portugal. Setting values to NaN.
+2024-10-04 18:21:00,271 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Portugal. Setting values to NaN.
+2024-10-04 18:21:00,273 - WARNING - Not enough valid data points to compute metrics for corn in country Puerto Rico. Setting values to NaN.
+2024-10-04 18:21:00,274 - WARNING - Not enough valid data points to compute metrics for rice in country Puerto Rico. Setting values to NaN.
+2024-10-04 18:21:00,274 - WARNING - Not enough valid data points to compute metrics for soy in country Puerto Rico. Setting values to NaN.
+2024-10-04 18:21:00,274 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Puerto Rico. Setting values to NaN.
+2024-10-04 18:21:00,274 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Puerto Rico. Setting values to NaN.
+2024-10-04 18:21:00,274 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Puerto Rico. Setting values to NaN.
+2024-10-04 18:21:00,275 - WARNING - Not enough valid data points to compute metrics for grasses in country Puerto Rico. Setting values to NaN.
+2024-10-04 18:21:00,275 - WARNING - Not enough valid data points to compute combined metrics for country Puerto Rico. Setting values to NaN.
+2024-10-04 18:21:00,275 - WARNING - Not enough valid data points to compute metrics for rice in country Qatar. Setting values to NaN.
+2024-10-04 18:21:00,276 - WARNING - Not enough valid data points to compute metrics for soy in country Qatar. Setting values to NaN.
+2024-10-04 18:21:00,276 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Qatar. Setting values to NaN.
+2024-10-04 18:21:00,276 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Qatar. Setting values to NaN.
+2024-10-04 18:21:00,276 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Qatar. Setting values to NaN.
+2024-10-04 18:21:00,279 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Republic of Congo. Setting values to NaN.
+2024-10-04 18:21:00,279 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Republic of Congo. Setting values to NaN.
+2024-10-04 18:21:00,280 - WARNING - Not enough valid data points to compute metrics for corn in country Reunion. Setting values to NaN.
+2024-10-04 18:21:00,280 - WARNING - Not enough valid data points to compute metrics for rice in country Reunion. Setting values to NaN.
+2024-10-04 18:21:00,280 - WARNING - Not enough valid data points to compute metrics for soy in country Reunion. Setting values to NaN.
+2024-10-04 18:21:00,280 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Reunion. Setting values to NaN.
+2024-10-04 18:21:00,281 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Reunion. Setting values to NaN.
+2024-10-04 18:21:00,281 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Reunion. Setting values to NaN.
+2024-10-04 18:21:00,281 - WARNING - Not enough valid data points to compute metrics for grasses in country Reunion. Setting values to NaN.
+2024-10-04 18:21:00,281 - WARNING - Not enough valid data points to compute combined metrics for country Reunion. Setting values to NaN.
+2024-10-04 18:21:00,282 - WARNING - Not enough valid data points to compute metrics for rice in country Romania. Setting values to NaN.
+2024-10-04 18:21:00,290 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Rwanda. Setting values to NaN.
+2024-10-04 18:21:00,290 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Rwanda. Setting values to NaN.
+2024-10-04 18:21:00,291 - WARNING - Not enough valid data points to compute metrics for corn in country Saint Helena. Setting values to NaN.
+2024-10-04 18:21:00,292 - WARNING - Not enough valid data points to compute metrics for rice in country Saint Helena. Setting values to NaN.
+2024-10-04 18:21:00,292 - WARNING - Not enough valid data points to compute metrics for soy in country Saint Helena. Setting values to NaN.
+2024-10-04 18:21:00,292 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Saint Helena. Setting values to NaN.
+2024-10-04 18:21:00,292 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Saint Helena. Setting values to NaN.
+2024-10-04 18:21:00,292 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Saint Helena. Setting values to NaN.
+2024-10-04 18:21:00,293 - WARNING - Not enough valid data points to compute metrics for grasses in country Saint Helena. Setting values to NaN.
+2024-10-04 18:21:00,293 - WARNING - Not enough valid data points to compute combined metrics for country Saint Helena. Setting values to NaN.
+2024-10-04 18:21:00,293 - WARNING - Not enough valid data points to compute metrics for corn in country Saint Kitts and Nevis. Setting values to NaN.
+2024-10-04 18:21:00,293 - WARNING - Not enough valid data points to compute metrics for rice in country Saint Kitts and Nevis. Setting values to NaN.
+2024-10-04 18:21:00,293 - WARNING - Not enough valid data points to compute metrics for soy in country Saint Kitts and Nevis. Setting values to NaN.
+2024-10-04 18:21:00,293 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Saint Kitts and Nevis. Setting values to NaN.
+2024-10-04 18:21:00,294 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Saint Kitts and Nevis. Setting values to NaN.
+2024-10-04 18:21:00,294 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Saint Kitts and Nevis. Setting values to NaN.
+2024-10-04 18:21:00,294 - WARNING - Not enough valid data points to compute metrics for grasses in country Saint Kitts and Nevis. Setting values to NaN.
+2024-10-04 18:21:00,294 - WARNING - Not enough valid data points to compute combined metrics for country Saint Kitts and Nevis. Setting values to NaN.
+2024-10-04 18:21:00,294 - WARNING - Not enough valid data points to compute metrics for corn in country Saint Lucia. Setting values to NaN.
+2024-10-04 18:21:00,295 - WARNING - Not enough valid data points to compute metrics for rice in country Saint Lucia. Setting values to NaN.
+2024-10-04 18:21:00,295 - WARNING - Not enough valid data points to compute metrics for soy in country Saint Lucia. Setting values to NaN.
+2024-10-04 18:21:00,295 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Saint Lucia. Setting values to NaN.
+2024-10-04 18:21:00,295 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Saint Lucia. Setting values to NaN.
+2024-10-04 18:21:00,295 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Saint Lucia. Setting values to NaN.
+2024-10-04 18:21:00,295 - WARNING - Not enough valid data points to compute metrics for grasses in country Saint Lucia. Setting values to NaN.
+2024-10-04 18:21:00,295 - WARNING - Not enough valid data points to compute combined metrics for country Saint Lucia. Setting values to NaN.
+2024-10-04 18:21:00,296 - WARNING - Not enough valid data points to compute metrics for corn in country Saint Pierre and Miquelon. Setting values to NaN.
+2024-10-04 18:21:00,296 - WARNING - Not enough valid data points to compute metrics for rice in country Saint Pierre and Miquelon. Setting values to NaN.
+2024-10-04 18:21:00,296 - WARNING - Not enough valid data points to compute metrics for soy in country Saint Pierre and Miquelon. Setting values to NaN.
+2024-10-04 18:21:00,296 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Saint Pierre and Miquelon. Setting values to NaN.
+2024-10-04 18:21:00,297 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Saint Pierre and Miquelon. Setting values to NaN.
+2024-10-04 18:21:00,297 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Saint Pierre and Miquelon. Setting values to NaN.
+2024-10-04 18:21:00,297 - WARNING - Not enough valid data points to compute metrics for grasses in country Saint Pierre and Miquelon. Setting values to NaN.
+2024-10-04 18:21:00,297 - WARNING - Not enough valid data points to compute combined metrics for country Saint Pierre and Miquelon. Setting values to NaN.
+2024-10-04 18:21:00,297 - WARNING - Not enough valid data points to compute metrics for corn in country Saint Vincent and the Grenadines. Setting values to NaN.
+2024-10-04 18:21:00,298 - WARNING - Not enough valid data points to compute metrics for rice in country Saint Vincent and the Grenadines. Setting values to NaN.
+2024-10-04 18:21:00,298 - WARNING - Not enough valid data points to compute metrics for soy in country Saint Vincent and the Grenadines. Setting values to NaN.
+2024-10-04 18:21:00,298 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Saint Vincent and the Grenadines. Setting values to NaN.
+2024-10-04 18:21:00,298 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Saint Vincent and the Grenadines. Setting values to NaN.
+2024-10-04 18:21:00,298 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Saint Vincent and the Grenadines. Setting values to NaN.
+2024-10-04 18:21:00,298 - WARNING - Not enough valid data points to compute metrics for grasses in country Saint Vincent and the Grenadines. Setting values to NaN.
+2024-10-04 18:21:00,298 - WARNING - Not enough valid data points to compute combined metrics for country Saint Vincent and the Grenadines. Setting values to NaN.
+2024-10-04 18:21:00,299 - WARNING - Not enough valid data points to compute metrics for corn in country Saint-Martin. Setting values to NaN.
+2024-10-04 18:21:00,299 - WARNING - Not enough valid data points to compute metrics for rice in country Saint-Martin. Setting values to NaN.
+2024-10-04 18:21:00,299 - WARNING - Not enough valid data points to compute metrics for soy in country Saint-Martin. Setting values to NaN.
+2024-10-04 18:21:00,299 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Saint-Martin. Setting values to NaN.
+2024-10-04 18:21:00,300 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Saint-Martin. Setting values to NaN.
+2024-10-04 18:21:00,300 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Saint-Martin. Setting values to NaN.
+2024-10-04 18:21:00,300 - WARNING - Not enough valid data points to compute metrics for grasses in country Saint-Martin. Setting values to NaN.
+2024-10-04 18:21:00,300 - WARNING - Not enough valid data points to compute combined metrics for country Saint-Martin. Setting values to NaN.
+2024-10-04 18:21:00,300 - WARNING - Not enough valid data points to compute metrics for corn in country Samoa. Setting values to NaN.
+2024-10-04 18:21:00,301 - WARNING - Not enough valid data points to compute metrics for rice in country Samoa. Setting values to NaN.
+2024-10-04 18:21:00,301 - WARNING - Not enough valid data points to compute metrics for soy in country Samoa. Setting values to NaN.
+2024-10-04 18:21:00,301 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Samoa. Setting values to NaN.
+2024-10-04 18:21:00,301 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Samoa. Setting values to NaN.
+2024-10-04 18:21:00,301 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Samoa. Setting values to NaN.
+2024-10-04 18:21:00,302 - WARNING - Not enough valid data points to compute metrics for grasses in country Samoa. Setting values to NaN.
+2024-10-04 18:21:00,302 - WARNING - Not enough valid data points to compute combined metrics for country Samoa. Setting values to NaN.
+2024-10-04 18:21:00,302 - WARNING - Not enough valid data points to compute metrics for corn in country Sao Tome and Principe. Setting values to NaN.
+2024-10-04 18:21:00,302 - WARNING - Not enough valid data points to compute metrics for rice in country Sao Tome and Principe. Setting values to NaN.
+2024-10-04 18:21:00,302 - WARNING - Not enough valid data points to compute metrics for soy in country Sao Tome and Principe. Setting values to NaN.
+2024-10-04 18:21:00,303 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Sao Tome and Principe. Setting values to NaN.
+2024-10-04 18:21:00,303 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Sao Tome and Principe. Setting values to NaN.
+2024-10-04 18:21:00,303 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Sao Tome and Principe. Setting values to NaN.
+2024-10-04 18:21:00,303 - WARNING - Not enough valid data points to compute metrics for grasses in country Sao Tome and Principe. Setting values to NaN.
+2024-10-04 18:21:00,303 - WARNING - Not enough valid data points to compute combined metrics for country Sao Tome and Principe. Setting values to NaN.
+2024-10-04 18:21:00,305 - WARNING - Not enough valid data points to compute metrics for soy in country Saudi Arabia. Setting values to NaN.
+2024-10-04 18:21:00,305 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Saudi Arabia. Setting values to NaN.
+2024-10-04 18:21:00,309 - WARNING - Not enough valid data points to compute metrics for soy in country Senegal. Setting values to NaN.
+2024-10-04 18:21:00,309 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Senegal. Setting values to NaN.
+2024-10-04 18:21:00,309 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Senegal. Setting values to NaN.
+2024-10-04 18:21:00,309 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Senegal. Setting values to NaN.
+2024-10-04 18:21:00,311 - WARNING - Not enough valid data points to compute metrics for rice in country Serbia. Setting values to NaN.
+2024-10-04 18:21:00,313 - WARNING - Not enough valid data points to compute metrics for corn in country Seychelles. Setting values to NaN.
+2024-10-04 18:21:00,313 - WARNING - Not enough valid data points to compute metrics for rice in country Seychelles. Setting values to NaN.
+2024-10-04 18:21:00,314 - WARNING - Not enough valid data points to compute metrics for soy in country Seychelles. Setting values to NaN.
+2024-10-04 18:21:00,314 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Seychelles. Setting values to NaN.
+2024-10-04 18:21:00,314 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Seychelles. Setting values to NaN.
+2024-10-04 18:21:00,314 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Seychelles. Setting values to NaN.
+2024-10-04 18:21:00,315 - WARNING - Not enough valid data points to compute metrics for grasses in country Seychelles. Setting values to NaN.
+2024-10-04 18:21:00,315 - WARNING - Not enough valid data points to compute combined metrics for country Seychelles. Setting values to NaN.
+2024-10-04 18:21:00,316 - WARNING - Not enough valid data points to compute metrics for soy in country Sierra Leone. Setting values to NaN.
+2024-10-04 18:21:00,316 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Sierra Leone. Setting values to NaN.
+2024-10-04 18:21:00,317 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Sierra Leone. Setting values to NaN.
+2024-10-04 18:21:00,317 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Sierra Leone. Setting values to NaN.
+2024-10-04 18:21:00,319 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Singapore. Setting values to NaN.
+2024-10-04 18:21:00,319 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Singapore. Setting values to NaN.
+2024-10-04 18:21:00,322 - WARNING - Not enough valid data points to compute metrics for rice in country Slovakia. Setting values to NaN.
+2024-10-04 18:21:00,327 - WARNING - Not enough valid data points to compute metrics for rice in country Slovenia. Setting values to NaN.
+2024-10-04 18:21:00,333 - WARNING - Not enough valid data points to compute metrics for corn in country Solomon Islands. Setting values to NaN.
+2024-10-04 18:21:00,333 - WARNING - Not enough valid data points to compute metrics for rice in country Solomon Islands. Setting values to NaN.
+2024-10-04 18:21:00,334 - WARNING - Not enough valid data points to compute metrics for soy in country Solomon Islands. Setting values to NaN.
+2024-10-04 18:21:00,334 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Solomon Islands. Setting values to NaN.
+2024-10-04 18:21:00,335 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Solomon Islands. Setting values to NaN.
+2024-10-04 18:21:00,335 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Solomon Islands. Setting values to NaN.
+2024-10-04 18:21:00,335 - WARNING - Not enough valid data points to compute metrics for grasses in country Solomon Islands. Setting values to NaN.
+2024-10-04 18:21:00,336 - WARNING - Not enough valid data points to compute combined metrics for country Solomon Islands. Setting values to NaN.
+2024-10-04 18:21:00,338 - WARNING - Not enough valid data points to compute metrics for soy in country Somalia. Setting values to NaN.
+2024-10-04 18:21:00,339 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Somalia. Setting values to NaN.
+2024-10-04 18:21:00,344 - WARNING - Not enough valid data points to compute metrics for corn in country South Georgia and the South Sandwich Islands. Setting values to NaN.
+2024-10-04 18:21:00,344 - WARNING - Not enough valid data points to compute metrics for rice in country South Georgia and the South Sandwich Islands. Setting values to NaN.
+2024-10-04 18:21:00,345 - WARNING - Not enough valid data points to compute metrics for soy in country South Georgia and the South Sandwich Islands. Setting values to NaN.
+2024-10-04 18:21:00,345 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country South Georgia and the South Sandwich Islands. Setting values to NaN.
+2024-10-04 18:21:00,345 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country South Georgia and the South Sandwich Islands. Setting values to NaN.
+2024-10-04 18:21:00,345 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country South Georgia and the South Sandwich Islands. Setting values to NaN.
+2024-10-04 18:21:00,345 - WARNING - Not enough valid data points to compute metrics for grasses in country South Georgia and the South Sandwich Islands. Setting values to NaN.
+2024-10-04 18:21:00,345 - WARNING - Not enough valid data points to compute combined metrics for country South Georgia and the South Sandwich Islands. Setting values to NaN.
+2024-10-04 18:21:00,357 - WARNING - Not enough valid data points to compute metrics for soy in country Sri Lanka. Setting values to NaN.
+2024-10-04 18:21:00,358 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Sri Lanka. Setting values to NaN.
+2024-10-04 18:21:00,358 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Sri Lanka. Setting values to NaN.
+2024-10-04 18:21:00,358 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Sri Lanka. Setting values to NaN.
+2024-10-04 18:21:00,360 - WARNING - Not enough valid data points to compute metrics for soy in country Sudan. Setting values to NaN.
+2024-10-04 18:21:00,360 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Sudan. Setting values to NaN.
+2024-10-04 18:21:00,363 - WARNING - Not enough valid data points to compute metrics for soy in country Suriname. Setting values to NaN.
+2024-10-04 18:21:00,363 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Suriname. Setting values to NaN.
+2024-10-04 18:21:00,363 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Suriname. Setting values to NaN.
+2024-10-04 18:21:00,363 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Suriname. Setting values to NaN.
+2024-10-04 18:21:00,364 - WARNING - Not enough valid data points to compute metrics for corn in country Svalbard and Jan Mayen. Setting values to NaN.
+2024-10-04 18:21:00,365 - WARNING - Not enough valid data points to compute metrics for rice in country Svalbard and Jan Mayen. Setting values to NaN.
+2024-10-04 18:21:00,365 - WARNING - Not enough valid data points to compute metrics for soy in country Svalbard and Jan Mayen. Setting values to NaN.
+2024-10-04 18:21:00,365 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Svalbard and Jan Mayen. Setting values to NaN.
+2024-10-04 18:21:00,365 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Svalbard and Jan Mayen. Setting values to NaN.
+2024-10-04 18:21:00,365 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Svalbard and Jan Mayen. Setting values to NaN.
+2024-10-04 18:21:00,366 - WARNING - Not enough valid data points to compute metrics for grasses in country Svalbard and Jan Mayen. Setting values to NaN.
+2024-10-04 18:21:00,366 - WARNING - Not enough valid data points to compute combined metrics for country Svalbard and Jan Mayen. Setting values to NaN.
+2024-10-04 18:21:00,367 - WARNING - Not enough valid data points to compute metrics for rice in country Swaziland. Setting values to NaN.
+2024-10-04 18:21:00,376 - WARNING - Not enough valid data points to compute metrics for soy in country Syria. Setting values to NaN.
+2024-10-04 18:21:00,377 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Syria. Setting values to NaN.
+2024-10-04 18:21:00,379 - WARNING - Not enough valid data points to compute metrics for soy in country Tajikistan. Setting values to NaN.
+2024-10-04 18:21:00,379 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Tajikistan. Setting values to NaN.
+2024-10-04 18:21:00,388 - WARNING - Not enough valid data points to compute metrics for soy in country Togo. Setting values to NaN.
+2024-10-04 18:21:00,388 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Togo. Setting values to NaN.
+2024-10-04 18:21:00,389 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Togo. Setting values to NaN.
+2024-10-04 18:21:00,389 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Togo. Setting values to NaN.
+2024-10-04 18:21:00,390 - WARNING - Not enough valid data points to compute metrics for corn in country Tonga. Setting values to NaN.
+2024-10-04 18:21:00,390 - WARNING - Not enough valid data points to compute metrics for rice in country Tonga. Setting values to NaN.
+2024-10-04 18:21:00,391 - WARNING - Not enough valid data points to compute metrics for soy in country Tonga. Setting values to NaN.
+2024-10-04 18:21:00,391 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Tonga. Setting values to NaN.
+2024-10-04 18:21:00,391 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Tonga. Setting values to NaN.
+2024-10-04 18:21:00,391 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Tonga. Setting values to NaN.
+2024-10-04 18:21:00,391 - WARNING - Not enough valid data points to compute metrics for grasses in country Tonga. Setting values to NaN.
+2024-10-04 18:21:00,391 - WARNING - Not enough valid data points to compute combined metrics for country Tonga. Setting values to NaN.
+2024-10-04 18:21:00,392 - WARNING - Not enough valid data points to compute metrics for corn in country Trinidad and Tobago. Setting values to NaN.
+2024-10-04 18:21:00,392 - WARNING - Not enough valid data points to compute metrics for rice in country Trinidad and Tobago. Setting values to NaN.
+2024-10-04 18:21:00,392 - WARNING - Not enough valid data points to compute metrics for soy in country Trinidad and Tobago. Setting values to NaN.
+2024-10-04 18:21:00,392 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Trinidad and Tobago. Setting values to NaN.
+2024-10-04 18:21:00,392 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Trinidad and Tobago. Setting values to NaN.
+2024-10-04 18:21:00,392 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Trinidad and Tobago. Setting values to NaN.
+2024-10-04 18:21:00,393 - WARNING - Not enough valid data points to compute metrics for grasses in country Trinidad and Tobago. Setting values to NaN.
+2024-10-04 18:21:00,393 - WARNING - Not enough valid data points to compute combined metrics for country Trinidad and Tobago. Setting values to NaN.
+2024-10-04 18:21:00,394 - WARNING - Not enough valid data points to compute metrics for rice in country Tunisia. Setting values to NaN.
+2024-10-04 18:21:00,394 - WARNING - Not enough valid data points to compute metrics for soy in country Tunisia. Setting values to NaN.
+2024-10-04 18:21:00,394 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Tunisia. Setting values to NaN.
+2024-10-04 18:21:00,402 - WARNING - Not enough valid data points to compute metrics for corn in country Turks and Caicos Islands. Setting values to NaN.
+2024-10-04 18:21:00,402 - WARNING - Not enough valid data points to compute metrics for rice in country Turks and Caicos Islands. Setting values to NaN.
+2024-10-04 18:21:00,402 - WARNING - Not enough valid data points to compute metrics for soy in country Turks and Caicos Islands. Setting values to NaN.
+2024-10-04 18:21:00,402 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Turks and Caicos Islands. Setting values to NaN.
+2024-10-04 18:21:00,403 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Turks and Caicos Islands. Setting values to NaN.
+2024-10-04 18:21:00,403 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Turks and Caicos Islands. Setting values to NaN.
+2024-10-04 18:21:00,403 - WARNING - Not enough valid data points to compute metrics for grasses in country Turks and Caicos Islands. Setting values to NaN.
+2024-10-04 18:21:00,403 - WARNING - Not enough valid data points to compute combined metrics for country Turks and Caicos Islands. Setting values to NaN.
+2024-10-04 18:21:00,403 - WARNING - Not enough valid data points to compute metrics for corn in country Tuvalu. Setting values to NaN.
+2024-10-04 18:21:00,404 - WARNING - Not enough valid data points to compute metrics for rice in country Tuvalu. Setting values to NaN.
+2024-10-04 18:21:00,404 - WARNING - Not enough valid data points to compute metrics for soy in country Tuvalu. Setting values to NaN.
+2024-10-04 18:21:00,404 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Tuvalu. Setting values to NaN.
+2024-10-04 18:21:00,404 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Tuvalu. Setting values to NaN.
+2024-10-04 18:21:00,405 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Tuvalu. Setting values to NaN.
+2024-10-04 18:21:00,405 - WARNING - Not enough valid data points to compute metrics for grasses in country Tuvalu. Setting values to NaN.
+2024-10-04 18:21:00,405 - WARNING - Not enough valid data points to compute combined metrics for country Tuvalu. Setting values to NaN.
+2024-10-04 18:21:00,407 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Uganda. Setting values to NaN.
+2024-10-04 18:21:00,407 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Uganda. Setting values to NaN.
+2024-10-04 18:21:00,412 - WARNING - Not enough valid data points to compute metrics for rice in country United Arab Emirates. Setting values to NaN.
+2024-10-04 18:21:00,414 - WARNING - Not enough valid data points to compute metrics for rice in country United Kingdom. Setting values to NaN.
+2024-10-04 18:21:00,415 - WARNING - Not enough valid data points to compute metrics for soy in country United Kingdom. Setting values to NaN.
+2024-10-04 18:21:00,415 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country United Kingdom. Setting values to NaN.
+2024-10-04 18:21:00,420 - WARNING - Not enough valid data points to compute metrics for corn in country United States Minor Outlying Islands. Setting values to NaN.
+2024-10-04 18:21:00,420 - WARNING - Not enough valid data points to compute metrics for rice in country United States Minor Outlying Islands. Setting values to NaN.
+2024-10-04 18:21:00,420 - WARNING - Not enough valid data points to compute metrics for soy in country United States Minor Outlying Islands. Setting values to NaN.
+2024-10-04 18:21:00,420 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country United States Minor Outlying Islands. Setting values to NaN.
+2024-10-04 18:21:00,421 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country United States Minor Outlying Islands. Setting values to NaN.
+2024-10-04 18:21:00,421 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country United States Minor Outlying Islands. Setting values to NaN.
+2024-10-04 18:21:00,421 - WARNING - Not enough valid data points to compute metrics for grasses in country United States Minor Outlying Islands. Setting values to NaN.
+2024-10-04 18:21:00,421 - WARNING - Not enough valid data points to compute combined metrics for country United States Minor Outlying Islands. Setting values to NaN.
+2024-10-04 18:21:00,428 - WARNING - Not enough valid data points to compute metrics for corn in country Vanuatu. Setting values to NaN.
+2024-10-04 18:21:00,428 - WARNING - Not enough valid data points to compute metrics for rice in country Vanuatu. Setting values to NaN.
+2024-10-04 18:21:00,428 - WARNING - Not enough valid data points to compute metrics for soy in country Vanuatu. Setting values to NaN.
+2024-10-04 18:21:00,428 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Vanuatu. Setting values to NaN.
+2024-10-04 18:21:00,429 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Vanuatu. Setting values to NaN.
+2024-10-04 18:21:00,429 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Vanuatu. Setting values to NaN.
+2024-10-04 18:21:00,429 - WARNING - Not enough valid data points to compute metrics for grasses in country Vanuatu. Setting values to NaN.
+2024-10-04 18:21:00,429 - WARNING - Not enough valid data points to compute combined metrics for country Vanuatu. Setting values to NaN.
+2024-10-04 18:21:00,435 - WARNING - Not enough valid data points to compute metrics for corn in country Virgin Islands, U.S.. Setting values to NaN.
+2024-10-04 18:21:00,436 - WARNING - Not enough valid data points to compute metrics for rice in country Virgin Islands, U.S.. Setting values to NaN.
+2024-10-04 18:21:00,436 - WARNING - Not enough valid data points to compute metrics for soy in country Virgin Islands, U.S.. Setting values to NaN.
+2024-10-04 18:21:00,436 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Virgin Islands, U.S.. Setting values to NaN.
+2024-10-04 18:21:00,436 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Virgin Islands, U.S.. Setting values to NaN.
+2024-10-04 18:21:00,436 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Virgin Islands, U.S.. Setting values to NaN.
+2024-10-04 18:21:00,436 - WARNING - Not enough valid data points to compute metrics for grasses in country Virgin Islands, U.S.. Setting values to NaN.
+2024-10-04 18:21:00,436 - WARNING - Not enough valid data points to compute combined metrics for country Virgin Islands, U.S.. Setting values to NaN.
+2024-10-04 18:21:00,437 - WARNING - Not enough valid data points to compute metrics for corn in country Wallis and Futuna. Setting values to NaN.
+2024-10-04 18:21:00,437 - WARNING - Not enough valid data points to compute metrics for rice in country Wallis and Futuna. Setting values to NaN.
+2024-10-04 18:21:00,437 - WARNING - Not enough valid data points to compute metrics for soy in country Wallis and Futuna. Setting values to NaN.
+2024-10-04 18:21:00,437 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Wallis and Futuna. Setting values to NaN.
+2024-10-04 18:21:00,438 - WARNING - Not enough valid data points to compute metrics for spring_wheat in country Wallis and Futuna. Setting values to NaN.
+2024-10-04 18:21:00,438 - WARNING - Not enough valid data points to compute metrics for spring_wheat (years 5-10) in country Wallis and Futuna. Setting values to NaN.
+2024-10-04 18:21:00,438 - WARNING - Not enough valid data points to compute metrics for grasses in country Wallis and Futuna. Setting values to NaN.
+2024-10-04 18:21:00,438 - WARNING - Not enough valid data points to compute combined metrics for country Wallis and Futuna. Setting values to NaN.
+2024-10-04 18:21:00,439 - WARNING - Not enough valid data points to compute metrics for rice in country Yemen. Setting values to NaN.
+2024-10-04 18:21:00,440 - WARNING - Not enough valid data points to compute metrics for soy in country Yemen. Setting values to NaN.
+2024-10-04 18:21:00,440 - WARNING - Not enough valid data points to compute metrics for soy (years 6-10) in country Yemen. Setting values to NaN.
+2024-10-04 18:21:00,449 - INFO - Calculated metrics for all countries
+2024-10-04 18:21:00,454 - INFO - Saved evaluation metrics to reports/model_evaluation_metrics.csv
+2024-10-04 18:21:01,584 - INFO - Saved plot to reports/figures/output_150Tg_crops_and_grasses_1_evaluation.png
+2024-10-04 18:21:01,623 - INFO - Loaded shapefile from data/external/World_Countries__Generalized_/World_Countries__Generalized_.shp
+2024-10-04 18:21:01,648 - INFO - Calculated country areas after reprojecting
+2024-10-04 18:21:01,649 - INFO - Merged evaluation metrics with GeoDataFrame
+2024-10-04 18:21:02,287 - INFO - Saved country R² plot to reports/figures/country_r2_values.png
+2024-10-04 18:21:02,889 - INFO - Saved country R² zoomed plot to reports/figures/country_r2_values_zoomed.png
+2024-10-04 18:21:03,689 - INFO - Saved country MAD plot to reports/figures/country_mad_values.png
+2024-10-04 18:21:03,704 - INFO - Saved fraction of countries metrics to reports/fraction_of_countries_metrics.csv
