@@ -51,7 +51,7 @@ scenarios:
 
 shapefile_path: 'data/external/World_Countries__Generalized_/World_Countries__Generalized_.shp'
 
-EPSG: 6933
+EPSG: 4326
 
 years: 10
 

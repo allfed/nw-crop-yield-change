@@ -1,0 +1,1268 @@
+2024-11-30 21:04:41,074 - ERROR - Original output file not found at data/processed/total_yield/output_150Tg_crops_and_grasses_1.csv
+2024-11-30 21:05:24,317 - WARNING - Columns wheat_rainfed_year1 or wheat_irrigated_year1 not found in the data.
+2024-11-30 21:05:24,317 - WARNING - Columns wheat_rainfed_year2 or wheat_irrigated_year2 not found in the data.
+2024-11-30 21:05:24,317 - WARNING - Columns wheat_rainfed_year3 or wheat_irrigated_year3 not found in the data.
+2024-11-30 21:05:24,317 - WARNING - Columns wheat_rainfed_year4 or wheat_irrigated_year4 not found in the data.
+2024-11-30 21:05:24,317 - WARNING - Columns wheat_rainfed_year5 or wheat_irrigated_year5 not found in the data.
+2024-11-30 21:05:24,317 - WARNING - Columns wheat_rainfed_year6 or wheat_irrigated_year6 not found in the data.
+2024-11-30 21:05:24,317 - WARNING - Columns wheat_rainfed_year7 or wheat_irrigated_year7 not found in the data.
+2024-11-30 21:05:24,317 - WARNING - Columns wheat_rainfed_year8 or wheat_irrigated_year8 not found in the data.
+2024-11-30 21:05:24,317 - WARNING - Columns wheat_rainfed_year9 or wheat_irrigated_year9 not found in the data.
+2024-11-30 21:05:24,317 - WARNING - Columns wheat_rainfed_year10 or wheat_irrigated_year10 not found in the data.
+2024-11-30 21:05:24,320 - WARNING - Discrepancies found for crop Corn in year 1.
+2024-11-30 21:05:24,322 - WARNING - Discrepancies found for crop Corn in year 2.
+2024-11-30 21:05:24,324 - WARNING - Discrepancies found for crop Corn in year 3.
+2024-11-30 21:05:24,326 - WARNING - Discrepancies found for crop Corn in year 4.
+2024-11-30 21:05:24,328 - WARNING - Discrepancies found for crop Corn in year 5.
+2024-11-30 21:05:24,330 - WARNING - Discrepancies found for crop Corn in year 6.
+2024-11-30 21:05:24,331 - WARNING - Discrepancies found for crop Corn in year 7.
+2024-11-30 21:05:24,333 - WARNING - Discrepancies found for crop Corn in year 8.
+2024-11-30 21:05:24,334 - WARNING - Discrepancies found for crop Corn in year 9.
+2024-11-30 21:05:24,336 - WARNING - Discrepancies found for crop Corn in year 10.
+2024-11-30 21:05:24,338 - WARNING - Discrepancies found for crop Rice in year 1.
+2024-11-30 21:05:24,339 - WARNING - Discrepancies found for crop Rice in year 2.
+2024-11-30 21:05:24,341 - WARNING - Discrepancies found for crop Rice in year 3.
+2024-11-30 21:05:24,343 - WARNING - Discrepancies found for crop Rice in year 4.
+2024-11-30 21:05:24,345 - WARNING - Discrepancies found for crop Rice in year 5.
+2024-11-30 21:05:24,347 - WARNING - Discrepancies found for crop Rice in year 6.
+2024-11-30 21:05:24,349 - WARNING - Discrepancies found for crop Rice in year 7.
+2024-11-30 21:05:24,351 - WARNING - Discrepancies found for crop Rice in year 8.
+2024-11-30 21:05:24,353 - WARNING - Discrepancies found for crop Rice in year 9.
+2024-11-30 21:05:24,354 - WARNING - Discrepancies found for crop Rice in year 10.
+2024-11-30 21:05:24,356 - WARNING - Discrepancies found for crop Soy in year 1.
+2024-11-30 21:05:24,357 - WARNING - Discrepancies found for crop Soy in year 2.
+2024-11-30 21:05:24,359 - WARNING - Discrepancies found for crop Soy in year 3.
+2024-11-30 21:05:24,361 - WARNING - Discrepancies found for crop Soy in year 4.
+2024-11-30 21:05:24,363 - WARNING - Discrepancies found for crop Soy in year 5.
+2024-11-30 21:05:24,364 - WARNING - Discrepancies found for crop Soy in year 6.
+2024-11-30 21:05:24,365 - WARNING - Discrepancies found for crop Soy in year 7.
+2024-11-30 21:05:24,367 - WARNING - Discrepancies found for crop Soy in year 8.
+2024-11-30 21:05:24,369 - WARNING - Discrepancies found for crop Soy in year 9.
+2024-11-30 21:05:24,370 - WARNING - Discrepancies found for crop Soy in year 10.
+2024-11-30 21:05:24,370 - WARNING - Columns wheat_year1 or wheat_total_pct_change_year1 not found.
+2024-11-30 21:05:24,370 - WARNING - Columns wheat_year2 or wheat_total_pct_change_year2 not found.
+2024-11-30 21:05:24,370 - WARNING - Columns wheat_year3 or wheat_total_pct_change_year3 not found.
+2024-11-30 21:05:24,370 - WARNING - Columns wheat_year4 or wheat_total_pct_change_year4 not found.
+2024-11-30 21:05:24,370 - WARNING - Columns wheat_year5 or wheat_total_pct_change_year5 not found.
+2024-11-30 21:05:24,370 - WARNING - Columns wheat_year6 or wheat_total_pct_change_year6 not found.
+2024-11-30 21:05:24,370 - WARNING - Columns wheat_year7 or wheat_total_pct_change_year7 not found.
+2024-11-30 21:05:24,371 - WARNING - Columns wheat_year8 or wheat_total_pct_change_year8 not found.
+2024-11-30 21:05:24,371 - WARNING - Columns wheat_year9 or wheat_total_pct_change_year9 not found.
+2024-11-30 21:05:24,371 - WARNING - Columns wheat_year10 or wheat_total_pct_change_year10 not found.
+2024-11-30 21:05:24,371 - INFO - Discrepancies detected:
+2024-11-30 21:05:24,371 - INFO - Crop: Corn, Year: 1
+2024-11-30 21:05:24,371 - INFO -     ISO3 Country Code      Country  corn_year1  corn_total_pct_change_year1  difference
+0                  AF  Afghanistan  -99.181709                   -96.805635    2.376074
+5                  AO       Angola    3.573502                     3.621357    0.047855
+9                  AR    Argentina   -2.137346                    -2.016896    0.120450
+11                 AW        Aruba  -27.241931                   -17.157653   10.084278
+12                 AU    Australia  -20.496826                   -14.226972    6.269854
+..                ...          ...         ...                          ...         ...
+240                VE    Venezuela  -30.829007                   -31.122464    0.293457
+241                VN      Vietnam  -65.115239                   -65.104356    0.010883
+244                YE        Yemen  -23.806862                    13.570697   37.377559
+245                ZM       Zambia   -0.611923                    -1.047260    0.435337
+246                ZW     Zimbabwe   18.321031                    19.409284    1.088254
+
+[101 rows x 5 columns]
+2024-11-30 21:05:24,389 - INFO - Crop: Corn, Year: 2
+2024-11-30 21:05:24,389 - INFO -     ISO3 Country Code    Country  corn_year2  corn_total_pct_change_year2  difference
+5                  AO     Angola  -64.535529                   -64.484707    0.050822
+9                  AR  Argentina  -86.883338                   -86.769637    0.113701
+11                 AW      Aruba  -68.770138                   -64.918055    3.852084
+12                 AU  Australia  -69.920074                   -75.005782    5.085708
+15                 BS    Bahamas  -92.560458                   -92.452363    0.108095
+..                ...        ...         ...                          ...         ...
+240                VE  Venezuela  -82.370225                   -82.351457    0.018768
+241                VN    Vietnam  -90.844722                   -90.789940    0.054782
+244                YE      Yemen  -84.410880                   -78.660698    5.750182
+245                ZM     Zambia  -72.705997                   -73.067560    0.361562
+246                ZW   Zimbabwe  -65.548187                   -65.471790    0.076397
+
+[90 rows x 5 columns]
+2024-11-30 21:05:24,396 - INFO - Crop: Corn, Year: 3
+2024-11-30 21:05:24,396 - INFO -     ISO3 Country Code    Country  corn_year3  corn_total_pct_change_year3  difference
+5                  AO     Angola  -92.173164                   -91.380420    0.792744
+9                  AR  Argentina  -96.247404                   -96.220557    0.026847
+11                 AW      Aruba  -33.187126                   -28.805056    4.382070
+12                 AU  Australia  -86.640237                   -88.930023    2.289786
+15                 BS    Bahamas  -94.644762                   -94.809694    0.164931
+..                ...        ...         ...                          ...         ...
+236                UY    Uruguay  -97.938639                   -97.934771    0.003868
+240                VE  Venezuela  -71.297804                   -70.843208    0.454596
+241                VN    Vietnam  -92.390667                   -92.364048    0.026618
+244                YE      Yemen  -88.239930                   -83.253366    4.986564
+246                ZW   Zimbabwe  -95.971638                   -95.971311    0.000327
+
+[86 rows x 5 columns]
+2024-11-30 21:05:24,401 - INFO - Crop: Corn, Year: 4
+2024-11-30 21:05:24,401 - INFO -     ISO3 Country Code    Country  corn_year4  corn_total_pct_change_year4  difference
+5                  AO     Angola  -94.605102                   -94.197000    0.408102
+9                  AR  Argentina  -94.938736                   -94.915308    0.023428
+11                 AW      Aruba  -34.071286                   -14.331586   19.739700
+12                 AU  Australia  -90.729986                   -92.324795    1.594810
+15                 BS    Bahamas  -94.007043                   -93.548759    0.458284
+..                ...        ...         ...                          ...         ...
+240                VE  Venezuela  -70.743958                   -70.760222    0.016263
+241                VN    Vietnam  -82.242347                   -82.265898    0.023551
+244                YE      Yemen  -80.037029                   -57.847148   22.189881
+245                ZM     Zambia  -99.898213                   -99.893469    0.004744
+246                ZW   Zimbabwe  -95.991657                   -95.951816    0.039842
+
+[91 rows x 5 columns]
+2024-11-30 21:05:24,407 - INFO - Crop: Corn, Year: 5
+2024-11-30 21:05:24,407 - INFO -     ISO3 Country Code      Country  corn_year5  corn_total_pct_change_year5  difference
+0                  AF  Afghanistan  -98.875087                   -98.022462    0.852625
+5                  AO       Angola  -96.082137                   -95.631988    0.450148
+9                  AR    Argentina  -93.920481                   -94.129750    0.209270
+11                 AW        Aruba  -27.639679                   -23.049501    4.590178
+12                 AU    Australia  -88.019962                   -90.006306    1.986344
+..                ...          ...         ...                          ...         ...
+240                VE    Venezuela  -67.451391                   -67.229536    0.221855
+241                VN      Vietnam  -74.828841                   -74.595959    0.232882
+244                YE        Yemen  -74.955517                   -57.791734   17.163782
+245                ZM       Zambia  -98.966444                   -98.932924    0.033520
+246                ZW     Zimbabwe  -92.868066                   -92.812623    0.055443
+
+[95 rows x 5 columns]
+2024-11-30 21:05:24,412 - INFO - Crop: Corn, Year: 6
+2024-11-30 21:05:24,412 - INFO -     ISO3 Country Code      Country  corn_year6  corn_total_pct_change_year6   difference
+0                  AF  Afghanistan  -71.058558                   -69.418981     1.639577
+2                  DZ      Algeria  -70.299278                  2631.172787  2701.472065
+5                  AO       Angola  -89.728081                   -89.010443     0.717638
+9                  AR    Argentina  -87.586335                   -87.947239     0.360904
+11                 AW        Aruba    2.012948                    11.585801     9.572853
+..                ...          ...         ...                          ...          ...
+240                VE    Venezuela  -40.296686                   -40.700630     0.403944
+241                VN      Vietnam  -54.059790                   -53.480469     0.579321
+244                YE        Yemen  -57.223968                   -36.855206    20.368762
+245                ZM       Zambia  -91.700637                   -91.576819     0.123817
+246                ZW     Zimbabwe  -72.702203                   -72.599506     0.102697
+
+[100 rows x 5 columns]
+2024-11-30 21:05:24,418 - INFO - Crop: Corn, Year: 7
+2024-11-30 21:05:24,418 - INFO -     ISO3 Country Code      Country  corn_year7  corn_total_pct_change_year7  difference
+0                  AF  Afghanistan  -46.138829                   -75.255673   29.116844
+2                  DZ      Algeria  -44.565607                   817.398612  861.964219
+5                  AO       Angola  -74.683399                   -73.063586    1.619813
+9                  AR    Argentina  -80.673461                   -80.935646    0.262185
+10                 AM      Armenia  -79.222344                   -72.117603    7.104741
+..                ...          ...         ...                          ...         ...
+240                VE    Venezuela  -28.860443                   -29.195874    0.335431
+241                VN      Vietnam  -41.800337                   -41.669757    0.130580
+244                YE        Yemen    8.646030                   139.755894  131.109864
+245                ZM       Zambia  -76.619201                   -76.616418    0.002783
+246                ZW     Zimbabwe  -41.764611                   -41.184203    0.580409
+
+[115 rows x 5 columns]
+2024-11-30 21:05:24,423 - INFO - Crop: Corn, Year: 8
+2024-11-30 21:05:24,423 - INFO -     ISO3 Country Code      Country  corn_year8  corn_total_pct_change_year8  difference
+0                  AF  Afghanistan  -14.965747                   -60.341334   45.375587
+1                  AL      Albania  -51.542086                   -51.151596    0.390490
+2                  DZ      Algeria    9.287647                   274.158886  264.871239
+4                  AD      Andorra  -89.418800                   -87.606717    1.812083
+5                  AO       Angola  -66.851953                   -65.587377    1.264576
+..                ...          ...         ...                          ...         ...
+240                VE    Venezuela  -16.496938                   -17.651308    1.154369
+241                VN      Vietnam  -27.596114                   -26.928367    0.667747
+244                YE        Yemen   63.524501                   363.390169  299.865668
+245                ZM       Zambia  -65.641719                   -65.655302    0.013583
+246                ZW     Zimbabwe  -36.919183                   -36.734550    0.184632
+
+[135 rows x 5 columns]
+2024-11-30 21:05:24,429 - INFO - Crop: Corn, Year: 9
+2024-11-30 21:05:24,429 - INFO -     ISO3 Country Code      Country  corn_year9  corn_total_pct_change_year9   difference
+0                  AF  Afghanistan  -19.144155                   -49.777063    30.632908
+1                  AL      Albania   -3.917808                    -4.480568     0.562759
+2                  DZ      Algeria   34.189121                  4587.821359  4553.632238
+4                  AD      Andorra  -40.449079                   -39.810673     0.638406
+5                  AO       Angola  -46.073378                   -46.702957     0.629579
+..                ...          ...         ...                          ...          ...
+240                VE    Venezuela    8.510972                     7.020305     1.490666
+241                VN      Vietnam  -19.630526                   -19.128825     0.501701
+244                YE        Yemen   32.144453                   147.548275   115.403822
+245                ZM       Zambia  -34.914979                   -35.424230     0.509250
+246                ZW     Zimbabwe   -8.907915                    -8.392355     0.515560
+
+[149 rows x 5 columns]
+2024-11-30 21:05:24,434 - INFO - Crop: Corn, Year: 10
+2024-11-30 21:05:24,434 - INFO -     ISO3 Country Code      Country  corn_year10  corn_total_pct_change_year10  difference
+0                  AF  Afghanistan     6.940893                    -11.818984   18.759877
+1                  AL      Albania   -54.360812                    -59.596794    5.235982
+2                  DZ      Algeria   -10.194965                     30.539211   40.734175
+4                  AD      Andorra   -39.355579                    -39.702636    0.347058
+5                  AO       Angola   -37.400481                    -35.930475    1.470006
+..                ...          ...          ...                           ...         ...
+240                VE    Venezuela    21.988367                     21.677439    0.310928
+241                VN      Vietnam    -0.403095                      2.744049    3.147145
+244                YE        Yemen    35.685661                     74.780061   39.094400
+245                ZM       Zambia   -31.905934                    -31.967372    0.061438
+246                ZW     Zimbabwe    -5.279828                     -5.059330    0.220498
+
+[153 rows x 5 columns]
+2024-11-30 21:05:24,439 - INFO - Crop: Rice, Year: 1
+2024-11-30 21:05:24,440 - INFO -     ISO3 Country Code      Country  rice_year1  rice_total_pct_change_year1  difference
+0                  AF  Afghanistan  -77.523889                   -75.106343    2.417545
+1                  AL      Albania  -98.556687                   -97.644174    0.912513
+5                  AO       Angola   -3.329097                    -5.416549    2.087453
+9                  AR    Argentina   -2.512909                    -2.115863    0.397046
+12                 AU    Australia   -8.766096                    -4.903448    3.862648
+..                ...          ...         ...                          ...         ...
+240                VE    Venezuela    1.637396                     3.855111    2.217715
+241                VN      Vietnam  -32.354526                   -31.414641    0.939886
+244                YE        Yemen   11.655562                    43.101048   31.445486
+245                ZM       Zambia   -5.909270                    -6.776956    0.867686
+246                ZW     Zimbabwe    2.376929                     1.779365    0.597563
+
+[106 rows x 5 columns]
+2024-11-30 21:05:24,446 - INFO - Crop: Rice, Year: 2
+2024-11-30 21:05:24,446 - INFO -     ISO3 Country Code    Country  rice_year2  rice_total_pct_change_year2  difference
+5                  AO     Angola  -71.677995                   -69.696271    1.981723
+9                  AR  Argentina  -82.929942                   -83.275774    0.345833
+12                 AU  Australia  -90.155462                   -93.505414    3.349952
+15                 BS    Bahamas  -92.751065                   -93.120730    0.369666
+21                 BZ     Belize  -67.930332                   -61.924170    6.006161
+..                ...        ...         ...                          ...         ...
+236                UY    Uruguay  -93.994323                   -93.808219    0.186105
+240                VE  Venezuela  -47.674654                   -43.549399    4.125255
+241                VN    Vietnam  -99.330283                   -99.139433    0.190850
+245                ZM     Zambia  -98.230553                   -98.269800    0.039247
+246                ZW   Zimbabwe  -86.368258                   -86.366499    0.001758
+
+[79 rows x 5 columns]
+2024-11-30 21:05:24,451 - INFO - Crop: Rice, Year: 3
+2024-11-30 21:05:24,451 - INFO -     ISO3 Country Code        Country  rice_year3  rice_total_pct_change_year3  difference
+5                  AO         Angola  -94.711781                   -93.213378    1.498403
+9                  AR      Argentina  -97.978517                   -98.281159    0.302642
+12                 AU      Australia  -98.195933                   -98.726919    0.530986
+17                 BD     Bangladesh  -90.583149                   -90.030307    0.552842
+21                 BZ         Belize  -98.192012                   -96.882127    1.309885
+..                ...            ...         ...                          ...         ...
+234                US  United States  -99.580985                   -99.501544    0.079440
+236                UY        Uruguay  -98.927338                   -98.889070    0.038268
+240                VE      Venezuela  -67.128015                   -62.177680    4.950335
+241                VN        Vietnam  -97.887330                   -97.499904    0.387426
+246                ZW       Zimbabwe  -98.944222                   -98.837419    0.106803
+
+[79 rows x 5 columns]
+2024-11-30 21:05:24,458 - INFO - Crop: Rice, Year: 4
+2024-11-30 21:05:24,458 - INFO -     ISO3 Country Code        Country  rice_year4  rice_total_pct_change_year4  difference
+5                  AO         Angola  -99.075767                   -98.446225    0.629542
+9                  AR      Argentina  -97.893779                   -98.150889    0.257110
+12                 AU      Australia  -96.307256                   -97.587666    1.280410
+17                 BD     Bangladesh  -67.007691                   -63.003010    4.004681
+22                 BJ          Benin  -90.275225                   -89.233600    1.041625
+..                ...            ...         ...                          ...         ...
+230                UG         Uganda  -97.206347                   -97.669538    0.463191
+234                US  United States  -99.887141                   -99.823982    0.063159
+240                VE      Venezuela  -72.918048                   -61.331782   11.586266
+241                VN        Vietnam  -94.142675                   -93.838575    0.304100
+246                ZW       Zimbabwe  -99.645576                   -99.633482    0.012094
+
+[81 rows x 5 columns]
+2024-11-30 21:05:24,464 - INFO - Crop: Rice, Year: 5
+2024-11-30 21:05:24,464 - INFO -     ISO3 Country Code        Country  rice_year5  rice_total_pct_change_year5  difference
+0                  AF    Afghanistan  -95.491672                   -94.885586    0.606086
+5                  AO         Angola  -98.796229                   -98.004667    0.791562
+9                  AR      Argentina  -97.734800                   -97.869817    0.135017
+12                 AU      Australia  -93.712704                   -95.959674    2.246970
+15                 BS        Bahamas  -98.888226                   -98.779144    0.109082
+..                ...            ...         ...                          ...         ...
+234                US  United States  -96.960177                   -96.353388    0.606789
+236                UY        Uruguay  -96.471791                   -95.916294    0.555497
+240                VE      Venezuela  -72.285414                   -71.059877    1.225536
+241                VN        Vietnam  -92.072449                   -91.571988    0.500462
+246                ZW       Zimbabwe  -99.027114                   -98.987215    0.039899
+
+[98 rows x 5 columns]
+2024-11-30 21:05:24,469 - INFO - Crop: Rice, Year: 6
+2024-11-30 21:05:24,470 - INFO -     ISO3 Country Code       Country  rice_year6  rice_total_pct_change_year6  difference
+0                  AF   Afghanistan  -58.538486                   -79.622001   21.083514
+1                  AL       Albania   49.178379                   199.832874  150.654495
+4                  AD       Andorra  -81.179763                   -80.926862    0.252901
+5                  AO        Angola  -97.385600                   -96.266469    1.119131
+9                  AR     Argentina  -94.660508                   -94.709259    0.048751
+..                ...           ...         ...                          ...         ...
+236                UY       Uruguay  -94.380318                   -94.294292    0.086026
+239                VA  Vatican City  -75.327353                   -75.271025    0.056328
+240                VE     Venezuela  -51.850413                   -40.024827   11.825586
+241                VN       Vietnam  -81.171664                   -79.222660    1.949004
+246                ZW      Zimbabwe  -94.438339                   -94.121819    0.316521
+
+[109 rows x 5 columns]
+2024-11-30 21:05:24,476 - INFO - Crop: Rice, Year: 7
+2024-11-30 21:05:24,476 - INFO -     ISO3 Country Code       Country  rice_year7  rice_total_pct_change_year7  difference
+0                  AF   Afghanistan  -66.599369                   -77.159345   10.559976
+1                  AL       Albania   92.583959                   903.592476  811.008517
+4                  AD       Andorra  -23.403858                   -22.158143    1.245715
+5                  AO        Angola  -89.336540                   -87.526190    1.810350
+9                  AR     Argentina  -84.147402                   -84.210915    0.063512
+..                ...           ...         ...                          ...         ...
+239                VA  Vatican City   35.565085                    41.799343    6.234258
+240                VE     Venezuela    5.809483                    46.920610   41.111127
+241                VN       Vietnam  -74.018014                   -73.396880    0.621134
+245                ZM        Zambia  -96.536505                   -96.731062    0.194556
+246                ZW      Zimbabwe  -79.341289                   -79.639469    0.298180
+
+[112 rows x 5 columns]
+2024-11-30 21:05:24,482 - INFO - Crop: Rice, Year: 8
+2024-11-30 21:05:24,482 - INFO -     ISO3 Country Code      Country  rice_year8  rice_total_pct_change_year8   difference
+0                  AF  Afghanistan  -66.277940                   -76.033205     9.755265
+1                  AL      Albania   17.478642                   955.295317   937.816675
+2                  DZ      Algeria  -65.350175                  1144.992567  1210.342742
+4                  AD      Andorra   18.188223                    28.454432    10.266209
+5                  AO       Angola  -74.413838                   -73.839566     0.574273
+..                ...          ...         ...                          ...          ...
+240                VE    Venezuela    5.898697                    28.069529    22.170832
+241                VN      Vietnam  -50.190006                   -48.052797     2.137209
+244                YE        Yemen  -45.487812                    34.834536    80.322348
+245                ZM       Zambia  -91.338638                   -91.143376     0.195263
+246                ZW     Zimbabwe  -73.807160                   -73.227768     0.579392
+
+[121 rows x 5 columns]
+2024-11-30 21:05:24,487 - INFO - Crop: Rice, Year: 9
+2024-11-30 21:05:24,487 - INFO -     ISO3 Country Code      Country  rice_year9  rice_total_pct_change_year9  difference
+0                  AF  Afghanistan  -50.338031                   -74.845316   24.507285
+1                  AL      Albania  -88.289889                   -55.841910   32.447979
+4                  AD      Andorra  -29.383883                   -29.841010    0.457127
+5                  AO       Angola  -57.440719                   -56.597204    0.843515
+9                  AR    Argentina  -43.924542                   -43.897130    0.027411
+..                ...          ...         ...                          ...         ...
+240                VE    Venezuela    3.809186                     9.005533    5.196347
+241                VN      Vietnam  -22.300421                   -18.093735    4.206686
+244                YE        Yemen  -17.601604                    54.697269   72.298873
+245                ZM       Zambia  -69.147950                   -69.090865    0.057084
+246                ZW     Zimbabwe  -59.658071                   -59.240086    0.417984
+
+[125 rows x 5 columns]
+2024-11-30 21:05:24,493 - INFO - Crop: Rice, Year: 10
+2024-11-30 21:05:24,493 - INFO -     ISO3 Country Code      Country  rice_year10  rice_total_pct_change_year10  difference
+0                  AF  Afghanistan   -19.742471                     54.540223   74.282694
+1                  AL      Albania   -26.745650                     93.069515  119.815164
+2                  DZ      Algeria   -52.734392                    -15.049709   37.684683
+4                  AD      Andorra   -10.268206                    -10.414249    0.146044
+5                  AO       Angola   -48.517147                    -47.734611    0.782537
+..                ...          ...          ...                           ...         ...
+240                VE    Venezuela    53.035478                     85.589468   32.553990
+241                VN      Vietnam   -24.390365                    -22.453635    1.936730
+244                YE        Yemen    -4.723871                      9.410686   14.134557
+245                ZM       Zambia   -46.530362                    -47.965657    1.435294
+246                ZW     Zimbabwe    -9.803606                    -11.816462    2.012855
+
+[131 rows x 5 columns]
+2024-11-30 21:05:24,499 - INFO - Crop: Soy, Year: 1
+2024-11-30 21:05:24,499 - INFO -     ISO3 Country Code     Country  soy_year1  soy_total_pct_change_year1  difference
+9                  AR   Argentina  -8.430723                   -8.936425    0.505702
+12                 AU   Australia -22.862087                  -18.370066    4.492021
+17                 BD  Bangladesh -85.152645                  -85.220102    0.067457
+21                 BZ      Belize -58.002788                  -56.716210    1.286578
+22                 BJ       Benin -63.294822                  -64.059556    0.764733
+..                ...         ...        ...                         ...         ...
+236                UY     Uruguay -21.601508                  -32.778332   11.176824
+241                VN     Vietnam -82.265477                  -82.262745    0.002732
+244                YE       Yemen -77.342051                  -29.614863   47.727188
+245                ZM      Zambia  -4.656589                   -4.720047    0.063457
+246                ZW    Zimbabwe  -6.180013                   -6.455522    0.275509
+
+[61 rows x 5 columns]
+2024-11-30 21:05:24,504 - INFO - Crop: Soy, Year: 2
+2024-11-30 21:05:24,504 - INFO -     ISO3 Country Code                           Country  soy_year2  soy_total_pct_change_year2  difference
+9                  AR                         Argentina -90.993154                  -90.834219    0.158935
+12                 AU                         Australia -93.888653                  -94.883163    0.994510
+25                 BO                           Bolivia -79.150690                  -80.970737    1.820046
+28                 BW                          Botswana -98.789574                  -98.630502    0.159072
+30                 BR                            Brazil -85.815315                  -86.782817    0.967502
+36                 BI                           Burundi -52.174059                  -44.190070    7.983989
+37                 KH                          Cambodia -99.842661                  -99.829361    0.013301
+38                 CM                          Cameroon -94.978596                  -96.641227    1.662631
+44                 TD                              Chad -98.642940                  -99.062962    0.420022
+45                 CL                             Chile -72.705771                  -65.510902    7.194870
+49                 CO                          Colombia -97.937563                  -98.160323    0.222760
+59                 CD  Democratic Republic of the Congo -83.598884                  -71.476826   12.122058
+61                 DJ                          Djibouti -92.367436                  -96.252142    3.884706
+70                 ET                          Ethiopia -59.920113                  -57.615332    2.304781
+101                IN                             India -99.661042                  -99.578551    0.082491
+102                ID                         Indonesia -73.492557                  -73.464241    0.028316
+103                IR                              Iran -99.949566                  -96.574931    3.374635
+122                LS                           Lesotho -86.730193                  -86.730477    0.000285
+123                LR                           Liberia -99.507622                  -99.657884    0.150262
+130                MW                            Malawi -91.089143                  -91.146943    0.057799
+140                MX                            Mexico -99.968318                  -99.956228    0.012090
+148                MZ                        Mozambique -99.763444                  -99.762592    0.000852
+150               NaN                           Namibia -99.920143                  -99.952593    0.032450
+158                NG                           Nigeria -99.044069                  -99.166150    0.122081
+170                PY                          Paraguay -93.767599                  -93.712598    0.055001
+171                PE                              Peru -99.443215                  -99.576628    0.133413
+182                RW                            Rwanda -32.347161                  -29.672027    2.675134
+203                SO                           Somalia -90.730454                  -56.062110   34.668344
+204                ZA                      South Africa -82.120084                  -82.479362    0.359278
+207                SS                       South Sudan -65.218019                  -69.810611    4.592592
+218                TZ                          Tanzania -49.996741                  -39.031816   10.964925
+220                TL                       Timor-Leste -71.596122                  -74.176845    2.580723
+230                UG                            Uganda -45.123863                  -46.847630    1.723767
+236                UY                           Uruguay -85.374895                  -81.313849    4.061047
+241                VN                           Vietnam -99.610166                  -99.612454    0.002289
+245                ZM                            Zambia -95.015390                  -95.052710    0.037321
+2024-11-30 21:05:24,511 - INFO - Crop: Soy, Year: 3
+2024-11-30 21:05:24,511 - INFO -     ISO3 Country Code                           Country  soy_year3  soy_total_pct_change_year3  difference
+9                  AR                         Argentina -92.290227                  -92.361425    0.071199
+12                 AU                         Australia -84.574946                  -85.247826    0.672880
+25                 BO                           Bolivia -99.332458                  -99.514233    0.181775
+28                 BW                          Botswana -96.867072                  -96.993585    0.126513
+30                 BR                            Brazil -95.343717                  -95.534339    0.190622
+36                 BI                           Burundi -31.759626                  -17.897745   13.861881
+38                 CM                          Cameroon -91.177484                  -94.381162    3.203678
+44                 TD                              Chad -91.739350                  -93.190688    1.451338
+45                 CL                             Chile -69.045752                  -72.935100    3.889348
+46                 CN                             China -99.913791                  -99.913422    0.000369
+49                 CO                          Colombia -89.075119                  -91.239549    2.164430
+59                 CD  Democratic Republic of the Congo -74.946019                  -58.848993   16.097025
+61                 DJ                          Djibouti -72.289202                  -77.496843    5.207641
+64                 EC                           Ecuador -93.872958                  -93.354701    0.518257
+68                 ER                           Eritrea -86.388525                  -88.813102    2.424577
+70                 ET                          Ethiopia -61.631226                  -62.764747    1.133522
+91                 GT                         Guatemala -97.985070                  -98.052214    0.067143
+101                IN                             India -98.487380                  -98.576020    0.088641
+102                ID                         Indonesia -97.843471                  -97.866099    0.022628
+103                IR                              Iran -96.819766                  -80.867078   15.952688
+115                KE                             Kenya  41.881015                  -24.483516   66.364530
+119                LA                              Laos -97.669340                  -97.687475    0.018136
+122                LS                           Lesotho -61.335089                  -61.326985    0.008104
+130                MW                            Malawi -65.143879                  -65.192771    0.048893
+131                MY                          Malaysia -98.295229                  -97.935101    0.360128
+140                MX                            Mexico -91.328482                  -90.583998    0.744484
+148                MZ                        Mozambique -95.540764                  -95.527718    0.013046
+149                MM                           Myanmar -99.944306                  -99.944171    0.000136
+150               NaN                           Namibia -96.835693                  -98.128065    1.292372
+152                NP                             Nepal -98.177291                  -98.192062    0.014770
+157                NE                             Niger -99.703545                  -99.605039    0.098506
+158                NG                           Nigeria -99.596913                  -99.627179    0.030266
+165                PK                          Pakistan -97.199348                  -97.989894    0.790546
+171                PE                              Peru -91.411143                  -90.402352    1.008791
+182                RW                            Rwanda   2.306471                    6.406217    4.099746
+198                SG                         Singapore -96.414518                  -96.557016    0.142497
+203                SO                           Somalia -72.871959                  -78.996865    6.124906
+204                ZA                      South Africa -77.410704                  -77.446649    0.035944
+207                SS                       South Sudan -64.272848                  -66.652556    2.379707
+218                TZ                          Tanzania -20.082341                   -5.451355   14.630986
+219                TH                          Thailand -99.557353                  -99.524188    0.033165
+220                TL                       Timor-Leste -89.463546                  -90.968037    1.504491
+230                UG                            Uganda -29.591124                  -30.515732    0.924608
+234                US                     United States -99.610406                  -99.522380    0.088027
+236                UY                           Uruguay -69.278420                  -67.292834    1.985586
+241                VN                           Vietnam -98.718760                  -98.719131    0.000371
+244                YE                             Yemen -84.631408                  -84.267909    0.363499
+245                ZM                            Zambia -83.758103                  -83.713093    0.045010
+246                ZW                          Zimbabwe -97.987749                  -97.983345    0.004404
+2024-11-30 21:05:24,518 - INFO - Crop: Soy, Year: 4
+2024-11-30 21:05:24,518 - INFO -     ISO3 Country Code                           Country  soy_year4  soy_total_pct_change_year4  difference
+0                  AF                       Afghanistan -84.473836                  -92.573022    8.099186
+9                  AR                         Argentina -95.935605                  -95.928026    0.007580
+12                 AU                         Australia -84.158017                  -84.685575    0.527558
+25                 BO                           Bolivia -90.816811                  -90.485514    0.331297
+28                 BW                          Botswana -94.105726                  -94.137313    0.031587
+30                 BR                            Brazil -90.482457                  -90.453272    0.029184
+36                 BI                           Burundi  -7.702790                   -3.327100    4.375689
+38                 CM                          Cameroon -90.665283                  -93.813269    3.147987
+44                 TD                              Chad -99.379642                  -99.567861    0.188219
+45                 CL                             Chile -73.056165                  -79.853499    6.797335
+46                 CN                             China -99.661045                  -99.667179    0.006134
+49                 CO                          Colombia -61.472614                  -61.037234    0.435380
+59                 CD  Democratic Republic of the Congo -55.400130                  -47.260002    8.140127
+61                 DJ                          Djibouti -62.500508                  -54.393986    8.106521
+64                 EC                           Ecuador -91.916037                  -93.380218    1.464180
+68                 ER                           Eritrea -84.974799                  -83.744528    1.230270
+70                 ET                          Ethiopia -56.752095                  -54.638246    2.113849
+101                IN                             India -96.870494                  -96.595557    0.274937
+102                ID                         Indonesia -93.123969                  -93.120312    0.003657
+103                IR                              Iran -88.209828                  -90.324357    2.114529
+114                KZ                        Kazakhstan -99.279852                  -99.636142    0.356290
+115                KE                             Kenya  68.022723                  -16.853147   84.875870
+118                KG                        Kyrgyzstan -94.821985                  -97.532853    2.710868
+119                LA                              Laos -95.214316                  -95.221919    0.007603
+122                LS                           Lesotho -53.495201                  -53.434061    0.061140
+130                MW                            Malawi -49.509520                  -49.598268    0.088747
+131                MY                          Malaysia -92.427720                  -94.313336    1.885616
+140                MX                            Mexico -77.875934                  -77.437400    0.438534
+148                MZ                        Mozambique -91.697793                  -91.707901    0.010108
+149                MM                           Myanmar -97.943294                  -97.945119    0.001826
+150               NaN                           Namibia -91.986705                  -89.751526    2.235179
+152                NP                             Nepal -98.442647                  -98.625393    0.182747
+158                NG                           Nigeria -99.779735                  -99.811883    0.032148
+165                PK                          Pakistan -96.845635                  -97.321787    0.476152
+170                PY                          Paraguay -93.983546                  -93.946176    0.037371
+171                PE                              Peru -99.156859                  -99.047551    0.109307
+182                RW                            Rwanda   1.124468                    3.071293    1.946825
+198                SG                         Singapore -92.698076                  -94.198261    1.500185
+203                SO                           Somalia -62.530985                  -54.822533    7.708452
+204                ZA                      South Africa -77.194313                  -77.236493    0.042180
+207                SS                       South Sudan -55.085459                  -56.015262    0.929802
+208                ES                             Spain -99.844112                  -99.920550    0.076437
+218                TZ                          Tanzania   3.101215                    5.377489    2.276274
+219                TH                          Thailand -96.981499                  -96.960542    0.020957
+220                TL                       Timor-Leste -78.614905                  -81.117629    2.502724
+230                UG                            Uganda  -8.438379                   -8.896416    0.458037
+234                US                     United States -96.678052                  -96.386434    0.291618
+236                UY                           Uruguay -84.260919                  -81.966573    2.294345
+241                VN                           Vietnam -96.776672                  -96.777831    0.001159
+244                YE                             Yemen -79.462614                  -63.948555   15.514060
+245                ZM                            Zambia -73.402137                  -73.403663    0.001526
+246                ZW                          Zimbabwe -95.212185                  -95.210512    0.001674
+2024-11-30 21:05:24,526 - INFO - Crop: Soy, Year: 5
+2024-11-30 21:05:24,526 - INFO -     ISO3 Country Code     Country  soy_year5  soy_total_pct_change_year5  difference
+9                  AR   Argentina -86.479196                  -85.877550    0.601646
+10                 AM     Armenia -64.842654                   77.246726  142.089380
+12                 AU   Australia -90.542898                  -90.824954    0.282056
+14                 AZ  Azerbaijan -66.779218                  122.971612  189.750830
+25                 BO     Bolivia -87.741311                  -87.113418    0.627893
+..                ...         ...        ...                         ...         ...
+236                UY     Uruguay -57.957100                  -51.401782    6.555318
+241                VN     Vietnam -95.748313                  -95.750009    0.001696
+244                YE       Yemen -83.151094                  -70.027804   13.123290
+245                ZM      Zambia -69.344524                  -69.256416    0.088108
+246                ZW    Zimbabwe -84.980982                  -84.829245    0.151737
+
+[61 rows x 5 columns]
+2024-11-30 21:05:24,532 - INFO - Crop: Soy, Year: 6
+2024-11-30 21:05:24,532 - INFO -     ISO3 Country Code        Country  soy_year6  soy_total_pct_change_year6  difference
+0                  AF    Afghanistan -49.853694                  -76.035146   26.181451
+1                  AL        Albania -98.007582                  -98.939489    0.931907
+9                  AR      Argentina -85.373686                  -85.365491    0.008194
+10                 AM        Armenia -52.311023                  -35.045255   17.265768
+12                 AU      Australia -78.787231                  -79.108119    0.320888
+..                ...            ...        ...                         ...         ...
+234                US  United States -93.497247                  -91.997460    1.499787
+236                UY        Uruguay -61.712213                  -60.239801    1.472412
+241                VN        Vietnam -90.321894                  -90.343033    0.021138
+245                ZM         Zambia -62.329336                  -62.336019    0.006683
+246                ZW       Zimbabwe -85.024526                  -85.006997    0.017529
+
+[73 rows x 5 columns]
+2024-11-30 21:05:24,537 - INFO - Crop: Soy, Year: 7
+2024-11-30 21:05:24,537 - INFO -     ISO3 Country Code      Country  soy_year7  soy_total_pct_change_year7  difference
+0                  AF  Afghanistan -31.567239                  -66.922292   35.355053
+1                  AL      Albania -97.726509                  -98.712794    0.986285
+4                  AD      Andorra -99.761073                  -98.687131    1.073942
+9                  AR    Argentina -75.940335                  -75.912619    0.027716
+10                 AM      Armenia -84.200866                  -58.453189   25.747677
+..                ...          ...        ...                         ...         ...
+236                UY      Uruguay -34.881227                  -32.711343    2.169884
+241                VN      Vietnam -82.636966                  -82.627162    0.009805
+244                YE        Yemen -75.781281                  -44.444559   31.336722
+245                ZM       Zambia -69.003916                  -68.948205    0.055711
+246                ZW     Zimbabwe -88.741620                  -88.699914    0.041707
+
+[82 rows x 5 columns]
+2024-11-30 21:05:24,544 - INFO - Crop: Soy, Year: 8
+2024-11-30 21:05:24,544 - INFO -     ISO3 Country Code      Country  soy_year8  soy_total_pct_change_year8  difference
+0                  AF  Afghanistan  12.979813                  -45.909382   58.889195
+9                  AR    Argentina -66.735566                  -66.765974    0.030408
+10                 AM      Armenia -57.683867                  -77.692342   20.008475
+12                 AU    Australia -71.660084                  -72.108657    0.448572
+13                 AT      Austria -93.859810                  -93.715989    0.143821
+..                ...          ...        ...                         ...         ...
+236                UY      Uruguay -54.206737                  -52.065797    2.140939
+241                VN      Vietnam -53.176744                  -53.118501    0.058243
+244                YE        Yemen -85.739958                  -82.915054    2.824904
+245                ZM       Zambia -83.228223                  -83.229861    0.001638
+246                ZW     Zimbabwe -88.379153                  -88.570477    0.191324
+
+[85 rows x 5 columns]
+2024-11-30 21:05:24,549 - INFO - Crop: Soy, Year: 9
+2024-11-30 21:05:24,549 - INFO -     ISO3 Country Code      Country  soy_year9  soy_total_pct_change_year9  difference
+0                  AF  Afghanistan  19.140089                  -43.371420   62.511508
+1                  AL      Albania -46.916022                  -64.008834   17.092812
+4                  AD      Andorra -54.282721                  -53.677642    0.605079
+9                  AR    Argentina -43.945216                  -43.283857    0.661359
+10                 AM      Armenia -44.567146                  -73.297204   28.730058
+..                ...          ...        ...                         ...         ...
+236                UY      Uruguay  10.444251                   29.551656   19.107405
+241                VN      Vietnam -16.127887                  -16.066976    0.060912
+244                YE        Yemen -44.522825                  170.258741  214.781566
+245                ZM       Zambia -75.880804                  -75.845474    0.035330
+246                ZW     Zimbabwe -62.639124                  -62.602506    0.036619
+
+[99 rows x 5 columns]
+2024-11-30 21:05:24,554 - INFO - Crop: Soy, Year: 10
+2024-11-30 21:05:24,554 - INFO -     ISO3 Country Code    Country  soy_year10  soy_total_pct_change_year10  difference
+1                  AL    Albania  -60.976851                   -78.548656   17.571805
+4                  AD    Andorra  -61.269987                   -74.410389   13.140402
+9                  AR  Argentina  -28.422515                   -28.745289    0.322775
+10                 AM    Armenia  -63.145032                   -80.248479   17.103447
+12                 AU  Australia   -4.691523                    -9.194893    4.503370
+..                ...        ...         ...                          ...         ...
+236                UY    Uruguay    1.972673                     6.917367    4.944694
+241                VN    Vietnam    2.056812                     2.475811    0.418999
+244                YE      Yemen  -20.018919                   -55.439301   35.420382
+245                ZM     Zambia  -44.649711                   -44.670670    0.020959
+246                ZW   Zimbabwe  -20.495997                   -20.334601    0.161396
+
+[101 rows x 5 columns]
+2024-11-30 21:07:07,184 - WARNING - Columns wheat_rainfed_year1 or wheat_irrigated_year1 not found in the data.
+2024-11-30 21:07:07,185 - WARNING - Columns wheat_rainfed_year2 or wheat_irrigated_year2 not found in the data.
+2024-11-30 21:07:07,185 - WARNING - Columns wheat_rainfed_year3 or wheat_irrigated_year3 not found in the data.
+2024-11-30 21:07:07,185 - WARNING - Columns wheat_rainfed_year4 or wheat_irrigated_year4 not found in the data.
+2024-11-30 21:07:07,185 - WARNING - Columns wheat_rainfed_year5 or wheat_irrigated_year5 not found in the data.
+2024-11-30 21:07:07,185 - WARNING - Columns wheat_rainfed_year6 or wheat_irrigated_year6 not found in the data.
+2024-11-30 21:07:07,185 - WARNING - Columns wheat_rainfed_year7 or wheat_irrigated_year7 not found in the data.
+2024-11-30 21:07:07,185 - WARNING - Columns wheat_rainfed_year8 or wheat_irrigated_year8 not found in the data.
+2024-11-30 21:07:07,185 - WARNING - Columns wheat_rainfed_year9 or wheat_irrigated_year9 not found in the data.
+2024-11-30 21:07:07,185 - WARNING - Columns wheat_rainfed_year10 or wheat_irrigated_year10 not found in the data.
+2024-11-30 21:07:07,188 - WARNING - Discrepancies found for crop Corn in year 1.
+2024-11-30 21:07:07,190 - WARNING - Discrepancies found for crop Corn in year 2.
+2024-11-30 21:07:07,193 - WARNING - Discrepancies found for crop Corn in year 3.
+2024-11-30 21:07:07,194 - WARNING - Discrepancies found for crop Corn in year 4.
+2024-11-30 21:07:07,196 - WARNING - Discrepancies found for crop Corn in year 5.
+2024-11-30 21:07:07,198 - WARNING - Discrepancies found for crop Corn in year 6.
+2024-11-30 21:07:07,199 - WARNING - Discrepancies found for crop Corn in year 7.
+2024-11-30 21:07:07,200 - WARNING - Discrepancies found for crop Corn in year 8.
+2024-11-30 21:07:07,202 - WARNING - Discrepancies found for crop Corn in year 9.
+2024-11-30 21:07:07,203 - WARNING - Discrepancies found for crop Corn in year 10.
+2024-11-30 21:07:07,205 - WARNING - Discrepancies found for crop Rice in year 1.
+2024-11-30 21:07:07,206 - WARNING - Discrepancies found for crop Rice in year 2.
+2024-11-30 21:07:07,209 - WARNING - Discrepancies found for crop Rice in year 3.
+2024-11-30 21:07:07,211 - WARNING - Discrepancies found for crop Rice in year 4.
+2024-11-30 21:07:07,213 - WARNING - Discrepancies found for crop Rice in year 5.
+2024-11-30 21:07:07,215 - WARNING - Discrepancies found for crop Rice in year 6.
+2024-11-30 21:07:07,217 - WARNING - Discrepancies found for crop Rice in year 7.
+2024-11-30 21:07:07,218 - WARNING - Discrepancies found for crop Rice in year 8.
+2024-11-30 21:07:07,220 - WARNING - Discrepancies found for crop Rice in year 9.
+2024-11-30 21:07:07,221 - WARNING - Discrepancies found for crop Rice in year 10.
+2024-11-30 21:07:07,223 - WARNING - Discrepancies found for crop Soy in year 1.
+2024-11-30 21:07:07,224 - WARNING - Discrepancies found for crop Soy in year 2.
+2024-11-30 21:07:07,227 - WARNING - Discrepancies found for crop Soy in year 3.
+2024-11-30 21:07:07,228 - WARNING - Discrepancies found for crop Soy in year 4.
+2024-11-30 21:07:07,230 - WARNING - Discrepancies found for crop Soy in year 5.
+2024-11-30 21:07:07,231 - WARNING - Discrepancies found for crop Soy in year 6.
+2024-11-30 21:07:07,233 - WARNING - Discrepancies found for crop Soy in year 7.
+2024-11-30 21:07:07,235 - WARNING - Discrepancies found for crop Soy in year 8.
+2024-11-30 21:07:07,236 - WARNING - Discrepancies found for crop Soy in year 9.
+2024-11-30 21:07:07,238 - WARNING - Discrepancies found for crop Soy in year 10.
+2024-11-30 21:07:07,238 - WARNING - Columns wheat_year1 or wheat_total_pct_change_year1 not found.
+2024-11-30 21:07:07,238 - WARNING - Columns wheat_year2 or wheat_total_pct_change_year2 not found.
+2024-11-30 21:07:07,238 - WARNING - Columns wheat_year3 or wheat_total_pct_change_year3 not found.
+2024-11-30 21:07:07,238 - WARNING - Columns wheat_year4 or wheat_total_pct_change_year4 not found.
+2024-11-30 21:07:07,238 - WARNING - Columns wheat_year5 or wheat_total_pct_change_year5 not found.
+2024-11-30 21:07:07,238 - WARNING - Columns wheat_year6 or wheat_total_pct_change_year6 not found.
+2024-11-30 21:07:07,238 - WARNING - Columns wheat_year7 or wheat_total_pct_change_year7 not found.
+2024-11-30 21:07:07,238 - WARNING - Columns wheat_year8 or wheat_total_pct_change_year8 not found.
+2024-11-30 21:07:07,238 - WARNING - Columns wheat_year9 or wheat_total_pct_change_year9 not found.
+2024-11-30 21:07:07,238 - WARNING - Columns wheat_year10 or wheat_total_pct_change_year10 not found.
+2024-11-30 21:07:07,238 - INFO - Discrepancies detected:
+2024-11-30 21:07:07,238 - INFO - Crop: Corn, Year: 1
+2024-11-30 21:07:07,238 - INFO -     ISO3 Country Code      Country  corn_year1  corn_total_pct_change_year1  difference
+0                  AF  Afghanistan  -99.181709                   -96.805635    2.376074
+5                  AO       Angola    3.573502                     3.621357    0.047855
+9                  AR    Argentina   -2.137346                    -2.016896    0.120450
+11                 AW        Aruba  -27.241931                   -17.157653   10.084278
+12                 AU    Australia  -20.496826                   -14.226972    6.269854
+..                ...          ...         ...                          ...         ...
+240                VE    Venezuela  -30.829007                   -31.122464    0.293457
+241                VN      Vietnam  -65.115239                   -65.104356    0.010883
+244                YE        Yemen  -23.806862                    13.570697   37.377559
+245                ZM       Zambia   -0.611923                    -1.047260    0.435337
+246                ZW     Zimbabwe   18.321031                    19.409284    1.088254
+
+[94 rows x 5 columns]
+2024-11-30 21:07:07,246 - INFO - Crop: Corn, Year: 2
+2024-11-30 21:07:07,246 - INFO -     ISO3 Country Code    Country  corn_year2  corn_total_pct_change_year2  difference
+5                  AO     Angola  -64.535529                   -64.484707    0.050822
+9                  AR  Argentina  -86.883338                   -86.769637    0.113701
+11                 AW      Aruba  -68.770138                   -64.918055    3.852084
+12                 AU  Australia  -69.920074                   -75.005782    5.085708
+15                 BS    Bahamas  -92.560458                   -92.452363    0.108095
+..                ...        ...         ...                          ...         ...
+240                VE  Venezuela  -82.370225                   -82.351457    0.018768
+241                VN    Vietnam  -90.844722                   -90.789940    0.054782
+244                YE      Yemen  -84.410880                   -78.660698    5.750182
+245                ZM     Zambia  -72.705997                   -73.067560    0.361562
+246                ZW   Zimbabwe  -65.548187                   -65.471790    0.076397
+
+[84 rows x 5 columns]
+2024-11-30 21:07:07,251 - INFO - Crop: Corn, Year: 3
+2024-11-30 21:07:07,251 - INFO -     ISO3 Country Code        Country  corn_year3  corn_total_pct_change_year3  difference
+5                  AO         Angola  -92.173164                   -91.380420    0.792744
+9                  AR      Argentina  -96.247404                   -96.220557    0.026847
+11                 AW          Aruba  -33.187126                   -28.805056    4.382070
+12                 AU      Australia  -86.640237                   -88.930023    2.289786
+15                 BS        Bahamas  -94.644762                   -94.809694    0.164931
+..                ...            ...         ...                          ...         ...
+230                UG         Uganda  -98.139834                   -98.129482    0.010352
+234                US  United States  -99.750434                   -99.779061    0.028627
+240                VE      Venezuela  -71.297804                   -70.843208    0.454596
+241                VN        Vietnam  -92.390667                   -92.364048    0.026618
+244                YE          Yemen  -88.239930                   -83.253366    4.986564
+
+[76 rows x 5 columns]
+2024-11-30 21:07:07,256 - INFO - Crop: Corn, Year: 4
+2024-11-30 21:07:07,256 - INFO -     ISO3 Country Code        Country  corn_year4  corn_total_pct_change_year4  difference
+5                  AO         Angola  -94.605102                   -94.197000    0.408102
+9                  AR      Argentina  -94.938736                   -94.915308    0.023428
+11                 AW          Aruba  -34.071286                   -14.331586   19.739700
+12                 AU      Australia  -90.729986                   -92.324795    1.594810
+15                 BS        Bahamas  -94.007043                   -93.548759    0.458284
+..                ...            ...         ...                          ...         ...
+234                US  United States  -99.702096                   -99.736507    0.034411
+240                VE      Venezuela  -70.743958                   -70.760222    0.016263
+241                VN        Vietnam  -82.242347                   -82.265898    0.023551
+244                YE          Yemen  -80.037029                   -57.847148   22.189881
+246                ZW       Zimbabwe  -95.991657                   -95.951816    0.039842
+
+[82 rows x 5 columns]
+2024-11-30 21:07:07,263 - INFO - Crop: Corn, Year: 5
+2024-11-30 21:07:07,263 - INFO -     ISO3 Country Code      Country  corn_year5  corn_total_pct_change_year5  difference
+0                  AF  Afghanistan  -98.875087                   -98.022462    0.852625
+5                  AO       Angola  -96.082137                   -95.631988    0.450148
+9                  AR    Argentina  -93.920481                   -94.129750    0.209270
+11                 AW        Aruba  -27.639679                   -23.049501    4.590178
+12                 AU    Australia  -88.019962                   -90.006306    1.986344
+..                ...          ...         ...                          ...         ...
+240                VE    Venezuela  -67.451391                   -67.229536    0.221855
+241                VN      Vietnam  -74.828841                   -74.595959    0.232882
+244                YE        Yemen  -74.955517                   -57.791734   17.163782
+245                ZM       Zambia  -98.966444                   -98.932924    0.033520
+246                ZW     Zimbabwe  -92.868066                   -92.812623    0.055443
+
+[88 rows x 5 columns]
+2024-11-30 21:07:07,268 - INFO - Crop: Corn, Year: 6
+2024-11-30 21:07:07,268 - INFO -     ISO3 Country Code      Country  corn_year6  corn_total_pct_change_year6   difference
+0                  AF  Afghanistan  -71.058558                   -69.418981     1.639577
+2                  DZ      Algeria  -70.299278                  2631.172787  2701.472065
+5                  AO       Angola  -89.728081                   -89.010443     0.717638
+9                  AR    Argentina  -87.586335                   -87.947239     0.360904
+11                 AW        Aruba    2.012948                    11.585801     9.572853
+..                ...          ...         ...                          ...          ...
+240                VE    Venezuela  -40.296686                   -40.700630     0.403944
+241                VN      Vietnam  -54.059790                   -53.480469     0.579321
+244                YE        Yemen  -57.223968                   -36.855206    20.368762
+245                ZM       Zambia  -91.700637                   -91.576819     0.123817
+246                ZW     Zimbabwe  -72.702203                   -72.599506     0.102697
+
+[96 rows x 5 columns]
+2024-11-30 21:07:07,274 - INFO - Crop: Corn, Year: 7
+2024-11-30 21:07:07,274 - INFO -     ISO3 Country Code      Country  corn_year7  corn_total_pct_change_year7  difference
+0                  AF  Afghanistan  -46.138829                   -75.255673   29.116844
+2                  DZ      Algeria  -44.565607                   817.398612  861.964219
+5                  AO       Angola  -74.683399                   -73.063586    1.619813
+9                  AR    Argentina  -80.673461                   -80.935646    0.262185
+10                 AM      Armenia  -79.222344                   -72.117603    7.104741
+..                ...          ...         ...                          ...         ...
+236                UY      Uruguay  -85.696496                   -85.678672    0.017825
+240                VE    Venezuela  -28.860443                   -29.195874    0.335431
+241                VN      Vietnam  -41.800337                   -41.669757    0.130580
+244                YE        Yemen    8.646030                   139.755894  131.109864
+246                ZW     Zimbabwe  -41.764611                   -41.184203    0.580409
+
+[110 rows x 5 columns]
+2024-11-30 21:07:07,280 - INFO - Crop: Corn, Year: 8
+2024-11-30 21:07:07,280 - INFO -     ISO3 Country Code      Country  corn_year8  corn_total_pct_change_year8  difference
+0                  AF  Afghanistan  -14.965747                   -60.341334   45.375587
+1                  AL      Albania  -51.542086                   -51.151596    0.390490
+2                  DZ      Algeria    9.287647                   274.158886  264.871239
+4                  AD      Andorra  -89.418800                   -87.606717    1.812083
+5                  AO       Angola  -66.851953                   -65.587377    1.264576
+..                ...          ...         ...                          ...         ...
+240                VE    Venezuela  -16.496938                   -17.651308    1.154369
+241                VN      Vietnam  -27.596114                   -26.928367    0.667747
+244                YE        Yemen   63.524501                   363.390169  299.865668
+245                ZM       Zambia  -65.641719                   -65.655302    0.013583
+246                ZW     Zimbabwe  -36.919183                   -36.734550    0.184632
+
+[131 rows x 5 columns]
+2024-11-30 21:07:07,285 - INFO - Crop: Corn, Year: 9
+2024-11-30 21:07:07,286 - INFO -     ISO3 Country Code      Country  corn_year9  corn_total_pct_change_year9   difference
+0                  AF  Afghanistan  -19.144155                   -49.777063    30.632908
+1                  AL      Albania   -3.917808                    -4.480568     0.562759
+2                  DZ      Algeria   34.189121                  4587.821359  4553.632238
+4                  AD      Andorra  -40.449079                   -39.810673     0.638406
+5                  AO       Angola  -46.073378                   -46.702957     0.629579
+..                ...          ...         ...                          ...          ...
+240                VE    Venezuela    8.510972                     7.020305     1.490666
+241                VN      Vietnam  -19.630526                   -19.128825     0.501701
+244                YE        Yemen   32.144453                   147.548275   115.403822
+245                ZM       Zambia  -34.914979                   -35.424230     0.509250
+246                ZW     Zimbabwe   -8.907915                    -8.392355     0.515560
+
+[144 rows x 5 columns]
+2024-11-30 21:07:07,290 - INFO - Crop: Corn, Year: 10
+2024-11-30 21:07:07,290 - INFO -     ISO3 Country Code      Country  corn_year10  corn_total_pct_change_year10  difference
+0                  AF  Afghanistan     6.940893                    -11.818984   18.759877
+1                  AL      Albania   -54.360812                    -59.596794    5.235982
+2                  DZ      Algeria   -10.194965                     30.539211   40.734175
+4                  AD      Andorra   -39.355579                    -39.702636    0.347058
+5                  AO       Angola   -37.400481                    -35.930475    1.470006
+..                ...          ...          ...                           ...         ...
+240                VE    Venezuela    21.988367                     21.677439    0.310928
+241                VN      Vietnam    -0.403095                      2.744049    3.147145
+244                YE        Yemen    35.685661                     74.780061   39.094400
+245                ZM       Zambia   -31.905934                    -31.967372    0.061438
+246                ZW     Zimbabwe    -5.279828                     -5.059330    0.220498
+
+[153 rows x 5 columns]
+2024-11-30 21:07:07,296 - INFO - Crop: Rice, Year: 1
+2024-11-30 21:07:07,297 - INFO -     ISO3 Country Code      Country  rice_year1  rice_total_pct_change_year1  difference
+0                  AF  Afghanistan  -77.523889                   -75.106343    2.417545
+1                  AL      Albania  -98.556687                   -97.644174    0.912513
+5                  AO       Angola   -3.329097                    -5.416549    2.087453
+9                  AR    Argentina   -2.512909                    -2.115863    0.397046
+12                 AU    Australia   -8.766096                    -4.903448    3.862648
+..                ...          ...         ...                          ...         ...
+240                VE    Venezuela    1.637396                     3.855111    2.217715
+241                VN      Vietnam  -32.354526                   -31.414641    0.939886
+244                YE        Yemen   11.655562                    43.101048   31.445486
+245                ZM       Zambia   -5.909270                    -6.776956    0.867686
+246                ZW     Zimbabwe    2.376929                     1.779365    0.597563
+
+[105 rows x 5 columns]
+2024-11-30 21:07:07,302 - INFO - Crop: Rice, Year: 2
+2024-11-30 21:07:07,302 - INFO -     ISO3 Country Code        Country  rice_year2  rice_total_pct_change_year2  difference
+5                  AO         Angola  -71.677995                   -69.696271    1.981723
+9                  AR      Argentina  -82.929942                   -83.275774    0.345833
+12                 AU      Australia  -90.155462                   -93.505414    3.349952
+15                 BS        Bahamas  -92.751065                   -93.120730    0.369666
+21                 BZ         Belize  -67.930332                   -61.924170    6.006161
+..                ...            ...         ...                          ...         ...
+234                US  United States  -99.327983                   -99.224987    0.102996
+236                UY        Uruguay  -93.994323                   -93.808219    0.186105
+240                VE      Venezuela  -47.674654                   -43.549399    4.125255
+241                VN        Vietnam  -99.330283                   -99.139433    0.190850
+245                ZM         Zambia  -98.230553                   -98.269800    0.039247
+
+[77 rows x 5 columns]
+2024-11-30 21:07:07,307 - INFO - Crop: Rice, Year: 3
+2024-11-30 21:07:07,307 - INFO -     ISO3 Country Code        Country  rice_year3  rice_total_pct_change_year3  difference
+5                  AO         Angola  -94.711781                   -93.213378    1.498403
+9                  AR      Argentina  -97.978517                   -98.281159    0.302642
+12                 AU      Australia  -98.195933                   -98.726919    0.530986
+17                 BD     Bangladesh  -90.583149                   -90.030307    0.552842
+21                 BZ         Belize  -98.192012                   -96.882127    1.309885
+..                ...            ...         ...                          ...         ...
+234                US  United States  -99.580985                   -99.501544    0.079440
+236                UY        Uruguay  -98.927338                   -98.889070    0.038268
+240                VE      Venezuela  -67.128015                   -62.177680    4.950335
+241                VN        Vietnam  -97.887330                   -97.499904    0.387426
+246                ZW       Zimbabwe  -98.944222                   -98.837419    0.106803
+
+[77 rows x 5 columns]
+2024-11-30 21:07:07,313 - INFO - Crop: Rice, Year: 4
+2024-11-30 21:07:07,313 - INFO -     ISO3 Country Code        Country  rice_year4  rice_total_pct_change_year4  difference
+5                  AO         Angola  -99.075767                   -98.446225    0.629542
+9                  AR      Argentina  -97.893779                   -98.150889    0.257110
+12                 AU      Australia  -96.307256                   -97.587666    1.280410
+17                 BD     Bangladesh  -67.007691                   -63.003010    4.004681
+22                 BJ          Benin  -90.275225                   -89.233600    1.041625
+..                ...            ...         ...                          ...         ...
+230                UG         Uganda  -97.206347                   -97.669538    0.463191
+234                US  United States  -99.887141                   -99.823982    0.063159
+240                VE      Venezuela  -72.918048                   -61.331782   11.586266
+241                VN        Vietnam  -94.142675                   -93.838575    0.304100
+246                ZW       Zimbabwe  -99.645576                   -99.633482    0.012094
+
+[80 rows x 5 columns]
+2024-11-30 21:07:07,318 - INFO - Crop: Rice, Year: 5
+2024-11-30 21:07:07,318 - INFO -     ISO3 Country Code        Country  rice_year5  rice_total_pct_change_year5  difference
+0                  AF    Afghanistan  -95.491672                   -94.885586    0.606086
+5                  AO         Angola  -98.796229                   -98.004667    0.791562
+9                  AR      Argentina  -97.734800                   -97.869817    0.135017
+12                 AU      Australia  -93.712704                   -95.959674    2.246970
+15                 BS        Bahamas  -98.888226                   -98.779144    0.109082
+..                ...            ...         ...                          ...         ...
+234                US  United States  -96.960177                   -96.353388    0.606789
+236                UY        Uruguay  -96.471791                   -95.916294    0.555497
+240                VE      Venezuela  -72.285414                   -71.059877    1.225536
+241                VN        Vietnam  -92.072449                   -91.571988    0.500462
+246                ZW       Zimbabwe  -99.027114                   -98.987215    0.039899
+
+[96 rows x 5 columns]
+2024-11-30 21:07:07,323 - INFO - Crop: Rice, Year: 6
+2024-11-30 21:07:07,323 - INFO -     ISO3 Country Code       Country  rice_year6  rice_total_pct_change_year6  difference
+0                  AF   Afghanistan  -58.538486                   -79.622001   21.083514
+1                  AL       Albania   49.178379                   199.832874  150.654495
+4                  AD       Andorra  -81.179763                   -80.926862    0.252901
+5                  AO        Angola  -97.385600                   -96.266469    1.119131
+9                  AR     Argentina  -94.660508                   -94.709259    0.048751
+..                ...           ...         ...                          ...         ...
+236                UY       Uruguay  -94.380318                   -94.294292    0.086026
+239                VA  Vatican City  -75.327353                   -75.271025    0.056328
+240                VE     Venezuela  -51.850413                   -40.024827   11.825586
+241                VN       Vietnam  -81.171664                   -79.222660    1.949004
+246                ZW      Zimbabwe  -94.438339                   -94.121819    0.316521
+
+[108 rows x 5 columns]
+2024-11-30 21:07:07,329 - INFO - Crop: Rice, Year: 7
+2024-11-30 21:07:07,329 - INFO -     ISO3 Country Code       Country  rice_year7  rice_total_pct_change_year7  difference
+0                  AF   Afghanistan  -66.599369                   -77.159345   10.559976
+1                  AL       Albania   92.583959                   903.592476  811.008517
+4                  AD       Andorra  -23.403858                   -22.158143    1.245715
+5                  AO        Angola  -89.336540                   -87.526190    1.810350
+9                  AR     Argentina  -84.147402                   -84.210915    0.063512
+..                ...           ...         ...                          ...         ...
+239                VA  Vatican City   35.565085                    41.799343    6.234258
+240                VE     Venezuela    5.809483                    46.920610   41.111127
+241                VN       Vietnam  -74.018014                   -73.396880    0.621134
+245                ZM        Zambia  -96.536505                   -96.731062    0.194556
+246                ZW      Zimbabwe  -79.341289                   -79.639469    0.298180
+
+[112 rows x 5 columns]
+2024-11-30 21:07:07,334 - INFO - Crop: Rice, Year: 8
+2024-11-30 21:07:07,334 - INFO -     ISO3 Country Code      Country  rice_year8  rice_total_pct_change_year8   difference
+0                  AF  Afghanistan  -66.277940                   -76.033205     9.755265
+1                  AL      Albania   17.478642                   955.295317   937.816675
+2                  DZ      Algeria  -65.350175                  1144.992567  1210.342742
+4                  AD      Andorra   18.188223                    28.454432    10.266209
+5                  AO       Angola  -74.413838                   -73.839566     0.574273
+..                ...          ...         ...                          ...          ...
+240                VE    Venezuela    5.898697                    28.069529    22.170832
+241                VN      Vietnam  -50.190006                   -48.052797     2.137209
+244                YE        Yemen  -45.487812                    34.834536    80.322348
+245                ZM       Zambia  -91.338638                   -91.143376     0.195263
+246                ZW     Zimbabwe  -73.807160                   -73.227768     0.579392
+
+[119 rows x 5 columns]
+2024-11-30 21:07:07,339 - INFO - Crop: Rice, Year: 9
+2024-11-30 21:07:07,339 - INFO -     ISO3 Country Code      Country  rice_year9  rice_total_pct_change_year9  difference
+0                  AF  Afghanistan  -50.338031                   -74.845316   24.507285
+1                  AL      Albania  -88.289889                   -55.841910   32.447979
+4                  AD      Andorra  -29.383883                   -29.841010    0.457127
+5                  AO       Angola  -57.440719                   -56.597204    0.843515
+9                  AR    Argentina  -43.924542                   -43.897130    0.027411
+..                ...          ...         ...                          ...         ...
+240                VE    Venezuela    3.809186                     9.005533    5.196347
+241                VN      Vietnam  -22.300421                   -18.093735    4.206686
+244                YE        Yemen  -17.601604                    54.697269   72.298873
+245                ZM       Zambia  -69.147950                   -69.090865    0.057084
+246                ZW     Zimbabwe  -59.658071                   -59.240086    0.417984
+
+[124 rows x 5 columns]
+2024-11-30 21:07:07,345 - INFO - Crop: Rice, Year: 10
+2024-11-30 21:07:07,345 - INFO -     ISO3 Country Code      Country  rice_year10  rice_total_pct_change_year10  difference
+0                  AF  Afghanistan   -19.742471                     54.540223   74.282694
+1                  AL      Albania   -26.745650                     93.069515  119.815164
+2                  DZ      Algeria   -52.734392                    -15.049709   37.684683
+4                  AD      Andorra   -10.268206                    -10.414249    0.146044
+5                  AO       Angola   -48.517147                    -47.734611    0.782537
+..                ...          ...          ...                           ...         ...
+240                VE    Venezuela    53.035478                     85.589468   32.553990
+241                VN      Vietnam   -24.390365                    -22.453635    1.936730
+244                YE        Yemen    -4.723871                      9.410686   14.134557
+245                ZM       Zambia   -46.530362                    -47.965657    1.435294
+246                ZW     Zimbabwe    -9.803606                    -11.816462    2.012855
+
+[130 rows x 5 columns]
+2024-11-30 21:07:07,350 - INFO - Crop: Soy, Year: 1
+2024-11-30 21:07:07,350 - INFO -     ISO3 Country Code                           Country  soy_year1  soy_total_pct_change_year1  difference
+9                  AR                         Argentina  -8.430723                   -8.936425    0.505702
+12                 AU                         Australia -22.862087                  -18.370066    4.492021
+17                 BD                        Bangladesh -85.152645                  -85.220102    0.067457
+21                 BZ                            Belize -58.002788                  -56.716210    1.286578
+22                 BJ                             Benin -63.294822                  -64.059556    0.764733
+25                 BO                           Bolivia   8.405946                   10.239183    1.833237
+28                 BW                          Botswana -26.690592                  -20.040644    6.649948
+30                 BR                            Brazil  -2.646724                   -1.536218    1.110507
+36                 BI                           Burundi -14.406834                  -16.017367    1.610533
+37                 KH                          Cambodia -65.054976                  -65.010050    0.044927
+38                 CM                          Cameroon -75.189692                  -71.321213    3.868478
+44                 TD                              Chad -84.734575                  -86.205379    1.470804
+45                 CL                             Chile -47.185558                  -30.842142   16.343416
+46                 CN                             China -99.564271                  -99.553209    0.011062
+49                 CO                          Colombia -68.777257                  -71.414637    2.637380
+52                 CR                        Costa Rica -38.895251                  -38.977390    0.082139
+59                 CD  Democratic Republic of the Congo -22.878543                  -34.448001   11.569458
+61                 DJ                          Djibouti -89.651461                  -32.906443   56.745018
+64                 EC                           Ecuador -20.242242                  -17.910087    2.332155
+66                 SV                       El Salvador -60.162501                  -59.983875    0.178626
+68                 ER                           Eritrea -61.375956                  -40.117270   21.258686
+70                 ET                          Ethiopia -91.852667                  -90.478924    1.373743
+91                 GT                         Guatemala -62.826648                  -62.140743    0.685905
+93                 GN                            Guinea -60.097227                  -58.413215    1.684012
+98                 HN                          Honduras -60.863778                  -61.089354    0.225576
+101                IN                             India -71.996025                  -72.272403    0.276378
+102                ID                         Indonesia -15.812648                  -15.797560    0.015088
+103                IR                              Iran -99.667389                  -90.765808    8.901581
+122                LS                           Lesotho -35.733365                  -35.656118    0.077248
+123                LR                           Liberia -46.470522                  -45.092463    1.378060
+130                MW                            Malawi -10.427239                   -9.945882    0.481357
+131                MY                          Malaysia -41.361724                  -42.268263    0.906538
+140                MX                            Mexico -86.518771                  -83.369491    3.149280
+148                MZ                        Mozambique   1.894822                    1.983337    0.088515
+149                MM                           Myanmar -76.995645                  -77.019062    0.023417
+150               NaN                           Namibia -11.457638                   -8.069115    3.388524
+152                NP                             Nepal -95.611745                  -95.508031    0.103714
+156                NI                         Nicaragua -54.030585                  -54.014712    0.015873
+157                NE                             Niger -74.051814                  -74.243313    0.191498
+158                NG                           Nigeria -69.347482                  -69.335714    0.011768
+165                PK                          Pakistan -99.055836                  -98.744002    0.311834
+170                PY                          Paraguay   8.245696                    7.877737    0.367959
+171                PE                              Peru  -2.224932                   -3.171443    0.946512
+182                RW                            Rwanda -25.551064                  -24.458935    1.092129
+197                SL                      Sierra Leone -48.053481                  -47.184954    0.868527
+198                SG                         Singapore -37.427836                  -38.520601    1.092765
+203                SO                           Somalia -79.548646                   45.092004  124.640651
+204                ZA                      South Africa -18.533937                  -19.569444    1.035507
+207                SS                       South Sudan -81.473770                  -80.970424    0.503346
+210                SD                             Sudan -61.658883                  -81.532419   19.873536
+218                TZ                          Tanzania -16.522815                  -17.926772    1.403957
+219                TH                          Thailand -74.850124                  -74.725956    0.124168
+230                UG                            Uganda -75.119871                  -72.959809    2.160062
+236                UY                           Uruguay -21.601508                  -32.778332   11.176824
+244                YE                             Yemen -77.342051                  -29.614863   47.727188
+245                ZM                            Zambia  -4.656589                   -4.720047    0.063457
+246                ZW                          Zimbabwe  -6.180013                   -6.455522    0.275509
+2024-11-30 21:07:07,357 - INFO - Crop: Soy, Year: 2
+2024-11-30 21:07:07,357 - INFO -     ISO3 Country Code                           Country  soy_year2  soy_total_pct_change_year2  difference
+9                  AR                         Argentina -90.993154                  -90.834219    0.158935
+12                 AU                         Australia -93.888653                  -94.883163    0.994510
+25                 BO                           Bolivia -79.150690                  -80.970737    1.820046
+28                 BW                          Botswana -98.789574                  -98.630502    0.159072
+30                 BR                            Brazil -85.815315                  -86.782817    0.967502
+36                 BI                           Burundi -52.174059                  -44.190070    7.983989
+37                 KH                          Cambodia -99.842661                  -99.829361    0.013301
+38                 CM                          Cameroon -94.978596                  -96.641227    1.662631
+44                 TD                              Chad -98.642940                  -99.062962    0.420022
+45                 CL                             Chile -72.705771                  -65.510902    7.194870
+49                 CO                          Colombia -97.937563                  -98.160323    0.222760
+59                 CD  Democratic Republic of the Congo -83.598884                  -71.476826   12.122058
+61                 DJ                          Djibouti -92.367436                  -96.252142    3.884706
+70                 ET                          Ethiopia -59.920113                  -57.615332    2.304781
+101                IN                             India -99.661042                  -99.578551    0.082491
+102                ID                         Indonesia -73.492557                  -73.464241    0.028316
+103                IR                              Iran -99.949566                  -96.574931    3.374635
+123                LR                           Liberia -99.507622                  -99.657884    0.150262
+130                MW                            Malawi -91.089143                  -91.146943    0.057799
+140                MX                            Mexico -99.968318                  -99.956228    0.012090
+150               NaN                           Namibia -99.920143                  -99.952593    0.032450
+158                NG                           Nigeria -99.044069                  -99.166150    0.122081
+170                PY                          Paraguay -93.767599                  -93.712598    0.055001
+171                PE                              Peru -99.443215                  -99.576628    0.133413
+182                RW                            Rwanda -32.347161                  -29.672027    2.675134
+203                SO                           Somalia -90.730454                  -56.062110   34.668344
+204                ZA                      South Africa -82.120084                  -82.479362    0.359278
+207                SS                       South Sudan -65.218019                  -69.810611    4.592592
+218                TZ                          Tanzania -49.996741                  -39.031816   10.964925
+220                TL                       Timor-Leste -71.596122                  -74.176845    2.580723
+230                UG                            Uganda -45.123863                  -46.847630    1.723767
+236                UY                           Uruguay -85.374895                  -81.313849    4.061047
+245                ZM                            Zambia -95.015390                  -95.052710    0.037321
+2024-11-30 21:07:07,364 - INFO - Crop: Soy, Year: 3
+2024-11-30 21:07:07,364 - INFO -     ISO3 Country Code                           Country  soy_year3  soy_total_pct_change_year3  difference
+9                  AR                         Argentina -92.290227                  -92.361425    0.071199
+12                 AU                         Australia -84.574946                  -85.247826    0.672880
+25                 BO                           Bolivia -99.332458                  -99.514233    0.181775
+28                 BW                          Botswana -96.867072                  -96.993585    0.126513
+30                 BR                            Brazil -95.343717                  -95.534339    0.190622
+36                 BI                           Burundi -31.759626                  -17.897745   13.861881
+38                 CM                          Cameroon -91.177484                  -94.381162    3.203678
+44                 TD                              Chad -91.739350                  -93.190688    1.451338
+45                 CL                             Chile -69.045752                  -72.935100    3.889348
+49                 CO                          Colombia -89.075119                  -91.239549    2.164430
+59                 CD  Democratic Republic of the Congo -74.946019                  -58.848993   16.097025
+61                 DJ                          Djibouti -72.289202                  -77.496843    5.207641
+64                 EC                           Ecuador -93.872958                  -93.354701    0.518257
+68                 ER                           Eritrea -86.388525                  -88.813102    2.424577
+70                 ET                          Ethiopia -61.631226                  -62.764747    1.133522
+91                 GT                         Guatemala -97.985070                  -98.052214    0.067143
+101                IN                             India -98.487380                  -98.576020    0.088641
+102                ID                         Indonesia -97.843471                  -97.866099    0.022628
+103                IR                              Iran -96.819766                  -80.867078   15.952688
+115                KE                             Kenya  41.881015                  -24.483516   66.364530
+119                LA                              Laos -97.669340                  -97.687475    0.018136
+130                MW                            Malawi -65.143879                  -65.192771    0.048893
+131                MY                          Malaysia -98.295229                  -97.935101    0.360128
+140                MX                            Mexico -91.328482                  -90.583998    0.744484
+148                MZ                        Mozambique -95.540764                  -95.527718    0.013046
+150               NaN                           Namibia -96.835693                  -98.128065    1.292372
+152                NP                             Nepal -98.177291                  -98.192062    0.014770
+157                NE                             Niger -99.703545                  -99.605039    0.098506
+158                NG                           Nigeria -99.596913                  -99.627179    0.030266
+165                PK                          Pakistan -97.199348                  -97.989894    0.790546
+171                PE                              Peru -91.411143                  -90.402352    1.008791
+182                RW                            Rwanda   2.306471                    6.406217    4.099746
+198                SG                         Singapore -96.414518                  -96.557016    0.142497
+203                SO                           Somalia -72.871959                  -78.996865    6.124906
+204                ZA                      South Africa -77.410704                  -77.446649    0.035944
+207                SS                       South Sudan -64.272848                  -66.652556    2.379707
+218                TZ                          Tanzania -20.082341                   -5.451355   14.630986
+219                TH                          Thailand -99.557353                  -99.524188    0.033165
+220                TL                       Timor-Leste -89.463546                  -90.968037    1.504491
+230                UG                            Uganda -29.591124                  -30.515732    0.924608
+234                US                     United States -99.610406                  -99.522380    0.088027
+236                UY                           Uruguay -69.278420                  -67.292834    1.985586
+244                YE                             Yemen -84.631408                  -84.267909    0.363499
+245                ZM                            Zambia -83.758103                  -83.713093    0.045010
+2024-11-30 21:07:07,371 - INFO - Crop: Soy, Year: 4
+2024-11-30 21:07:07,371 - INFO -     ISO3 Country Code                           Country  soy_year4  soy_total_pct_change_year4  difference
+0                  AF                       Afghanistan -84.473836                  -92.573022    8.099186
+12                 AU                         Australia -84.158017                  -84.685575    0.527558
+25                 BO                           Bolivia -90.816811                  -90.485514    0.331297
+28                 BW                          Botswana -94.105726                  -94.137313    0.031587
+30                 BR                            Brazil -90.482457                  -90.453272    0.029184
+36                 BI                           Burundi  -7.702790                   -3.327100    4.375689
+38                 CM                          Cameroon -90.665283                  -93.813269    3.147987
+44                 TD                              Chad -99.379642                  -99.567861    0.188219
+45                 CL                             Chile -73.056165                  -79.853499    6.797335
+49                 CO                          Colombia -61.472614                  -61.037234    0.435380
+59                 CD  Democratic Republic of the Congo -55.400130                  -47.260002    8.140127
+61                 DJ                          Djibouti -62.500508                  -54.393986    8.106521
+64                 EC                           Ecuador -91.916037                  -93.380218    1.464180
+68                 ER                           Eritrea -84.974799                  -83.744528    1.230270
+70                 ET                          Ethiopia -56.752095                  -54.638246    2.113849
+101                IN                             India -96.870494                  -96.595557    0.274937
+103                IR                              Iran -88.209828                  -90.324357    2.114529
+114                KZ                        Kazakhstan -99.279852                  -99.636142    0.356290
+115                KE                             Kenya  68.022723                  -16.853147   84.875870
+118                KG                        Kyrgyzstan -94.821985                  -97.532853    2.710868
+122                LS                           Lesotho -53.495201                  -53.434061    0.061140
+130                MW                            Malawi -49.509520                  -49.598268    0.088747
+131                MY                          Malaysia -92.427720                  -94.313336    1.885616
+140                MX                            Mexico -77.875934                  -77.437400    0.438534
+148                MZ                        Mozambique -91.697793                  -91.707901    0.010108
+150               NaN                           Namibia -91.986705                  -89.751526    2.235179
+152                NP                             Nepal -98.442647                  -98.625393    0.182747
+158                NG                           Nigeria -99.779735                  -99.811883    0.032148
+165                PK                          Pakistan -96.845635                  -97.321787    0.476152
+170                PY                          Paraguay -93.983546                  -93.946176    0.037371
+171                PE                              Peru -99.156859                  -99.047551    0.109307
+182                RW                            Rwanda   1.124468                    3.071293    1.946825
+198                SG                         Singapore -92.698076                  -94.198261    1.500185
+203                SO                           Somalia -62.530985                  -54.822533    7.708452
+204                ZA                      South Africa -77.194313                  -77.236493    0.042180
+207                SS                       South Sudan -55.085459                  -56.015262    0.929802
+208                ES                             Spain -99.844112                  -99.920550    0.076437
+218                TZ                          Tanzania   3.101215                    5.377489    2.276274
+219                TH                          Thailand -96.981499                  -96.960542    0.020957
+220                TL                       Timor-Leste -78.614905                  -81.117629    2.502724
+230                UG                            Uganda  -8.438379                   -8.896416    0.458037
+234                US                     United States -96.678052                  -96.386434    0.291618
+236                UY                           Uruguay -84.260919                  -81.966573    2.294345
+244                YE                             Yemen -79.462614                  -63.948555   15.514060
+2024-11-30 21:07:07,378 - INFO - Crop: Soy, Year: 5
+2024-11-30 21:07:07,378 - INFO -     ISO3 Country Code                           Country  soy_year5  soy_total_pct_change_year5  difference
+9                  AR                         Argentina -86.479196                  -85.877550    0.601646
+10                 AM                           Armenia -64.842654                   77.246726  142.089380
+12                 AU                         Australia -90.542898                  -90.824954    0.282056
+14                 AZ                        Azerbaijan -66.779218                  122.971612  189.750830
+25                 BO                           Bolivia -87.741311                  -87.113418    0.627893
+28                 BW                          Botswana -78.054013                  -76.056833    1.997180
+30                 BR                            Brazil -87.612009                  -87.286822    0.325187
+36                 BI                           Burundi -43.524409                  -45.908006    2.383598
+37                 KH                          Cambodia -99.884297                  -99.874278    0.010018
+38                 CM                          Cameroon -92.268219                  -94.915574    2.647354
+45                 CL                             Chile -71.694318                  -78.446435    6.752116
+46                 CN                             China -95.383798                  -95.561207    0.177409
+49                 CO                          Colombia -64.081364                  -67.072564    2.991199
+53                 HR                           Croatia -98.926993                  -98.606601    0.320393
+59                 CD  Democratic Republic of the Congo -59.125092                  -57.534540    1.590552
+61                 DJ                          Djibouti -64.722521                  -59.836602    4.885919
+64                 EC                           Ecuador -76.279358                  -78.020361    1.741004
+66                 SV                       El Salvador -95.450021                  -95.432947    0.017074
+68                 ER                           Eritrea -90.846978                  -87.887746    2.959232
+70                 ET                          Ethiopia -55.122563                  -48.846912    6.275651
+75                 FR                            France -98.895479                  -98.679811    0.215667
+81                 GE                           Georgia -71.019048                   22.851309   93.870357
+101                IN                             India -96.999184                  -96.918930    0.080254
+103                IR                              Iran -68.276839                   97.078179  165.355018
+108                IT                             Italy -98.824738                  -98.510396    0.314342
+114                KZ                        Kazakhstan -94.246202                  -97.133788    2.887586
+115                KE                             Kenya  18.130213                  -34.940436   53.070649
+118                KG                        Kyrgyzstan -74.059457                  -87.339366   13.279909
+122                LS                           Lesotho -19.228737                  -19.205467    0.023270
+130                MW                            Malawi -44.423090                  -42.524094    1.898996
+140                MX                            Mexico -60.561708                  -59.576660    0.985048
+144                MN                          Mongolia -97.051303                  -93.585581    3.465722
+148                MZ                        Mozambique -92.161546                  -92.099582    0.061965
+150               NaN                           Namibia -90.106962                  -81.827182    8.279780
+152                NP                             Nepal -91.582080                  -91.439296    0.142784
+165                PK                          Pakistan -86.952236                  -86.968486    0.016250
+171                PE                              Peru -94.820611                  -94.107463    0.713148
+175                PT                          Portugal -98.428033                  -99.165130    0.737097
+181                RU                            Russia -97.555100                  -97.115286    0.439814
+182                RW                            Rwanda -48.520376                  -49.606176    1.085800
+203                SO                           Somalia -65.617368                  -67.459869    1.842501
+204                ZA                      South Africa -56.878740                  -57.188352    0.309613
+207                SS                       South Sudan -57.705401                  -58.573723    0.868322
+208                ES                             Spain -96.619556                  -98.174143    1.554587
+218                TZ                          Tanzania -24.914549                  -34.875095    9.960546
+219                TH                          Thailand -97.608413                  -97.566127    0.042286
+226                TR                            Turkey -74.914559                  -87.878427   12.963868
+230                UG                            Uganda -22.498146                  -23.188348    0.690202
+231                UA                           Ukraine -98.197737                  -98.991473    0.793735
+234                US                     United States -93.199359                  -92.391655    0.807703
+236                UY                           Uruguay -57.957100                  -51.401782    6.555318
+244                YE                             Yemen -83.151094                  -70.027804   13.123290
+245                ZM                            Zambia -69.344524                  -69.256416    0.088108
+246                ZW                          Zimbabwe -84.980982                  -84.829245    0.151737
+2024-11-30 21:07:07,385 - INFO - Crop: Soy, Year: 6
+2024-11-30 21:07:07,385 - INFO -     ISO3 Country Code        Country  soy_year6  soy_total_pct_change_year6  difference
+0                  AF    Afghanistan -49.853694                  -76.035146   26.181451
+1                  AL        Albania -98.007582                  -98.939489    0.931907
+10                 AM        Armenia -52.311023                  -35.045255   17.265768
+12                 AU      Australia -78.787231                  -79.108119    0.320888
+14                 AZ     Azerbaijan -51.945863                  -39.908910   12.036952
+..                ...            ...        ...                         ...         ...
+231                UA        Ukraine -85.729051                  -92.365077    6.636026
+234                US  United States -93.497247                  -91.997460    1.499787
+236                UY        Uruguay -61.712213                  -60.239801    1.472412
+241                VN        Vietnam -90.321894                  -90.343033    0.021138
+246                ZW       Zimbabwe -85.024526                  -85.006997    0.017529
+
+[65 rows x 5 columns]
+2024-11-30 21:07:07,390 - INFO - Crop: Soy, Year: 7
+2024-11-30 21:07:07,390 - INFO -     ISO3 Country Code        Country  soy_year7  soy_total_pct_change_year7  difference
+0                  AF    Afghanistan -31.567239                  -66.922292   35.355053
+1                  AL        Albania -97.726509                  -98.712794    0.986285
+4                  AD        Andorra -99.761073                  -98.687131    1.073942
+9                  AR      Argentina -75.940335                  -75.912619    0.027716
+10                 AM        Armenia -84.200866                  -58.453189   25.747677
+..                ...            ...        ...                         ...         ...
+234                US  United States -94.284831                  -93.449226    0.835605
+236                UY        Uruguay -34.881227                  -32.711343    2.169884
+244                YE          Yemen -75.781281                  -44.444559   31.336722
+245                ZM         Zambia -69.003916                  -68.948205    0.055711
+246                ZW       Zimbabwe -88.741620                  -88.699914    0.041707
+
+[75 rows x 5 columns]
+2024-11-30 21:07:07,397 - INFO - Crop: Soy, Year: 8
+2024-11-30 21:07:07,397 - INFO -     ISO3 Country Code        Country  soy_year8  soy_total_pct_change_year8  difference
+0                  AF    Afghanistan  12.979813                  -45.909382   58.889195
+9                  AR      Argentina -66.735566                  -66.765974    0.030408
+10                 AM        Armenia -57.683867                  -77.692342   20.008475
+12                 AU      Australia -71.660084                  -72.108657    0.448572
+13                 AT        Austria -93.859810                  -93.715989    0.143821
+..                ...            ...        ...                         ...         ...
+234                US  United States -72.817331                  -70.699957    2.117373
+236                UY        Uruguay -54.206737                  -52.065797    2.140939
+241                VN        Vietnam -53.176744                  -53.118501    0.058243
+244                YE          Yemen -85.739958                  -82.915054    2.824904
+246                ZW       Zimbabwe -88.379153                  -88.570477    0.191324
+
+[80 rows x 5 columns]
+2024-11-30 21:07:07,402 - INFO - Crop: Soy, Year: 9
+2024-11-30 21:07:07,402 - INFO -     ISO3 Country Code      Country  soy_year9  soy_total_pct_change_year9  difference
+0                  AF  Afghanistan  19.140089                  -43.371420   62.511508
+1                  AL      Albania -46.916022                  -64.008834   17.092812
+4                  AD      Andorra -54.282721                  -53.677642    0.605079
+9                  AR    Argentina -43.945216                  -43.283857    0.661359
+10                 AM      Armenia -44.567146                  -73.297204   28.730058
+..                ...          ...        ...                         ...         ...
+236                UY      Uruguay  10.444251                   29.551656   19.107405
+241                VN      Vietnam -16.127887                  -16.066976    0.060912
+244                YE        Yemen -44.522825                  170.258741  214.781566
+245                ZM       Zambia -75.880804                  -75.845474    0.035330
+246                ZW     Zimbabwe -62.639124                  -62.602506    0.036619
+
+[93 rows x 5 columns]
+2024-11-30 21:07:07,408 - INFO - Crop: Soy, Year: 10
+2024-11-30 21:07:07,408 - INFO -     ISO3 Country Code    Country  soy_year10  soy_total_pct_change_year10  difference
+1                  AL    Albania  -60.976851                   -78.548656   17.571805
+4                  AD    Andorra  -61.269987                   -74.410389   13.140402
+9                  AR  Argentina  -28.422515                   -28.745289    0.322775
+10                 AM    Armenia  -63.145032                   -80.248479   17.103447
+12                 AU  Australia   -4.691523                    -9.194893    4.503370
+..                ...        ...         ...                          ...         ...
+236                UY    Uruguay    1.972673                     6.917367    4.944694
+241                VN    Vietnam    2.056812                     2.475811    0.418999
+244                YE      Yemen  -20.018919                   -55.439301   35.420382
+245                ZM     Zambia  -44.649711                   -44.670670    0.020959
+246                ZW   Zimbabwe  -20.495997                   -20.334601    0.161396
+
+[98 rows x 5 columns]
