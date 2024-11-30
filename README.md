@@ -1,3 +1,4 @@
+
 # 🌾❄️ NuclearWinterCropYieldAnalysis
 
 Code and scripts for calculating percentage changes in crop and grass yields under different soot emission scenarios associated with varying intensities of nuclear winters.
@@ -6,7 +7,7 @@ This project processes crop and grass yield data from NetCDF datasets provided b
 
 The code can be run locally using Python. Setup instructions are below.
 
-**Note**: The code does not have to be run to view the results. All outputs of the code can be found in the reports and data/processed folders. The reports folder also contains detailed documentation on the results.
+**Note**: The code does not have to be run to view the results. All outputs of the code can be found in the `data/processed` directory. The `reports` folder contains detailed documentation on the results.
 
 ## Setup
 
@@ -57,17 +58,14 @@ To process the yield data and calculate the percentage changes for different nuc
 python src/1_yield_change_calculation.py
 ```
 
-This script processes the yield data for various crops and grasses under different soot emission scenarios and outputs CSV files containing the percentage changes in yields for each country and year. The outputs are saved in the `data/processed` directory.
+This script processes the yield data for various crops and grasses under different soot emission scenarios. 
+Outputs are separated into:
+- Rainfed yields
+- Irrigated yields
 
-### Model Evaluation:
+The outputs are saved in the `data/processed` directory.
 
-To evaluate the model's correspondence with the reference data (provided in `data/raw/rutgers_nw_production_raw.csv`), run:
-
-```bash
-python src/2_model_evaluation.py
-```
-
-This script compares the calculated yield changes with the reference data, computes evaluation metrics, and generates plots saved in the `reports/figures` directory.
+This script compares the calculated yield changes with the reference data.
 
 ## Files
 
@@ -86,48 +84,33 @@ This script compares the calculated yield changes with the reference data, compu
 │   │       ├── World_Countries__Generalized_.shp
 │   │       └── World_Countries__Generalized_.shx
 │   ├── processed
-│   │   ├── output_150Tg_crops_and_grasses_1.csv
-│   │   ├── output_16Tg_crops_and_grasses_1.csv
-│   │   ├── output_27Tg_crops_and_grasses_1.csv
-│   │   ├── output_37Tg_crops_and_grasses_1.csv
-│   │   ├── output_47Tg_crops_and_grasses_1.csv
-│   │   ├── output_5Tg_crops_and_grasses_1.csv
-│   │   ├── output_5Tg_crops_and_grasses_2.csv
-│   │   ├── output_5Tg_crops_and_grasses_3.csv
-│   │   └── output_5Tg_crops_and_grasses_aggregated.csv
+│   │   ├── output_<scenario>_crops_and_grasses_rainfed_<index>.csv
+│   │   ├── output_<scenario>_crops_irrigated_<index>.csv
+│   │   ├── total_yields
+│   │   │   └── Legacy and total yield files for earlier versions of the project
+│   │   └── total_yields_legacy
+│   │       └── Contains legacy outputs from the experimental section
 │   └── raw
 │       ├── Crop Yield
-│       │   ├── clm5_crop_2deg_cpl_cntrl_03_0005-0019_yield_latlon_CLM5mask_6crops.nc
-│       │   ├── [Other NetCDF files for crop yield data]
+│       │   ├── [NetCDF files for crop yield data]
 │       ├── Grass Production
-│       │   ├── clm5_crop_2deg_cpl_cntrl_03_0005-0018_yield_latlon_CLM5mask_C3-C4-LEAFC.nc
-│       │   ├── [Other NetCDF files for grass production data]
+│       │   ├── [NetCDF files for grass production data]
 │       └── rutgers_nw_production_raw.csv
 ├── logs
 │   ├── model_evaluation.log
-│   └── yield_processing.log
+│   ├── yield_processing.log
 ├── notebooks
-│   ├── 1_Country shapefile debugging.ipynb
-│   ├── 2_Reference file peculiarities.ipynb
-│   ├── 3_Geospatial merging calculations.ipynb
-│   ├── cornrain_yield_points_overlay.png
-│   ├── United Arab Emirates_Corn_yield_year1_comparison.png
-│   └── United Arab Emirates_Corn_yield_year1.png
-├── poetry.lock
-├── pyproject.toml
-├── README.md
+│   └── [Jupyter notebooks for exploratory analysis]
 ├── reports
 │   ├── figures
-│   │   ├── country_mad_values.png
-│   │   ├── country_r2_values.png
-│   │   ├── country_r2_values_zoomed.png
-│   │   ├── output_150Tg_crops_and_grasses_1_evaluation.png
-│   │   └── [Other evaluation plots]
+│   │   ├── [Plots and figures generated during evaluation]
 │   ├── fraction_of_countries_metrics.csv
 │   └── model_evaluation_metrics.csv
 ├── src
 │   ├── 1_yield_change_calculation.py
-│   └── 2_model_evaluation.py
+│   └── experimental
+│       ├── Alternate versions of the yield change calculation scripts
+│       └── Experimental outputs
 └── tests
 ```
 
@@ -141,7 +124,10 @@ This script compares the calculated yield changes with the reference data, compu
     - `World_Countries__Generalized_`: Directory containing the shapefile components for country boundaries.
 
   - **processed**: Contains the processed output files generated by the analysis scripts.
-    - `output_<scenario>_crops_and_grasses_<index>.csv`: CSV files containing the percentage changes in yields for each country and year under different nuclear winter scenarios.
+    - `output_<scenario>_crops_and_grasses_rainfed_<index>.csv`: CSV files containing the percentage changes in yields for rainfed crops and grasses under different nuclear winter scenarios.
+    - `output_<scenario>_crops_irrigated_<index>.csv`: CSV files containing the percentage changes in yields for irrigated crops under different nuclear winter scenarios.
+    - `total_yields`: Contains outputs from earlier versions of the analysis that calculated total yields (combined rainfed and irrigated yields).
+    - `total_yields_legacy`: Contains legacy outputs from the experimental scripts.
 
   - **raw**: Contains the raw input data required for the analysis.
     - `Crop Yield`: Directory containing NetCDF files with crop yield data under various nuclear winter scenarios.
@@ -149,51 +135,38 @@ This script compares the calculated yield changes with the reference data, compu
     - `rutgers_nw_production_raw.csv`: Reference data file used for model evaluation.
 
 - **logs**
-  - `model_evaluation.log`: Log file capturing the output of the model evaluation script.
-  - `yield_processing.log`: Log file capturing the output of the yield change calculation script.
+  - Log files capturing the output of various scripts.
 
 - **notebooks**
-  - `1_Country shapefile debugging.ipynb`: Notebook exploring the country shapefile data, addressing inconsistencies in country naming, and explaining the approach taken in the analysis code based on the raster and shapefile data.
-  - `2_Reference file peculiarities.ipynb`: Notebook examining peculiarities in the reference data file (`rutgers_nw_production_raw.csv`) used for model evaluation, explaining the metrics used and the handling of spurious data.
-  - `3_Geospatial merging calculations.ipynb`: Notebook describing how the raster data is clipped and processed in the analysis code, including the assumptions made.
-  - **Additional PNG files**: Visual outputs and overlays generated during exploratory analysis.
+  - Jupyter notebooks for exploratory analysis and debugging.
 
 - **reports**
-  - **figures**: Contains plots and figures generated by the model evaluation script.
-    - `country_mad_values.png`: Plot of Mean Absolute Difference (MAD) values for each country.
-    - `country_r2_values.png`: Plot of R² values for each country.
-    - `country_r2_values_zoomed.png`: Zoomed-in plot of R² values for better visualization.
-    - `output_150Tg_crops_and_grasses_1_evaluation.png`: Evaluation plot for the 150 Tg scenario.
-    - **[Other evaluation plots]**: Additional plots generated during model evaluation.
-
-  - `fraction_of_countries_metrics.csv`: CSV file containing metrics on the fraction of countries meeting specified R² and MAD thresholds.
-  - `model_evaluation_metrics.csv`: CSV file containing the calculated evaluation metrics for each country and crop.
+  - **figures**: Contains plots and figures generated during the model evaluation.
+  - Metrics and documentation for the evaluation process.
 
 - **src**
-  - `1_yield_change_calculation.py`: Main script for processing yield data, calculating percentage changes, and outputting results to CSV files.
-  - `2_model_evaluation.py`: Script for evaluating the model's outputs against the reference data, calculating metrics, and generating plots.
+  - `1_yield_change_calculation.py`: Main script for processing yield data.
+  - `experimental`: Alternate versions of the yield change calculation script for specific use cases.
 
 - **tests**
   - Directory reserved for test scripts (currently empty).
 
 - **poetry.lock & pyproject.toml**
-    - `poetry.lock`: File generated by Poetry, locking the specific versions of dependencies used in the project.
-    - `pyproject.toml`: Configuration file for Poetry, listing the project's dependencies and other metadata.
+  - Configuration files for dependency management and project setup.
 
-- **Additional Information**
-    - ***Contact***
-    For questions or support, please contact:
+## Additional Information
 
-    Twitter: @thicknavyrain
-    LinkedIn: Ricky Nathvani
+For questions or support, contact:
 
-- **License**
+- Twitter: @thicknavyrain
+- LinkedIn: Ricky Nathvani
 
-arduino
+## License
 
-                                 Apache License
-                           Version 2.0, January 2004
-                        http://www.apache.org/licenses/
+```
+Apache License
+Version 2.0, January 2004
+http://www.apache.org/licenses/
+```
 
 This project is licensed under the Apache License 2.0.
-
