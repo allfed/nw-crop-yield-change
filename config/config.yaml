@@ -49,7 +49,7 @@ scenarios:
     grass_files:
       - 'data/raw/Grass Production/clm5_crop_2deg_cpl_nw_ur_150_07_0005-0018_yield_latlon_CLM5mask_C3-C4-LEAFC.nc'
 
-shapefile_path: 'data/external/World_Countries__Generalized_/World_Countries__Generalized_.shp'
+shapefile_path: 'data/external/World_Countries__Generalized_ISO/World_Countries__Generalized_ISO.shp'
 
 EPSG: 4326
 
