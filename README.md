@@ -1,169 +1,117 @@
-
 # 🌾❄️ NuclearWinterCropYieldAnalysis
 
 Code and scripts for calculating percentage changes in crop and grass yields under different soot emission scenarios associated with varying intensities of nuclear winters.
 
-This project processes crop and grass yield data from NetCDF datasets provided by [Xia et al. (2022)](https://www.nature.com/articles/s43016-022-00573-0), calculates percentage changes in yields for various crops and grasses across countries for the first 10 years post-nuclear winter, and outputs the results to CSV files. It performs spatial data processing, aggregation, and analysis, and generates visualizations to evaluate the impact of different nuclear winter scenarios on global agriculture.
+This project processes crop and grass yield data from NetCDF datasets provided by [Xia et al. (2022)](https://www.nature.com/articles/s43016-022-00573-0), calculates percentage changes in yields for various crops and grasses across countries for the first 10 years post‑nuclear winter, and outputs the results to CSV files. It performs spatial data processing, aggregation, and analysis, and generates visualisations to evaluate the impact of different nuclear‑winter scenarios on global agriculture.
 
 The code can be run locally using Python. Setup instructions are below.
 
-**Note**: The code does not have to be run to view the results. All outputs of the code can be found in the `data/processed` directory. The `reports` folder contains detailed documentation on the results.
+> **Heads‑up**: You do **not** need to run the code to see the results. All model outputs are in the **`results/`** folder now (see the directory structure below).
 
-## Setup
+---
 
-### Dependencies: Setup in Local Development Environment
+## 1 · Setup
 
-#### Dependency Management with Poetry
+### 1.1 Dependencies (Poetry)
 
-See [https://python-poetry.org/docs/](https://python-poetry.org/docs/) for installation instructions.
+1. Install [Poetry](https://python-poetry.org/docs/).
+2. From the repository root, install dependencies and activate the virtual‑env:
 
-Once Poetry is installed, navigate to the root folder of the repository and run:
+   ```bash
+   poetry install
+   poetry shell
+   ```
+3. Exit the environment with `exit`.
 
-```bash
-poetry install
-```
+### 1.2 Input‑data layout
 
-This command will install all the required dependencies listed in the pyproject.toml file.
+Raw data lives under **`data/raw/`** and is already included in the repo.
 
-To activate the virtual environment for this project using Poetry, run:
+* **Crop & grass yields**: NetCDF files from [Xia et al. (2022)](https://osf.io/yrbse/)
+* **Country borders**: Generalised ISO country shapefile from the ALLFED project, shipped under **`data/external/World_Countries__Generalized_ISO/`**
 
-```bash
-poetry shell
-```
+---
 
-To exit the virtual environment, simply type:
+## 2 · Running the analysis
 
-```bash
-exit
-```
-
-### Input Data Management
-
-The raw data is included in the repository under the `data/raw` directory.
-
-- Crop yield and grass production data are sourced from [Xia et al. (2022)](https://osf.io/yrbse/).
-- Country shapefile for spatial analysis is sourced from the ALLFED [LosingIndustryCropYields](https://github.com/allfed/LosingIndustryCropYields/) project and is located in `data/external/World_Countries__Generalized_`.
-
-Ensure that the data files are in the correct directories as specified in the project structure below.
-
-## How to Run the Code
-
-After setting up the Poetry environment as described above, you can run the analysis scripts.
-
-### Calculate Yield Changes:
-
-To process the yield data and calculate the percentage changes for different nuclear winter scenarios, run:
+After activating the Poetry environment run:
 
 ```bash
 python src/1_yield_change_calculation.py
 ```
 
-This script processes the yield data for various crops and grasses under different soot emission scenarios. 
-Outputs are separated into:
-- Rainfed yields
-- Irrigated yields
+The script will
 
-The outputs are saved in the `data/processed` directory.
+1. load configuration from **`config/config.yaml`**,
+2. process crop & grass yields for each soot‑emission scenario, and
+3. write the results to CSV **in `results/`** (separate files for rain‑fed and irrigated outputs).
 
-This script compares the calculated yield changes with the reference data.
+Logs are written to **`results/logs/`** while the script runs.
 
-## Files
+---
 
-### Project Structure
+## 3 · Project structure
 
-```lua
+```text
 .
 ├── config
 │   └── config.yaml
 ├── data
 │   ├── external
-│   │   └── World_Countries__Generalized_
-│   │       ├── World_Countries__Generalized_.cpg
-│   │       ├── World_Countries__Generalized_.dbf
-│   │       ├── World_Countries__Generalized_.prj
-│   │       ├── World_Countries__Generalized_.shp
-│   │       └── World_Countries__Generalized_.shx
-│   ├── processed
-│   │   ├── output_<scenario>_crops_and_grasses_rainfed_<index>.csv
-│   │   ├── output_<scenario>_crops_irrigated_<index>.csv
-│   │   ├── total_yields
-│   │   │   └── Legacy and total yield files for earlier versions of the project
-│   │   └── total_yields_legacy
-│   │       └── Contains legacy outputs from the experimental section
+│   │   └── World_Countries__Generalized_ISO
+│   │       ├── World_Countries__Generalized_ISO.{cpg,dbf,prj,shp,shx}
 │   └── raw
-│       ├── Crop Yield
-│       │   ├── [NetCDF files for crop yield data]
-│       ├── Grass Production
-│       │   ├── [NetCDF files for grass production data]
-│       └── rutgers_nw_production_raw.csv
-├── logs
-│   ├── model_evaluation.log
-│   ├── yield_processing.log
-├── notebooks
-│   └── [Jupyter notebooks for exploratory analysis]
-├── reports
-│   ├── figures
-│   │   ├── [Plots and figures generated during evaluation]
-│   ├── fraction_of_countries_metrics.csv
-│   └── model_evaluation_metrics.csv
+│       ├── Crop Yield/                     # NetCDF crop‑yield files
+│       ├── Grass Production/               # NetCDF grass‑yield files
+│       └── rutgers_nw_production_raw.csv   # Reference dataset
+│
+├── docs
+│   └── sources/README.md                   # Rendered copy of this file for Sphinx/Read‑the‑Docs
+│
+├── results
+│   ├── logs/                               # *.log files produced during runs
+│   └── output_<scenario>_*.csv             # Model outputs (one file per run / aggregate)
+│
+├── scripts                                 # Exploratory notebooks & helper images
+│   ├── 1_Country shapefile debugging.ipynb
+│   ├── 2_Reference file peculiarities.ipynb
+│   ├── 3_Geospatial merging calculations.ipynb
+│   └── *.png
+│
 ├── src
-│   ├── 1_yield_change_calculation.py
-│   └── experimental
-│       ├── Alternate versions of the yield change calculation scripts
-│       └── Experimental outputs
-└── tests
+│   └── 1_yield_change_calculation.py       # Main processing script
+│
+├── LICENSE
+├── poetry.lock
+├── pyproject.toml
+└── README.md
 ```
 
-### Which File Does What?
+---
 
-- **config**
-  - `config.yaml`: Configuration file containing file paths, EPSG codes, crop aggregation mappings, country name mappings, and other parameters used in the scripts.
+## 4 · Directory cheat‑sheet
 
-- **data**
-  - **external**: Contains external data files, such as the country shapefile used for spatial analysis.
-    - `World_Countries__Generalized_`: Directory containing the shapefile components for country boundaries.
+| Folder | Key contents & purpose |
+| ------ | ---------------------- |
+| **`config/`** | `config.yaml` – centralises file paths, EPSG codes, crop mappings, country‑name mappings, etc. |
+| **`data/raw/`** | Source NetCDF yield datasets and Rutgers reference CSV. |
+| **`data/external/`** | Country shapefile used for spatial clipping. |
+| **`results/`** | All CSV outputs from the script. Sub‑folder `logs/` captures run‑time logs. |
+| **`scripts/`** | Jupyter notebooks & diagnostic plots – useful for deep‑dives but *not* needed for the main pipeline. |
+| **`src/`** | `1_yield_change_calculation.py` – orchestrates the full pipeline. |
 
-  - **processed**: Contains the processed output files generated by the analysis scripts.
-    - `output_<scenario>_crops_and_grasses_rainfed_<index>.csv`: CSV files containing the percentage changes in yields for rainfed crops and grasses under different nuclear winter scenarios.
-    - `output_<scenario>_crops_irrigated_<index>.csv`: CSV files containing the percentage changes in yields for irrigated crops under different nuclear winter scenarios.
-    - `total_yields`: Contains outputs from earlier versions of the analysis that calculated total yields (combined rainfed and irrigated yields).
-    - `total_yields_legacy`: Contains legacy outputs from the experimental scripts.
+---
 
-  - **raw**: Contains the raw input data required for the analysis.
-    - `Crop Yield`: Directory containing NetCDF files with crop yield data under various nuclear winter scenarios.
-    - `Grass Production`: Directory containing NetCDF files with grass production data under various nuclear winter scenarios.
-    - `rutgers_nw_production_raw.csv`: Reference data file used for model evaluation.
+## 5 · Questions / support
 
-- **logs**
-  - Log files capturing the output of various scripts.
+* **Twitter**: [@thicknavyrain](https://twitter.com/thicknavyrain)
+* **LinkedIn**: [Ricky Nathvani](https://www.linkedin.com/in/ricky-nathvani/)
 
-- **notebooks**
-  - Jupyter notebooks for exploratory analysis and debugging.
+---
 
-- **reports**
-  - **figures**: Contains plots and figures generated during the model evaluation.
-  - Metrics and documentation for the evaluation process.
+## 6 · License
 
-- **src**
-  - `1_yield_change_calculation.py`: Main script for processing yield data.
-  - `experimental`: Alternate versions of the yield change calculation script for specific use cases.
-
-- **tests**
-  - Directory reserved for test scripts (currently empty).
-
-- **poetry.lock & pyproject.toml**
-  - Configuration files for dependency management and project setup.
-
-## Additional Information
-
-For questions or support, contact:
-
-- Twitter: @thicknavyrain
-- LinkedIn: Ricky Nathvani
-
-## License
-
-```
+```text
 Apache License
 Version 2.0, January 2004
 http://www.apache.org/licenses/

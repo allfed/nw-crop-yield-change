@@ -37,7 +37,7 @@ def setup_logging():
         level=logging.INFO,
         format='%(asctime)s - %(levelname)s - %(message)s',
         handlers=[
-            logging.FileHandler("logs/yield_processing.log"),
+            logging.FileHandler("results/logs/yield_processing.log"),
             logging.StreamHandler()
         ]
     )
@@ -458,12 +458,12 @@ def process_scenario(scenario_name, crop_file_paths, grass_file_paths, control_c
             continue
 
         # Save the DataFrames
-        output_filename_rainfed = f'data/processed/output_{scenario_name}_crops_and_grasses_rainfed_{idx + 1}.csv'
+        output_filename_rainfed = f'results/output_{scenario_name}_crops_and_grasses_rainfed_{idx + 1}.csv'
         result_rainfed_df.to_csv(output_filename_rainfed, index=False)
         logging.info(f"Saved rainfed results to {output_filename_rainfed}")
         combined_results_rainfed.append(result_rainfed_df)
 
-        output_filename_irrigated = f'data/processed/output_{scenario_name}_crops_irrigated_{idx + 1}.csv'
+        output_filename_irrigated = f'results/output_{scenario_name}_crops_irrigated_{idx + 1}.csv'
         result_irrigated_df.to_csv(output_filename_irrigated, index=False)
         logging.info(f"Saved irrigated results to {output_filename_irrigated}")
         combined_results_irrigated.append(result_irrigated_df)
@@ -473,7 +473,7 @@ def process_scenario(scenario_name, crop_file_paths, grass_file_paths, control_c
         # Average combined results for rainfed
         avg_combined_rainfed_df = pd.concat(combined_results_rainfed).groupby(['ISO3 Country Code', 'Country']).mean().reset_index()
         # Save the aggregated result
-        output_filename_rainfed = f'data/processed/output_{scenario_name}_crops_and_grasses_rainfed_aggregated.csv'
+        output_filename_rainfed = f'results/output_{scenario_name}_crops_and_grasses_rainfed_aggregated.csv'
         avg_combined_rainfed_df.to_csv(output_filename_rainfed, index=False)
         logging.info(f"Saved aggregated rainfed results to {output_filename_rainfed}")
 
@@ -481,7 +481,7 @@ def process_scenario(scenario_name, crop_file_paths, grass_file_paths, control_c
         # Average combined results for irrigated
         avg_combined_irrigated_df = pd.concat(combined_results_irrigated).groupby(['ISO3 Country Code', 'Country']).mean().reset_index()
         # Save the aggregated result
-        output_filename_irrigated = f'data/processed/output_{scenario_name}_crops_irrigated_aggregated.csv'
+        output_filename_irrigated = f'results/output_{scenario_name}_crops_irrigated_aggregated.csv'
         avg_combined_irrigated_df.to_csv(output_filename_irrigated, index=False)
         logging.info(f"Saved aggregated irrigated results to {output_filename_irrigated}")
 
