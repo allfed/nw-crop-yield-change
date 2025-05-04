@@ -1,8 +1,10 @@
+
 import pathlib
 import importlib.util
 import sys
 
 import numpy as np
+import pandas as pd
 import pytest
 import xarray as xr
 
@@ -20,10 +22,9 @@ spec.loader.exec_module(yc)  # type: ignore
 # -----------------------------------------------------------------------------
 # Fixtures
 # -----------------------------------------------------------------------------
-
 @pytest.fixture
 def simple_dataset():
-    """Return a minimal synthetic crop‑yield xarray.Dataset for tests."""
+    """Return a minimal synthetic crop-yield xarray.Dataset for tests."""
     lon = np.array([0, 90, 180])
     lat = np.array([-45, 45])
 
@@ -48,15 +49,14 @@ def simple_dataset():
 # -----------------------------------------------------------------------------
 # Tests for independent / simple logic
 # -----------------------------------------------------------------------------
-
 def test_calculate_percentage_change_normal():
-    """Positive reference – returns expected percentage."""
+    """Positive reference - returns expected percentage."""
     result = yc.calculate_percentage_change(120, 100)
     assert pytest.approx(result) == 20.0
 
 
 def test_calculate_percentage_change_zero_reference():
-    """Zero reference – returns NaN (avoid divide‑by‑zero)."""
+    """Zero reference - returns NaN (avoid divide-by-zero)."""
     result = yc.calculate_percentage_change(50, 0)
     assert np.isnan(result)
 
@@ -64,18 +64,16 @@ def test_calculate_percentage_change_zero_reference():
 # -----------------------------------------------------------------------------
 # Tests for longitude wrapping / sorting
 # -----------------------------------------------------------------------------
-
 def test_fix_longitude(simple_dataset):
     wrapped = yc.fix_longitude(simple_dataset.copy())
-    # Longitudes should now be in (‑180, 180] and sorted ascending
+    # Longitudes should now be in (-180, 180] and sorted ascending
     assert np.all((wrapped["lon"] >= -180) & (wrapped["lon"] <= 180))
     assert np.all(np.diff(wrapped["lon"]) > 0)
 
 
 # -----------------------------------------------------------------------------
-# Tests for data‑selection helpers (stub out heavy reprojection)
+# Tests for data-selection helpers (stub out heavy reprojection)
 # -----------------------------------------------------------------------------
-
 def test_get_component_yield(monkeypatch, simple_dataset):
     """Ensure getter selects correct crop/time slice and keeps dimensions."""
 
@@ -94,7 +92,6 @@ def test_get_component_yield(monkeypatch, simple_dataset):
 # -----------------------------------------------------------------------------
 # Tests for grass aggregation helper (stub out reprojection again)
 # -----------------------------------------------------------------------------
-
 def test_aggregate_grass_yields(monkeypatch):
     """Sum across grass dimension and verify aggregation logic."""
     # Build tiny grass dataset with dims grass, time, lat, lon (sizes: 2,1,1,1)
@@ -116,4 +113,34 @@ def test_aggregate_grass_yields(monkeypatch):
     total = yc.aggregate_grass_yields(ds_grass, epsg_code=4326, year=0)
     assert isinstance(total, xr.DataArray)
     # Should equal 3 everywhere
-    assert float(total) == 3.0
+    assert total.item() == 3.0
+
+
+# -----------------------------------------------------------------------------
+# New test: total (rainfed + irrigated) component path
+# -----------------------------------------------------------------------------
+def test_process_yields_total(monkeypatch, simple_dataset):
+    """process_yields should handle component_type='total'."""
+    # Stub heavy GIS helpers
+    monkeypatch.setattr(yc, "assign_crs", lambda da, epsg: da)
+    monkeypatch.setattr(yc, "clip_yield_to_country", lambda yld, geom, epsg: yld)
+
+    # Minimal crop aggregation: same pair as in attr long_name
+    crop_agg = {"Maize": ["maize_rainfed", "maize_irrigated"]}
+
+    gdf_stub = pd.DataFrame({"COUNTRY": ["Nowhere"], "ISO": ["NWD"], "geometry": [None]})
+
+    df = yc.process_yields(
+        ds=simple_dataset,
+        control_datasets=[simple_dataset],  # identical control implies delta = 0
+        gdf=gdf_stub,
+        aggregation_info=crop_agg,
+        names_list=["maize_rainfed", "maize_irrigated"],
+        years=1,
+        epsg_code=4326,
+        country_mapping={},
+        component_type="total",
+    )
+
+    assert "maize_total_year1" in df.columns
+    assert df.loc[0, "maize_total_year1"] == 0.0
