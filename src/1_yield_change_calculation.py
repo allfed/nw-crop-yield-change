@@ -24,7 +24,7 @@ It performs the following steps:
 9. Outputs the results to separate CSV files, sorted alphabetically by country name.
 
 AUTHOR: Ricky Nathvani
-DATE: 2024‑11‑30 (updated 2025‑05‑04)
+DATE: 2025‑05‑04
 """
 
 import geopandas as gpd
@@ -176,7 +176,7 @@ def process_yields(
                 component_suffix = 'irrigated'
             elif component_type == 'total':
                 component_indices = [names_list.index(c) for c in sub_components]
-                component_suffix = 'total'
+                component_suffix = ''
             else:
                 logging.error(f"Invalid component_type: {component_type}")
                 continue
@@ -206,7 +206,10 @@ def process_yields(
                         percentage_changes[cname] = {'ISO3 Country Code': iso, 'Country': cname}
 
                     col_name = 'spring_wheat' if group_name == 'Wheat' else group_name.lower()
-                    percentage_changes[cname][f'{col_name}_{component_suffix}_year{year + 1}'] = pct
+                    if component_type == 'total':
+                        percentage_changes[cname][f'{col_name}_year{year + 1}'] = pct
+                    else:
+                        percentage_changes[cname][f'{col_name}_{component_suffix}_year{year + 1}'] = pct
                 except Exception as e:
                     logging.error(f"Could not process {cname} (year {year + 1}, group {group_name}, {component_type}): {e}")
 
